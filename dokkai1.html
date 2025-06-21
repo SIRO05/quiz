@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+   <link rel="icon" href="./logo/image.png">
+  <title>日本語オンラインテスト || 読解</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    .question-block {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-bottom: 30px;
+    }
+
+    .question-block img {
+      max-width: 50%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    #timer {
+      position: fixed;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-weight: bold;
+      font-size: 18px;
+      color:firebrick   
+    }
+
+    #submit-btn {
+      position: fixed;
+      bottom: 10px;
+      right: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #266bff;
+      border-color: #001136;
+      color: #ffffff;
+    }
+
+    #result {
+      margin-top: 40px;
+      padding: 20px;
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+    }
+
+    .correct {
+      color: green;
+    }
+
+    .wrong {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>日本語オンラインテスト「読解」</h1>
+  <div id="test-container"></div>
+
+  <div id="timer">残り時間: 00:00</div>
+  <button id="submit-btn">テストを完了する</button>
+
+  <div id="result"></div>
+
+  <script>
+    const testData = [
+      {
+        image: "1.png",
+        questions: [
+          {
+            text: "19",
+            options: ["ある", "あった", "あのような", "あんな"],
+            answer: 0
+          },
+          {
+            text: "20",
+            options: ["今からは", "今までは", "次からは", "次までは"],
+            answer: 1
+          },
+          {
+            text: "21",
+            options: ["増えていそうだ", "増えてありそうだ", "増えてあるそうだ", "増えているそうだ"],
+            answer: 3
+          },
+          {
+            text: "22a",
+            options: ["なぜなら", "ところが", "たとえば", "たぶん"],
+            answer: 2
+          },
+          {
+            text: "22b",
+            options: ["だから", "など", "がないので", "であれば"],
+            answer: 1
+          },
+          {
+            text: "23",
+            options: ["急に決めた", "急に決まるだろう", "すぐに決められなかった", "すぐに決められないだろう"],
+            answer: 3
+          },
+        ]
+      },
+      {
+        image: "2.png",
+        questions: [
+          {
+            text: "19",
+            options: ["なってみると", "なるところに", "なったように", "なるとしたら"],
+            answer: 0
+          },
+          {
+            text: "20",
+            options: ["あるくらいだ", "あるかないかわからない", "めったにない", "あるはずがないのだ"],
+            answer: 0
+          },
+          {
+            text: "21a",
+            options: ["きらいだから", "きらいだから", "好きだから", "好きだから"],
+            answer: 0
+          },
+          {
+            text: "21b",
+            options: ["食べるようにしている", "食べるようにしている", "食べないようにしている", "食べないようにしている"],
+            answer: 2
+          },
+          {
+            text: "22",
+            options: ["どんなふうに", "あんなふうな", "どんなような", "そんなふうに"],
+            answer: 3
+          },
+          {
+            text: "23",
+            options: ["または", "そして", "ところが", "つまり"],
+            answer: 1
+          },
+        ]
+      },
+      {
+        image: "3.png",
+        questions: [
+          {
+            text: "19a",
+            options: ["からして", "によると", "にしろ", "にかかわらず"],
+            answer: 1
+          },
+          {
+            text: "19b",
+            options: ["表しているそうだ", "表すことだ", "表すものだ", "表したわけだ"],
+            answer: 0
+          },
+          {
+            text: "20",
+            options: ["感じようとする", "感じがちな", "感じさせる", "感じないでもない"],
+            answer: 2
+          },
+          {
+            text: "21",
+            options: ["にともなって", "につれて", "に対して", "において"],
+            answer: 3
+          },
+          {
+            text: "22",
+            options: ["新しいキャラクター", "人気があるキャラクター", "市町村のキャラクター", "このマークのキャラクター"],
+            answer: 1
+          },
+          {
+            text: "23",
+            options: ["つけてほしい", "つけられてほしい", "つけてもいい", "つけてみたい"],
+            answer: 0
+          },
+        ]
+      },
+      {
+        image: "4.png",
+        questions: [
+          {
+            text: "19",
+            options: ["あるのではないだろうか", "ないのではないだろうか", "なくてもよいのだろうか", "あってもよいのだろうか"],
+            answer: 0
+          },
+          {
+            text: "20",
+            options: ["乗れば乗るほど", "乗ったとたん", "乗ったすえに", "乗ったばかりに"],
+            answer: 1
+          },
+          {
+            text: "21",
+            options: ["または", "しかも", "ところが", "たとえば"],
+            answer: 2
+          },
+          {
+            text: "22",
+            options: ["このことからはわからないが", "このことが言うには", "このことでよければ", "このことが示す通り"],
+            answer: 3
+          },
+          {
+            text: "23",
+            options: ["すればいい", "しなくてもいい", "してもいい", "したほうがいい"],
+            answer: 1
+          },
+        ]
+      },
+      {
+        image: "5.png",
+        questions: [
+          {
+            text: "19",
+            options: ["からすると", "に限らず", "に限り", "からして"],
+            answer: 1
+          },
+          {
+            text: "20a",
+            options: ["ばかりに", "せいで", "おかげで", "からには"],
+            answer: 2
+          },
+          {
+            text: "20b",
+            options: ["理解しようと思います", "理解することができます", "理解できなくなりました", "理解できるようになりました"],
+            answer: 3
+          },
+          {
+            text: "21",
+            options: ["考えられません", "考えません", "考えさせられません", "考えさせません"],
+            answer: 0
+          },
+          {
+            text: "22",
+            options: ["なかなか", "とうとう", "だんだん", "ますます"],
+            answer: 1
+          },
+          {
+            text: "23",
+            options: ["過去の新聞を見る", "現在の新聞を見る", "過去の新聞を保存する", "現在の新聞を保存する"],
+            answer: 0
+          },
+        ]
+      },
+      {
+        image: "6.png",
+        questions: [
+          {
+            text: "19",
+            options: ["", "", "", ""],
+            answer: 0
+          },
+          {
+            text: "20",
+            options: ["", "", "", ""],
+            answer: 1
+          },
+          {
+            text: "21a",
+            options: ["", "", "", ""],
+            answer: 2
+          },
+          {
+            text: "21b",
+            options: ["", "", "", ""],
+            answer: 3
+          },
+          {
+            text: "22",
+            options: ["", "", "", ""],
+            answer: 0
+          },
+          {
+            text: "23",
+            options: ["", "", "", ""],
+            answer: 3
+          },
+        ]
+      },
+      {
+        image: "7.png",
+        questions: [
+          {
+            text: "19",
+            options: ["", "", "", ""],
+            answer: 0
+          },
+          {
+            text: "20a",
+            options: ["", "", "", ""],
+            answer: 1
+          },
+          {
+            text: "20b",
+            options: ["", "", "", ""],
+            answer: 2
+          },
+          {
+            text: "21",
+            options: ["", "", "", ""],
+            answer: 3
+          },
+          {
+            text: "22",
+            options: ["", "", "", ""],
+            answer: 2
+          },
+          {
+            text: "23",
+            options: ["", "", "", ""],
+            answer: 1
+          },
+        ]
+      },
+      {
+        image: "8.png",
+        questions: [
+          {
+            text: "19a",
+            options: ["", "", "", ""],
+            answer: 2
+          },
+          {
+            text: "19b",
+            options: ["", "", "", ""],
+            answer: 3
+          },
+          {
+            text: "20",
+            options: ["", "", "", ""],
+            answer: 0
+          },
+          {
+            text: "21",
+            options: ["", "", "", ""],
+            answer: 1
+          },
+          {
+            text: "22",
+            options: ["", "", "", ""],
+            answer: 2
+          },
+          {
+            text: "23",
+            options: ["", "", "", ""],
+            answer: 3
+          },
+        ]
+      },
+      {
+        image: "9.png",
+        questions: [
+          {
+            text: "19",
+            options: ["", "", "", ""],
+            answer: 0
+          },
+          {
+            text: "20",
+            options: ["", "", "", ""],
+            answer: 1
+          },
+          {
+            text: "21",
+            options: ["", "", "", ""],
+            answer: 2
+          },
+          {
+            text: "22",
+            options: ["", "", "", ""],
+            answer: 3
+          },
+          {
+            text: "23",
+            options: ["", "", "", ""],
+            answer: 3
+          },
+        ]
+      },
+      {
+        image: "10.png",
+        questions: [
+          {
+            text: "19",
+            options: ["", "", "", ""],
+            answer: 0
+          },
+          {
+            text: "20",
+            options: ["", "", "", ""],
+            answer: 1
+          },
+          {
+            text: "21",
+            options: ["", "", "", ""],
+            answer: 2
+          },
+          {
+            text: "22",
+            options: ["", "", "", ""],
+            answer: 1
+          },
+          {
+            text: "23",
+            options: ["", "", "", ""],
+            answer: 3
+          },
+        ]
+      },
+      {
+        image: "11.png",
+        questions: [
+          {
+            text: "19",
+            options: ["", "", "", ""],
+            answer: 0
+          },
+          {
+            text: "20",
+            options: ["", "", "", ""],
+            answer: 1
+          },
+          {
+            text: "21",
+            options: ["", "", "", ""],
+            answer: 2
+          },
+          {
+            text: "22a",
+            options: ["", "", "", ""],
+            answer: 3
+          },
+          {
+            text: "22b",
+            options: ["", "", "", ""],
+            answer: 1
+          },
+          {
+            text: "23",
+            options: ["", "", "", ""],
+            answer: 2
+          },
+        ]
+      },
+      {
+        image: "12.png",
+        questions: [
+          {
+            text: "19",
+            options: ["", "", "", ""],
+            answer: 1
+          },
+          {
+            text: "20",
+            options: ["", "", "", ""],
+            answer: 0
+          },
+          {
+            text: "21",
+            options: ["", "", "", ""],
+            answer: 2
+          },
+          {
+            text: "22a",
+            options: ["", "", "", ""],
+            answer: 3
+          },
+          {
+            text: "22b",
+            options: ["", "", "", ""],
+            answer: 1
+          },
+          {
+            text: "23",
+            options: ["", "", "", ""],
+            answer: 2
+          },
+        ]
+      },
+      {
+        image: "13.png",
+        questions: [
+          {
+            text: "19",
+            options: ["", "", "", ""],
+            answer: 1
+          },
+          {
+            text: "20",
+            options: ["", "", "", ""],
+            answer: 2
+          },
+          {
+            text: "21a",
+            options: ["", "", "", ""],
+            answer: 3
+          },
+          {
+            text: "21b",
+            options: ["", "", "", ""],
+            answer: 1
+          },
+          {
+            text: "22",
+            options: ["", "", "", ""],
+            answer: 2
+          },
+          {
+            text: "23",
+            options: ["", "", "", ""],
+            answer: 3
+          },
+        ]
+      },
+      {
+        image: "14.png",
+        questions: [
+          {
+            text: "19",
+            options: ["", "", "", ""],
+            answer: 0
+          },
+          {
+            text: "20",
+            options: ["", "", "", ""],
+            answer: 1
+          },
+          {
+            text: "21",
+            options: ["", "", "", ""],
+            answer: 2
+          },
+          {
+            text: "22",
+            options: ["", "", "", ""],
+            answer: 3
+          },
+          {
+            text: "23",
+            options: ["", "", "", ""],
+            answer: 1
+          },
+        ]
+      },
+      {
+        image: "15.png",
+        questions: [
+          {
+            text: "19",
+            options: ["", "", "", ""],
+            answer: 1
+          },
+          {
+            text: "20a",
+            options: ["", "", "", ""],
+            answer: 2
+          },
+          {
+            text: "20b",
+            options: ["", "", "", ""],
+            answer: 3
+          },
+          {
+            text: "21",
+            options: ["", "", "", ""],
+            answer: 1
+          },
+          {
+            text: "22",
+            options: ["", "", "", ""],
+            answer: 2
+          },
+          {
+            text: "23",
+            options: ["", "", "", ""],
+            answer: 3
+          },
+        ]
+      },
+    ];
+
+    const timeLimit = 30 * 60; // 4 минуты
+    let secondsLeft = timeLimit;
+    let timer;
+    let userAnswers = [];
+
+    function shuffle(array) {
+      return array.sort(() => Math.random() - 0.5);
+    }
+
+    function renderTest() {
+      const container = document.getElementById("test-container");
+      container.innerHTML = "";
+      const shuffledPhotos = shuffle([...testData]);
+
+      shuffledPhotos.forEach((photo, pIndex) => {
+        const block = document.createElement("div");
+        block.className = "question-block";
+
+        const img = document.createElement("img");
+        img.src = photo.image;
+        block.appendChild(img);
+
+        photo.questions.forEach((question, qIndex) => {
+          const qId = `q-${pIndex}-${qIndex}`;
+          const qBlock = document.createElement("div");
+          qBlock.innerHTML = `<p><strong>${question.text}</strong></p>`;
+
+          question.options.forEach((opt, optIndex) => {
+            qBlock.innerHTML += `
+              <label>
+                <input type="radio" name="${qId}" value="${optIndex}"> ${opt}
+              </label><br>
+            `;
+          });
+
+          block.appendChild(qBlock);
+        });
+
+        container.appendChild(block);
+      });
+    }
+
+    function startTimer() {
+      const timerEl = document.getElementById("timer");
+
+      timer = setInterval(() => {
+        if (secondsLeft <= 0) {
+          clearInterval(timer);
+          finishTest();
+        }
+
+        const m = String(Math.floor(secondsLeft / 60)).padStart(2, "0");
+        const s = String(secondsLeft % 60).padStart(2, "0");
+        timerEl.textContent = `残り時間: ${m}:${s}`;
+        secondsLeft--;
+      }, 1000);
+    }
+
+    function finishTest() {
+      clearInterval(timer);
+      let correct = 0;
+      let total = 0;
+      const resultDiv = document.getElementById("result");
+      resultDiv.innerHTML = "<h2>Результаты теста:</h2>";
+
+      testData.forEach((photo, pIndex) => {
+        photo.questions.forEach((question, qIndex) => {
+          total++;
+          const qId = `q-${pIndex}-${qIndex}`;
+          const selected = document.querySelector(`input[name="${qId}"]:checked`);
+          const answer = selected ? parseInt(selected.value) : -1;
+          const isCorrect = answer === question.answer;
+
+          if (isCorrect) correct++;
+
+          resultDiv.innerHTML += `
+            <div>
+              <strong>${question.text}</strong><br>
+              Ваш ответ: <span class="${isCorrect ? 'correct' : 'wrong'}">${answer >= 0 ? question.options[answer] : "Не выбран"}</span><br>
+              Правильный ответ: <span class="correct">${question.options[question.answer]}</span>
+            </div><hr>
+          `;
+        });
+      });
+
+      resultDiv.innerHTML = `<h3>Правильных ответов: ${correct} из ${total}</h3>` + resultDiv.innerHTML;
+    }
+
+    document.getElementById("submit-btn").addEventListener("click", finishTest);
+
+    // Запуск
+    renderTest();
+    startTimer();
+  </script>
+</body>
+</html>
