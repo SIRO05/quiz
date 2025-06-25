@@ -2,38 +2,51 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" href="./logo/image.png">
+    <link rel="icon" href="./logo/ssr_logo.jpg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>日本語の期末試験</title>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="./style/style.css"/>
 </head>
 <body>
-    <script src="script.js"></script>
+    <script src="./js/script.js"></script>
     <div class="header">
     <p><h1>日本語オンラインテスト</h1></p>
-  </div>
-  <div class="container">
-    <form id="start-form"></form>
-        <label><p><h3>トピックを選択してください:</h3></p>
-          <select onchange="window.location.href=this.value;">
-            <option value=""></option>
-            <option value="goi.html" style="background-color: whitesmoke;">文字・語彙テスト</option>
-            <option value="bunpou.html" style="background-color: rgb(209, 209, 209);">文法テスト</option>
-            <option value="hoshi.html" style="background-color: whitesmoke;">星問題テスト</option>
-            <option value="dIndex.html" style="background-color: rgb(209, 209, 209);">読解テスト</option>
-            <option value="dokkai1.html" style="background-color: whitesmoke;">読解</option>
-          </select>
-        </label>
-  </div>
-  
+      <button id="toggle-theme" style="margin-left: auto; margin-right: 20px; padding: 8px 12px; border: none; border-radius: 5px; cursor: pointer;">☼
 
-  <!-- <br>
-    <form action="goi.html"><input type="submit" value="文字・語彙テスト" ></form>
-  <br>
-    <form action="bunpou.html"><input type="submit" value="文法テスト"></form>
-  <br>
-    <form action="hoshi.html"><input type="submit" value="星問題テスト"></form>
-  <br>
-    <form action="dokkai.html"><input type="submit" value="読解テスト"></form> -->
+    </button>
+    <!-- <button id="toggle-dim" style="margin-right: 20px; padding: 8px 12px; border: none; border-radius: 5px; cursor: pointer;">🕶️ 画面を暗くする
+    </button> -->
+  </div>
+  <!-- <div class="test-buttons">
+    <button onclick="location.href='goi.html?subject=文字・語彙'">文字・語彙</button>
+    <button onclick="location.href='bunpou.html?subject=文法'">文法</button>
+    <button onclick="location.href='hoshi_mondai.html?subject=星問題'">星問題</button>
+    <button onclick="location.href='dokkai.html?subject=読解'">読解</button>
+  </div> -->
+  <div class="choice_container">
+  <form id="start-form"></form>
+      <label id="label_choice" ><p><h3>トピックを選択してください:</h3></p>
+        <select id="select_choice" onchange="window.location.href=this.value;" style="width: 100%; padding: 10px; margin-bottom: 15px;" >
+          <option class="choice_option1" value="">⊶ トピックを選択 ⊷</option>
+          <option class="choice_option2" value='goi.html?subject=文字・語彙'>文字・語彙テスト</option>
+          <option class="choice_option1" value='bunpou.html?subject=文法'>文法テスト</option>
+          <option class="choice_option2" value='hoshi_mondai.html?subject=星問題'>星問題テスト</option>
+          <option class="choice_option1" value="dokkai.html">読解テスト</option>
+          <!-- <option value='dokkai.html?subject=読解' style="background-color: rgb(209, 209, 209);">読解テスト</option> -->
+        </select>
+      </label>
+  </div>
+  <div id="dim-overlay"></div>
 </body>
 </html>
+
+
+<!-- <div id="timer"></div>
+<h1 id="test-title"></h1> -->
+
+<!--! Обычный тест -->
+<!-- <div id="questions-container"></div> -->
+
+<!--! Фото-тест -->
+<!-- <div id="testContainer"></div>
+<button id="finishBtn" style="display:none;">Завершить</button> -->

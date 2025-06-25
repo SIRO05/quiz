@@ -1,0 +1,334 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0px;
+  background-image: url("./front_photo/front_photo.jpg"); /* Замените на путь к вашему файлу */
+  background-size: cover; /* Растягивает изображение на весь экран */
+  background-repeat: no-repeat; /* Предотвращает повторение */
+  background-attachment: fixed; /* Зафиксировать фон, чтобы он не прокручивался вместе со страницей */
+  /* Другие стили для body */
+}
+
+header {
+  position: sticky;
+  top: 0;
+  background: #fff;
+  padding: 0px 0;
+  z-index: 0;
+}
+
+
+/* ==== Light Theme (default) ==== */
+:root {
+  --background: #ffffff;
+  --text-color: #000000;
+  --container-bg: #ffffff;
+  --question-bg: #f9f9f9;
+  --header-bg: #004080;
+  --header-text: #ffffff;
+}
+
+/* ==== Dark Theme ==== */
+body.dark-mode {
+  --background: #121212;
+  --text-color: #e0e0e0;
+  --container-bg: #1e1e1e;
+  --question-bg: #2c2c2c;
+  --header-bg: #222;
+  --header-text: #ffffff;
+}
+
+/* Apply theme variables */
+body {
+  background-color: var(--background);
+  color: var(--text-color);
+}
+
+.choice_container,
+.container,
+.question {
+  background-color: var(--container-bg);
+  color: var(--text-color);
+}
+
+.question {
+  background-color: var(--question-bg);
+}
+
+.header,
+.bottom-bar {
+  background-color: var(--header-bg);
+  color: var(--header-text);
+}
+
+#toggle-theme {
+  background-color: transparent;
+  color: var(--header-text);
+}
+
+
+.choice_container {
+  max-width: 900px;
+  margin: auto;
+  padding: 25px;
+  margin-top: 5px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.label_choice {
+  display: block;
+  margin: 15px 0 5px;
+}
+
+.header {
+  left: 0;
+  right: 0;
+  background: #004080;
+  color: white;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.top-bar {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #004080;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  color: white;
+}
+
+#timer {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 18px;
+  color: white;
+}
+
+.test-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+#stop_test {
+  position: absolute;
+  right: 5px;
+  background: #0780e3;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 13px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#back_button {
+  position: absolute;
+  left: 5px;
+  background: #0780e3;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 13px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+
+
+.question-set img {
+  width: 100%;
+  max-height: 555px;
+  object-fit: contain;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.question {
+  margin-bottom: 15px;
+  border-radius: 10px;
+  padding-top: 1px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.correct {
+  background-color: #4CAF50;
+  border-radius: 5px;
+}
+
+.incorrect {
+  background-color: #F44336;
+  border-radius: 5px;
+}
+
+.correct-answer {
+  background-color: #4CAF50;
+  border: none solid green;
+  border-radius: 5px;
+}
+
+#select_choice {
+  background-color: var(--container-bg);
+  color: var(--select_choice-color);
+}
+
+#select_choice > .choice_option1 {
+  background-color: var(--select_choice-bg1);
+  color: var(--select_choice-color);
+}
+
+#select_choice > .choice_option2 {
+  background-color: var(--select_choice-bg2);
+  color: var(--select_choice-color);
+}
+
+
+/* ==== Light Theme (default) ==== */
+:root {
+  --background: #fff;
+  --text-color: #000;
+  --container-bg: rgba(255, 255, 255, 0.7);
+  --question-bg: #f9f9f9;
+  --header-bg: #004080;
+  --header-text: #fff;
+  --button-bg: #0780e3;
+  --button-text: #fff;
+  --select_choice-bg1: #ddd;
+  --select_choice-bg2: #efefef;
+  --select_choice-color: #000;
+}
+
+/* ==== Dark Theme Custom ==== */
+body.dark-mode {
+  --background: #000;                  /* Главный фон — черный */
+  --text-color: #fff;                  /* Основной текст — белый */
+  --container-bg: rgba(0, 0, 0, 0.7);               /* Контейнер тестов — черный */
+  --question-bg: #151515;              /* Вопросы — черные */
+  --header-bg: #2e003e;                /* Темно-пурпурный верх/низ */
+  --header-text: #fff;
+  --button-bg: #ba55d3;                /* Светло-пурпурный кнопки */
+  --button-text: #fff;
+  --select_choice-bg1: #555;
+  --select_choice-bg2: #151515;
+  --select_choice-color: #fff;
+}
+
+/* Применение переменных */
+body {
+  background-color: var(--background);
+  color: var(--text-color);
+}
+
+.choice_container,
+.container,
+.question {
+  background-color: var(--container-bg);
+  color: var(--text-color);
+}
+
+.question {
+  background-color: var(--question-bg);
+}
+
+.header,
+.bottom-bar {
+  background-color: var(--header-bg);
+  color: var(--header-text);
+}
+
+/* Кнопки */
+#stop_test,
+#back_button,
+#toggle-theme {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  padding: 10px 20px;
+  font-size: 13px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* ==== Light Theme Background Image ==== */
+body {
+  background-image: url("./front_photo/front_photo.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* ==== Dark Theme Background Image ==== */
+body.dark-mode {
+  background-image: url("./front_photo/front_photo_dark.jpg"); /* Укажите здесь нужное изображение для темной темы */
+}
+
+body {
+  transition: background-image 0.6s ease-in-out, background-color 0.3s ease;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background-image: url("./front_photo/front_photo.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  opacity: 1;
+  transition: opacity 0.8s ease-in-out;
+  pointer-events: none;
+}
+
+body.dark-mode::before {
+  background-image: url("./front_photo/front_photo_dark.jpg");
+  opacity: 1;
+}
+
+
+/* #dim-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* полупрозрачный черный */
+  /* z-index: 999;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+#dim-overlay.active {
+  opacity: 1;
+  pointer-events: auto;
+} */

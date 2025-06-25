@@ -1,6 +1,6 @@
 const photoTests = [
   {
-    image: "1.png",
+    image: "./dokkai_photo/1.png",
     questions: [
         {
         text: "19",
@@ -35,7 +35,7 @@ const photoTests = [
     ]
     },
     {
-    image: "2.png",
+    image: "./dokkai_photo/2.png",
     questions: [
         {
         text: "19",
@@ -70,7 +70,7 @@ const photoTests = [
     ]
     },
     {
-    image: "3.png",
+    image: "./dokkai_photo/3.png",
     questions: [
         {
         text: "19a",
@@ -105,7 +105,7 @@ const photoTests = [
     ]
     },
     {
-    image: "4.png",
+    image: "./dokkai_photo/4.png",
     questions: [
         {
         text: "19",
@@ -135,7 +135,7 @@ const photoTests = [
     ]
     },
     {
-    image: "5.png",
+    image: "./dokkai_photo/5.png",
     questions: [
         {
         text: "19",
@@ -170,7 +170,7 @@ const photoTests = [
     ]
     },
     {
-    image: "6.png",
+    image: "./dokkai_photo/6.png",
     questions: [
         {
         text: "19",
@@ -200,7 +200,7 @@ const photoTests = [
     ]
     },
     {
-    image: "7.png",
+    image: "./dokkai_photo/7.png",
     questions: [
         {
         text: "19",
@@ -230,7 +230,7 @@ const photoTests = [
     ]
     },
     {
-    image: "8.png",
+    image: "./dokkai_photo/8.png",
     questions: [
         {
         text: "19a/b",
@@ -260,7 +260,7 @@ const photoTests = [
     ]
     },
     {
-    image: "9.png",
+    image: "./dokkai_photo/9.png",
     questions: [
         {
         text: "19",
@@ -290,7 +290,7 @@ const photoTests = [
     ]
     },
     {
-    image: "10.png",
+    image: "./dokkai_photo/10.png",
     questions: [
         {
         text: "19",
@@ -320,7 +320,7 @@ const photoTests = [
     ]
     },
     {
-    image: "11.png",
+    image: "./dokkai_photo/11.png",
     questions: [
         {
         text: "19",
@@ -350,7 +350,7 @@ const photoTests = [
     ]
     },
     {
-    image: "12.png",
+    image: "./dokkai_photo/12.png",
     questions: [
         {
         text: "19",
@@ -380,7 +380,7 @@ const photoTests = [
     ]
     },
     {
-    image: "13.png",
+    image: "./dokkai_photo/13.png",
     questions: [
         {
         text: "19",
@@ -410,7 +410,7 @@ const photoTests = [
     ]
     },
     {
-    image: "14.png",
+    image: "./dokkai_photo/14.png",
     questions: [
         {
         text: "19",
@@ -440,7 +440,7 @@ const photoTests = [
     ]
     },
     {
-    image: "15.png",
+    image: "./dokkai_photo/15.png",
     questions: [
         {
         text: "19",
@@ -474,7 +474,7 @@ const photoTests = [
 
 let currentIndex = 0;
 let score = 0;
-let time = 1800; // 5 минут на тест
+let time = 3600; // 5 минут на тест
 let interval;
 
 function startTest() {
@@ -542,7 +542,7 @@ function showPhotoTest(index) {
   if (currentIndex < photoTests.length - 1) {
     const nextBtn = document.createElement("button");
     nextBtn.textContent = "次へ進む";
-    nextBtn.style = "margin-top: 15px; background:rgb(43, 73, 98); color: white; border-radius: 10px;";
+    nextBtn.style = "margin-top: 20px; padding: 10px 423px; background: #0780e3; color: white; border: none; border-radius: 5px;";
     nextBtn.onclick = () => {
       currentIndex++;
       showPhotoTest(currentIndex);
@@ -562,3 +562,23 @@ function finishTest() {
 document.getElementById("finishBtn").addEventListener("click", finishTest);
 
 startTest();
+
+document.addEventListener('DOMContentLoaded', () => {
+  const themeButton = document.getElementById('toggle-theme');
+  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+  // Установить тему из localStorage или по умолчанию
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+    document.body.classList.add('dark-mode');
+    themeButton.textContent = '☀️ 昼モード';
+  }
+
+  themeButton.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    const isDark = document.body.classList.contains('dark-mode');
+
+    themeButton.textContent = isDark ? '☀️ 昼モード' : '🌙 夜モード';
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  });
+});
