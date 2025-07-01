@@ -75,7 +75,7 @@ function startTimer() {
   timer = setInterval(() => {
     const minutes = String(Math.floor(timeLeft / 60)).padStart(2, '0');
     const seconds = String(timeLeft % 60).padStart(2, '0');
-    timerElem.textContent = `残り時間: ${minutes}:${seconds}`;
+    timerElem.textContent = `${minutes}:${seconds}`;
     if (--timeLeft < 0) {
       clearInterval(timer);
       submitTest();
@@ -118,7 +118,7 @@ function submitTest() {
 
   // Показываем результат
   const result = document.createElement('p');
-  result.innerHTML = `<strong>Правильных ответов: ${correctCount} из ${questions.length}</strong>`;
+  result.innerHTML = `<strong>正解: ${questions.length} 点中 ${correctCount}点</strong>`;
   document.getElementById("questions-container").appendChild(result);
 
   // Сравнение ответов
@@ -133,14 +133,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const savedTheme = localStorage.getItem('theme');
   if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
     document.body.classList.add('dark-mode');
-    themeButton.textContent = '\u2600';
+    themeButton.textContent = '☀️'; //\u2600
   }
 
   themeButton.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
     const isDark = document.body.classList.contains('dark-mode');
 
-    themeButton.textContent = isDark ? '\u2600' : '\u263C';
+    themeButton.textContent = isDark ? '☀️' : '🌙'; //\u2600   \u263C
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
   });
 });

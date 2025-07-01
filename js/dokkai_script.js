@@ -491,7 +491,7 @@ function updateTimer() {
   time--;
   const minutes = String(Math.floor(time / 60)).padStart(2, '0');
   const seconds = String(time % 60).padStart(2, '0');
-  document.getElementById("timer").textContent = `残り時間: ${minutes}:${seconds}`;
+  document.getElementById("timer").textContent = `${minutes}:${seconds}`; //残り時間:
 }
 
 function showPhotoTest(index) {
@@ -541,8 +541,9 @@ function showPhotoTest(index) {
   // Следующий блок фото, если есть
   if (currentIndex < photoTests.length - 1) {
     const nextBtn = document.createElement("button");
+    nextBtn.classList.add('bottom')
     nextBtn.textContent = "次へ進む";
-    nextBtn.style = "margin-top: 20px; padding: 10px 423px; background: #0780e3; color: white; border: none; border-radius: 5px;";
+    nextBtn.style = "margin-top: 20px; padding: auto; background: #0780e3; color: white; border: none; border-radius: 5px;";
     nextBtn.onclick = () => {
       currentIndex++;
       showPhotoTest(currentIndex);
@@ -554,8 +555,8 @@ function showPhotoTest(index) {
 function finishTest() {
   clearInterval(interval);
   document.getElementById("testContainer").innerHTML = `
-    <h2>Тест завершен!</h2>
-    <p>Вы ответили правильно на ${score} из ${photoTests.length * 6} вопросов.</p>
+    <h2>テストが完了しました！</h2>
+    <p>おめでとうございます！ ${photoTests.length * 6} 問中 ${score} 問正解しました。</p>
   `;
 }
 
@@ -571,14 +572,14 @@ document.addEventListener('DOMContentLoaded', () => {
   const savedTheme = localStorage.getItem('theme');
   if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
     document.body.classList.add('dark-mode');
-    themeButton.textContent = '☀️ 昼モード';
+    themeButton.textContent = '☀️'; //☀️ 昼モード//
   }
 
   themeButton.addEventListener('click', () => {
     document.body.classList.toggle('dark-mode');
     const isDark = document.body.classList.contains('dark-mode');
 
-    themeButton.textContent = isDark ? '☀️ 昼モード' : '🌙 夜モード';
+    themeButton.textContent = isDark ? '☀️' : '🌙'; //'☀️ 昼モード' : '🌙 夜モード'//
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
   });
 });

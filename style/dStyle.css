@@ -24,7 +24,7 @@ body {
   max-width: 900px;
   margin: 40px auto 100px;
   padding: 20px;
-  background: white;
+  background: var(--container-bg);
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
@@ -44,11 +44,13 @@ body {
 .answers button {
   display: inline;
   margin: 0px 0;
-  margin-inline-start: 5px;
+  margin-inline-start: 7px;
   padding: auto;
-  border: cadetblue;
+  margin-bottom: 5px;
+  border: none;
   border-radius: 5px;
-  background: #e0e0e0;
+  background: var(--container-bg);
+  color: var(--answer-text);
   cursor: pointer;
   transition: background 0.3s;
 }
@@ -91,33 +93,13 @@ body {
 .finish-button {
   position: absolute;
   right: 5px;
-  background: #0780e3;
+  background: var(--button-bg);
   border: none;
   color: white;
   padding: 10px 20px;
   font-size: 13px;
   border-radius: 5px;
   cursor: pointer;
-}
-
-/* ==== Light Theme (default) ==== */
-:root {
-  --background: #ffffff;
-  --text-color: #000000;
-  --container-bg: #ffffff;
-  --question-bg: #f9f9f9;
-  --header-bg: #004080;
-  --header-text: #ffffff;
-}
-
-/* ==== Dark Theme ==== */
-body.dark-mode {
-  --background: #121212;
-  --text-color: #e0e0e0;
-  --container-bg: #1e1e1e;
-  --question-bg: #2c2c2c;
-  --header-bg: #222;
-  --header-text: #ffffff;
 }
 
 /* Apply theme variables */
@@ -131,6 +113,9 @@ body {
 .question {
   background-color: var(--container-bg);
   color: var(--text-color);
+  border-radius: 10px;
+  padding-top: 1px;
+  padding-left: 10px;
 }
 
 .question {
@@ -155,24 +140,26 @@ body {
 :root {
   --background: #ffffff;
   --text-color: #000000;
-  --container-bg: #ffffff;
+  --container-bg: rgba(255, 255, 255, 0.5);
   --question-bg: #f9f9f9;
   --header-bg: #004080;
   --header-text: #ffffff;
   --button-bg: #0780e3;
   --button-text: #ffffff;
+  --answer-text: #000000;
 }
 
 /* ==== Dark Theme Custom ==== */
 body.dark-mode {
-  --background: #000000;               /* Главный фон — черный */
-  --text-color: #ffffff;               /* Основной текст — белый */
-  --container-bg: #000000;             /* Контейнер тестов — черный */
-  --question-bg: #000000;              /* Вопросы — черные */
-  --header-bg: #2e003e;                /* Темно-пурпурный верх/низ */
+  --background: #000000;                          /* Главный фон — черный */
+  --text-color: #ffffff;                          /* Основной текст — белый */
+  --container-bg: rgba(0, 0, 0, 0.5);             /* Контейнер тестов — черный */
+  --question-bg: #1f1f1f;                         /* Вопросы — черные */
+  --header-bg: #2e003e;                           /* Темно-пурпурный верх/низ */
   --header-text: #ffffff;
-  --button-bg: #ba55d3;                /* Светло-пурпурный кнопки */
+  --button-bg: #ba55d3;                           /* Светло-пурпурный кнопки */
   --button-text: #ffffff;
+  --answer-text: #ffffff;
 }
 
 /* Применение переменных */
