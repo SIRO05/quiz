@@ -9,16 +9,25 @@ body {
 }
 
 .header {
-  position: sticky;
+  position: fixed;
   left: 0;
   right: 0;
+  top: 0;
   background: #004080;
   color: white;
-  padding: 0px 0px;
-  top: 0;
+  padding: 0px 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 10;
+}
+
+.titul {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: inherit;
+  font-size: auto;
+  max-width: max-content;
 }
 
 .test-container {

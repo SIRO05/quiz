@@ -14,9 +14,16 @@ header {
   top: 0px;
   background: #fff;
   padding: 0px 0;
-  z-index: 0px;
+  z-index: 10;
 }
 
+.test-title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: inherit;
+  font-size: auto;
+  max-width: max-content;
+}
 
 /* ==== Light Theme (default) ==== */
 :root {
@@ -86,7 +93,7 @@ body {
   right: 0px;
   background: #004080;
   color: white;
-  padding: 0px 0px;
+  padding: 0px 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
