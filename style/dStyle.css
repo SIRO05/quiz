@@ -9,12 +9,12 @@ body {
 }
 
 .header {
-  position: fixed;
+  position: sticky;
   left: 0;
   right: 0;
   background: #004080;
   color: white;
-  padding: 0px 5px;
+  padding: 0px 0px;
   top: 0;
   display: flex;
   justify-content: space-between;

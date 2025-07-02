@@ -86,7 +86,7 @@ body {
   right: 0px;
   background: #004080;
   color: white;
-  padding: 0px 5px;
+  padding: 0px 0px;
   display: flex;
   justify-content: space-between;
   align-items: center;
