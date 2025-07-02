@@ -1,6 +1,6 @@
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
+  margin: 0px;
   padding: 0px;
   background-image: url("./front_photo/front_photo.jpg"); /* Замените на путь к вашему файлу */
   background-size: cover; /* Растягивает изображение на весь экран */
@@ -11,10 +11,10 @@ body {
 
 header {
   position: sticky;
-  top: 0;
+  top: 0px;
   background: #fff;
   padding: 0px 0;
-  z-index: 0;
+  z-index: 0px;
 }
 
 
@@ -82,11 +82,11 @@ body {
 }
 
 .header {
-  left: 0;
-  right: 0;
+  left: 0px;
+  right: 0px;
   background: #004080;
   color: white;
-  padding: 5px;
+  padding: 0px 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -156,7 +156,6 @@ body {
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
-
 
 
 .question-set img {
@@ -268,7 +267,7 @@ body {
   background-color: var(--button-bg);
   color: var(--button-text);
   border: none;
-  padding: 10px 20px;
+  padding: 7px 20px;
   font-size: 13px;
   border-radius: 5px;
   cursor: pointer;
@@ -314,21 +313,41 @@ body.dark-mode::before {
   opacity: 1;
 }
 
-
-/* #dim-overlay {
+.modal-overlay {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* полупрозрачный черный */
-  /* z-index: 999;
-  pointer-events: none;
-  opacity: 0;
-  transition: opacity 0.5s ease;
+  background-color: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
 }
 
-#dim-overlay.active {
-  opacity: 1;
-  pointer-events: auto;
-} */
+.modal-content {
+  background-color: var(--container-bg);
+  color: var(--text-color);
+  padding: 30px 20px;
+  border-radius: 10px;
+  max-width: 350px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.modal-content button {
+  margin: 10px;
+  padding: 8px 18px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  cursor: pointer;
+}
+
+.modal-content input {
+  padding: 8px;
+  width: 80%;
+  margin-top: 5px;
+}

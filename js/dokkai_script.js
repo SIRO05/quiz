@@ -18,14 +18,9 @@ const photoTests = [
         correct: 3
         },
         {
-        text: "22a",
-        options: ["なぜなら", "ところが", "たとえば", "たぶん"],
+        text: "22a/b",
+        options: ["a なぜなら / b だから", "a ところが / b がないので", "a たとえば / b など", "a たぶん / b であれば"],
         correct: 2
-        },
-        {
-        text: "22b",
-        options: ["だから", "など", "がないので", "であれば"],
-        correct: 1
         },
         {
         text: "23",
@@ -48,14 +43,9 @@ const photoTests = [
         correct: 0
         },
         {
-        text: "21a",
-        options: ["きらいだから", "きらいだから", "好きだから", "好きだから"],
+        text: "21a/b",
+        options: ["a きらいだから / b 食べないようにしている", "a きらいだから / b 食べるようにしている", "a 好きだから / b 食べるようにしている", "a 好きだから / b 食べないようにしている"],
         correct: 0
-        },
-        {
-        text: "21b",
-        options: ["食べるようにしている", "食べるようにしている", "食べないようにしている", "食べないようにしている"],
-        correct: 2
         },
         {
         text: "22",
@@ -73,14 +63,9 @@ const photoTests = [
     image: "./dokkai_photo/3.png",
     questions: [
         {
-        text: "19a",
-        options: ["からして", "によると", "にしろ", "にかかわらず"],
+        text: "19a/b",
+        options: ["a からして / b 表すことだ", "a によると / b 表しているそうだ", "a にしろ / b 表すものだ", "a にかかわらず / b 表したわけだ"],
         correct: 1
-        },
-        {
-        text: "19b",
-        options: ["表しているそうだ", "表すことだ", "表すものだ", "表したわけだ"],
-        correct: 0
         },
         {
         text: "20",
@@ -143,14 +128,9 @@ const photoTests = [
         correct: 1
         },
         {
-        text: "20a",
-        options: ["ばかりに", "せいで", "おかげで", "からには"],
+        text: "20a/b",
+        options: ["a ばかりに / b 理解できなくなりました", "a せいで / b 理解することができます", "a おかげで / b 理解できるようになりました", "a からには / b 理解しようと思います"],
         correct: 2
-        },
-        {
-        text: "20b",
-        options: ["理解しようと思います", "理解することができます", "理解できなくなりました", "理解できるようになりました"],
-        correct: 3
         },
         {
         text: "21",
@@ -474,31 +454,66 @@ const photoTests = [
 
 let currentIndex = 0;
 let score = 0;
-let time = 3600; // 5 минут на тест
+let time = 0;
 let interval;
+let maxTests = photoTests.length;
+let selectedTests = [];
+
+document.addEventListener('DOMContentLoaded', () => {
+  const configModal = document.getElementById("configModal");
+  const startBtn = document.getElementById("startBtn");
+
+  configModal.style.display = "flex"; // Показать модальное окно
+
+  startBtn.addEventListener("click", () => {
+    const questionCount = parseInt(document.getElementById("questionCount").value);
+    time = parseInt(document.getElementById("testTime").value);
+
+    selectedTests = photoTests.slice(0, questionCount);
+    configModal.style.display = "none";
+    startTest();
+  });
+
+  const themeButton = document.getElementById('toggle-theme');
+  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+    document.body.classList.add('dark-mode');
+    themeButton.textContent = '☀️';
+  }
+
+  themeButton.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    const isDark = document.body.classList.contains('dark-mode');
+    themeButton.textContent = isDark ? '☀️' : '🌙';
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  });
+
+  document.getElementById("backToMenuBtn").addEventListener("click", () => {
+    if (confirm("本当にメニューに戻りますか？（進行状況は失われます）")) {
+      window.location.href = "index.html";
+    }
+  });
+
+  document.getElementById("finishBtn").addEventListener("click", () => {
+    if (confirm("テストを終了してもよろしいですか？")) {
+      finishTest();
+    }
+  });
+});
+
 
 function startTest() {
   showPhotoTest(currentIndex);
   interval = setInterval(updateTimer, 1000);
 }
 
-function updateTimer() {
-  if (time <= 0) {
-    clearInterval(interval);
-    finishTest();
-    return;
-  }
-  time--;
-  const minutes = String(Math.floor(time / 60)).padStart(2, '0');
-  const seconds = String(time % 60).padStart(2, '0');
-  document.getElementById("timer").textContent = `${minutes}:${seconds}`; //残り時間:
-}
-
 function showPhotoTest(index) {
   const container = document.getElementById("testContainer");
   container.innerHTML = "";
 
-  const test = photoTests[index];
+  const test = selectedTests[index];
   const wrapper = document.createElement("div");
   wrapper.className = "question-set";
 
@@ -510,7 +525,7 @@ function showPhotoTest(index) {
     const questionEl = document.createElement("div");
     questionEl.className = "question";
     questionEl.innerHTML = `<p>${q.text}</p>`;
-    
+
     const answersEl = document.createElement("div");
     answersEl.className = "answers";
 
@@ -526,7 +541,6 @@ function showPhotoTest(index) {
           btn.classList.add("incorrect");
           answersEl.children[q.correct].classList.add("correct");
         }
-        // Disable all buttons
         [...answersEl.children].forEach(b => b.disabled = true);
       };
       answersEl.appendChild(btn);
@@ -538,12 +552,11 @@ function showPhotoTest(index) {
 
   container.appendChild(wrapper);
 
-  // Следующий блок фото, если есть
-  if (currentIndex < photoTests.length - 1) {
+  if (currentIndex < selectedTests.length - 1) {
     const nextBtn = document.createElement("button");
-    nextBtn.classList.add('bottom')
-    nextBtn.textContent = "次へ進む";
-    nextBtn.style = "margin-top: 20px; padding: auto; background: #0780e3; color: white; border: none; border-radius: 5px;";
+    nextBtn.className = "bottom-button";
+    nextBtn.textContent = "進む ▶";
+    nextBtn.style.marginTop = "10px";
     nextBtn.onclick = () => {
       currentIndex++;
       showPhotoTest(currentIndex);
@@ -552,15 +565,25 @@ function showPhotoTest(index) {
   }
 }
 
+function updateTimer() {
+  if (time <= 0) {
+    clearInterval(interval);
+    finishTest();
+    return;
+  }
+  time--;
+  const minutes = String(Math.floor(time / 60)).padStart(2, '0');
+  const seconds = String(time % 60).padStart(2, '0');
+  document.getElementById("timer").textContent = `${minutes}:${seconds}`;
+}
+
 function finishTest() {
   clearInterval(interval);
   document.getElementById("testContainer").innerHTML = `
     <h2>テストが完了しました！</h2>
-    <p>おめでとうございます！ ${photoTests.length * 6} 問中 ${score} 問正解しました。</p>
+    <p>${selectedTests.length * 6} 問中 ${score} 問正解しました。</p>
   `;
 }
-
-document.getElementById("finishBtn").addEventListener("click", finishTest);
 
 startTest();
 

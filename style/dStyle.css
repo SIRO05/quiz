@@ -1,20 +1,21 @@
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   background-image: url("./front_photo/front_photo.jpg");
   background-size: cover;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; 
   background-attachment: fixed;
 }
 
 .header {
-  /* position: fixed; */
+  position: fixed;
   left: 0;
   right: 0;
   background: #004080;
   color: white;
-  padding: 5px;
+  padding: 0px 5px;
+  top: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -22,7 +23,7 @@ body {
 
 .test-container {
   max-width: 900px;
-  margin: 40px auto 100px;
+  margin: 100px auto 100px;
   padding: 20px;
   background: var(--container-bg);
   border-radius: 10px;
@@ -46,10 +47,10 @@ body {
   margin: 0px 0;
   margin-inline-start: 7px;
   padding: auto;
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   border: none;
   border-radius: 5px;
-  background: var(--container-bg);
+  background: var(--answer-bg);
   color: var(--answer-text);
   cursor: pointer;
   transition: background 0.3s;
@@ -96,7 +97,7 @@ body {
   background: var(--button-bg);
   border: none;
   color: white;
-  padding: 10px 20px;
+  padding: 7px 20px;
   font-size: 13px;
   border-radius: 5px;
   cursor: pointer;
@@ -114,12 +115,15 @@ body {
   background-color: var(--container-bg);
   color: var(--text-color);
   border-radius: 10px;
+  margin-top: 1px;
   padding-top: 1px;
-  padding-left: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
 .question {
   background-color: var(--question-bg);
+  padding-top: 1px;
 }
 
 .header,
@@ -147,6 +151,8 @@ body {
   --button-bg: #0780e3;
   --button-text: #ffffff;
   --answer-text: #000000;
+  --answer-bg: #e5e5e5;
+  --choose-bg: #e5e5e5;
 }
 
 /* ==== Dark Theme Custom ==== */
@@ -160,6 +166,8 @@ body.dark-mode {
   --button-bg: #ba55d3;                           /* Светло-пурпурный кнопки */
   --button-text: #ffffff;
   --answer-text: #ffffff;
+  --answer-bg: rgba(0, 0, 0, 0.5);
+  --choose-bg: #151515;
 }
 
 /* Применение переменных */
@@ -236,4 +244,56 @@ body::before {
 body.dark-mode::before {
   background-image: url("./front_photo/front_photo_dark.jpg");
   opacity: 1;
+}
+
+/* Настройки модального окна */
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+  background: white;
+  color: black;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px;
+  background-color: var(--container-bg);
+  color: var(--text-color);
+}
+
+.modal-content select, .modal-content button {
+  margin-top: 10px;
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 5px;
+  color: var(--answer-text);
+  background: var(--choose-bg);
+}
+
+/* Кнопки в нижней панели */
+.bottom-button {
+  background: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  padding: 7px 20px;
+  font-size: 13px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.bottom-button.left {
+  position: absolute;
+  left: 5px;
 }

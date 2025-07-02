@@ -1,61 +1,78 @@
 let questions = [];
 let timer;
-let timeLeft = 3600; // Общее время на тест — 1 час (можно изменить)
-//let timeLeft = parseInt(params.get('time')) || 3600; // Пользовательский выбор или 1 час
+let timeLeft = 3600;
 let userAnswers = [];
+let subject = null;
 
-// Получаем параметры из URL — subject (тема) и count (кол-во вопросов)
+// URL パラメータ取得
 const params = new URLSearchParams(window.location.search);
-const subject = params.get('subject');
-const count = parseInt(params.get('count')) || 200; // по умолчанию 6 вопросов
+subject = params.get('subject') || "文法";
 
-// Загружаем вопросы из JSON по выбранной теме
-if (subject) {
+// 初期ダイアログ設定
+window.onload = () => {
+  document.getElementById("start-settings-modal").style.display = "flex";
+  document.getElementById("test-title").textContent = "日本語オンラインテスト： " + subject;
+};
+
+// テーマ切り替え
+document.addEventListener('DOMContentLoaded', () => {
+  const themeButton = document.getElementById('toggle-theme');
+  const savedTheme = localStorage.getItem('theme');
+  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+  if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
+    document.body.classList.add('dark-mode');
+    themeButton.textContent = '☀️';
+  }
+
+  themeButton.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    const isDark = document.body.classList.contains('dark-mode');
+    themeButton.textContent = isDark ? '☀️' : '🌙';
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+  });
+});
+
+// Начало теста
+document.getElementById("start-test-btn").addEventListener("click", () => {
+  const count = parseInt(document.getElementById("question-count").value) || 20;
+  const time = parseInt(document.getElementById("time-limit").value) || 60;
+  timeLeft = time * 60;
+
   fetch('questions.json')
     .then(res => res.json())
     .then(data => {
-      // Перемешиваем и берем только нужное количество вопросов
-      questions = shuffleArray(data[subject]).slice(0, count);
-      displayQuestions();   // отображаем вопросы
-      startTimer();         // запускаем таймер
-      document.getElementById("test-title").textContent = "日本語オンラインテスト： " + subject;
+      questions = shuffleArray(data[subject] || []).slice(0, count);
+      displayQuestions();
+      startTimer();
+      document.getElementById("start-settings-modal").style.display = "none";
     });
-}
+});
 
-// Отображение вопросов и вариантов
+// Вопросы
 function displayQuestions() {
   const container = document.getElementById("questions-container");
+  container.innerHTML = '';
 
   questions.forEach((q, index) => {
     const div = document.createElement('div');
     div.className = 'question';
-
-    // Заголовок вопроса
     let html = `<p><strong>${index + 1}. ${q.question}</strong></p>`;
 
-    // Если есть изображение вопроса
     if (q.image) {
       html += `<img src="${q.image}" alt="question image" style="max-width: 300px;"><br>`;
     }
 
-    // Обрабатываем варианты — могут быть текстом или изображением
-    const options = shuffleArray(q.options.map((opt, i) => {
-      return typeof opt === 'string'
-        ? { text: opt, index: i }
-        : { ...opt, index: i }; // если opt — объект с text/image
-    }));
+    const options = shuffleArray(q.options.map((opt, i) =>
+      typeof opt === 'string' ? { text: opt, index: i } : { ...opt, index: i }
+    ));
 
-    // Создаем HTML для каждого варианта
     options.forEach(opt => {
       const id = `q${index}_o${opt.index}`;
       html += `<label><input type="radio" name="q${index}" value="${opt.index}">`;
-
-      if (opt.image) {
-        html += ` <img src="${opt.image}" alt="option image" style="max-width: 150px;">`;
-      } else {
-        html += ` ${opt.text}`;
-      }
-
+      html += opt.image
+        ? ` <img src="${opt.image}" alt="option image" style="max-width: 150px;">`
+        : ` ${opt.text}`;
       html += `</label><br>`;
     });
 
@@ -64,12 +81,7 @@ function displayQuestions() {
   });
 }
 
-// Перемешивание массива (вопросов или вариантов)
-function shuffleArray(arr) {
-  return arr.sort(() => Math.random() - 0.5);
-}
-
-// Запуск таймера
+// Таймер
 function startTimer() {
   const timerElem = document.getElementById("timer");
   timer = setInterval(() => {
@@ -83,14 +95,45 @@ function startTimer() {
   }, 1000);
 }
 
-// Обработка отправки теста
+// Перемешивание
+function shuffleArray(arr) {
+  return arr.sort(() => Math.random() - 0.5);
+}
+
+// Подтверждение завершения
+document.getElementById("stop_test").addEventListener("click", () => {
+  document.getElementById("confirm-end-modal").style.display = "flex";
+});
+
+document.getElementById("confirm-end-yes").addEventListener("click", () => {
+  document.getElementById("confirm-end-modal").style.display = "none";
+  submitTest();
+});
+
+document.getElementById("confirm-end-no").addEventListener("click", () => {
+  document.getElementById("confirm-end-modal").style.display = "none";
+});
+
+// Подтверждение выхода
+document.getElementById("back_button").addEventListener("click", () => {
+  document.getElementById("confirm-exit-modal").style.display = "flex";
+});
+
+document.getElementById("confirm-exit-yes").addEventListener("click", () => {
+  window.location.href = 'index.html';
+});
+
+document.getElementById("confirm-exit-no").addEventListener("click", () => {
+  document.getElementById("confirm-exit-modal").style.display = "none";
+});
+
+// Проверка
 function submitTest() {
   clearInterval(timer);
   const allQuestions = document.querySelectorAll('.question');
   let correctCount = 0;
   userAnswers = [];
 
-  // Проверяем каждый вопрос
   questions.forEach((q, i) => {
     const selected = document.querySelector(`input[name="q${i}"]:checked`);
     const selectedIndex = selected ? parseInt(selected.value) : -1;
@@ -101,10 +144,7 @@ function submitTest() {
       const optIndex = parseInt(opt.value);
       const label = opt.parentElement;
 
-      if (optIndex === q.answer) {
-        label.classList.add('correct-answer');
-      }
-
+      if (optIndex === q.answer) label.classList.add('correct-answer');
       if (opt.checked && optIndex === q.answer) {
         correctCount++;
         label.classList.add('correct');
@@ -116,31 +156,7 @@ function submitTest() {
     });
   });
 
-  // Показываем результат
   const result = document.createElement('p');
   result.innerHTML = `<strong>正解: ${questions.length} 点中 ${correctCount}点</strong>`;
   document.getElementById("questions-container").appendChild(result);
-
-  // Сравнение ответов
-  displayAnswerComparison();
 }
-
-document.addEventListener('DOMContentLoaded', () => {
-  const themeButton = document.getElementById('toggle-theme');
-  const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
-
-  // Установить тему из localStorage или по умолчанию
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-    document.body.classList.add('dark-mode');
-    themeButton.textContent = '☀️'; //\u2600
-  }
-
-  themeButton.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-    const isDark = document.body.classList.contains('dark-mode');
-
-    themeButton.textContent = isDark ? '☀️' : '🌙'; //\u2600   \u263C
-    localStorage.setItem('theme', isDark ? 'dark' : 'light');
-  });
-});
