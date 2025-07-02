@@ -22,6 +22,26 @@ body {
   z-index: 10;
 }
 
+.wrapper {
+  overflow: hidden; /* Скрывает текст, выходящий за пределы */
+  /*width: 100%; /* Задаем ширину контейнера */
+  white-space: nowrap; /* Предотвращает перенос текста */
+}
+
+.moving-text {
+  display: inline-block; /* Делает текст блочным элементом */
+  animation: moveText 7s linear infinite; /* Применяем анимацию */
+}
+
+@keyframes moveText {
+  0% {
+    transform: translateX(-100%); /* Начальное положение - за пределами */
+  }
+  100% {
+    transform: translateX(100%); /* Конечное положение - за пределами */
+  }
+}
+
 .titul {
   white-space: nowrap;
   overflow: hidden;
