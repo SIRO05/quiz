@@ -574,7 +574,7 @@ function updateTimer() {
   time--;
   const minutes = String(Math.floor(time / 60)).padStart(2, '0');
   const seconds = String(time % 60).padStart(2, '0');
-  document.getElementById("timer").textContent = `${minutes}:${seconds}`;
+  document.getElementById("timer").textContent = `⏱ ${minutes}:${seconds}`;
 }
 
 function finishTest() {

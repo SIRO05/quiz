@@ -1,0 +1,182 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  transition: background 0.3s, color 0.3s;
+}
+
+body.light {
+  background: #f0f0f0;
+  color: #111;
+}
+
+body.dark {
+  background: #121212;
+  color: #f5f5f5;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #4a90e2;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 999;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+#themeToggle {
+  font-size: 20px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: white;
+}
+
+.container {
+  max-width: 800px;
+  margin: 100px auto 120px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+body.dark .container {
+  background: #1e1e1e;
+}
+
+.hidden {
+  display: none;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #4a90e2;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.class-block {
+  padding: 20px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin: 15px 0;
+}
+
+.bottom-bar {
+  background-color: var(--header-bg);
+  color: var(--header-text);
+}
+
+/* ==== Light Theme (default) ==== */
+:root {
+  --background: #fff;
+  --text-color: #000;
+  --container-bg: rgba(255, 255, 255, 0.7);
+  --question-bg: #f9f9f9;
+  --header-bg: #004080;
+  --header-text: #fff;
+  --button-bg: #0780e3;
+  --button-text: #fff;
+  --select_choice-bg1: #ddd;
+  --select_choice-bg2: #efefef;
+  --select_choice-color: #000;
+}
+
+/* ==== Dark Theme Custom ==== */
+body.dark-mode {
+  --background: #000;                  /* Главный фон — черный */
+  --text-color: #fff;                  /* Основной текст — белый */
+  --container-bg: rgba(0, 0, 0, 0.7);               /* Контейнер тестов — черный */
+  --question-bg: #151515;              /* Вопросы — черные */
+  --header-bg: #2e003e;                /* Темно-пурпурный верх/низ */
+  --header-text: #fff;
+  --button-bg: #ba55d3;                /* Светло-пурпурный кнопки */
+  --button-text: #fff;
+  --select_choice-bg1: #555;
+  --select_choice-bg2: #151515;
+  --select_choice-color: #fff;
+}
+
+/* Кнопки */
+#stop_test,
+#back_button,
+#toggle-theme {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  padding: 7px 20px;
+  font-size: 13px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* ==== Light Theme Background Image ==== */
+body {
+  background-image: url("./front_photo/front_photo.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* ==== Dark Theme Background Image ==== */
+body.dark-mode {
+  background-image: url("./front_photo/front_photo_dark.jpg"); /* Укажите здесь нужное изображение для темной темы */
+}
+
+body {
+  transition: background-image 0.6s ease-in-out, background-color 0.3s ease;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background-image: url("./front_photo/front_photo.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  opacity: 1;
+  transition: opacity 0.8s ease-in-out;
+  pointer-events: none;
+}
+
+body.dark-mode::before {
+  background-image: url("./front_photo/front_photo_dark.jpg");
+  opacity: 1;
+}

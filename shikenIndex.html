@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="./logo/ssr_logo.jpg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>試験テスト</title>
+  <link rel="stylesheet" href="./style/shikenStyle.css" />
+</head>
+<body class="light">
+
+  <header>
+    <h1>試験テスト</h1>
+    <button id="themeToggle">🌙</button>
+  </header>
+
+  <main class="container" id="user-form">
+    <h2>データを入力</h2>
+    <input type="text" id="username" placeholder="名前" />
+    <button onclick="startTest()">テストを開始する</button>
+  </main>
+  <!-- <div class="bottom-bar">
+    <button id="stop_test">完了</button>
+    <button id="back_button">戻る</button>
+  </div> -->
+  <main class="container hidden" id="test-section">
+    <form id="test-form"></form>
+    <div class="footer">
+      <button onclick="confirmExit()">⟵ В меню</button>
+      <div id="timer">⏱ <span id="time">00:00</span> сек</div>
+      <button type="button" onclick="confirmSubmit()">完了</button>
+    </div>
+  </main>
+
+  <main class="container hidden" id="result-section">
+    <h2>Результат</h2>
+    <p id="score-result"></p>
+    <button onclick="location.reload()">Пройти заново</button>
+  </main>
+
+  <script src="./js/shikenScript.js"></script>
+</body>
+</html>
