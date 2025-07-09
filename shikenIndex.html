@@ -11,31 +11,27 @@
 
   <header>
     <h1>試験テスト</h1>
-    <button id="themeToggle">🌙</button>
+    <button id="themeToggle" style="margin-left: auto; margin-right: 20px; padding: 8px 12px; border: none; border-radius: 5px; cursor: pointer;">☀️</button> <!--☼-->
   </header>
 
   <main class="container" id="user-form">
     <h2>データを入力</h2>
-    <input type="text" id="username" placeholder="名前" />
+    <input type="text" id="username" placeholder="  名前" />
     <button onclick="startTest()">テストを開始する</button>
   </main>
-  <!-- <div class="bottom-bar">
-    <button id="stop_test">完了</button>
-    <button id="back_button">戻る</button>
-  </div> -->
-  <main class="container hidden" id="test-section">
+    <main class="container hidden" id="test-section">
     <form id="test-form"></form>
     <div class="footer">
-      <button onclick="confirmExit()">⟵ В меню</button>
-      <div id="timer">⏱ <span id="time">00:00</span> сек</div>
+      <button onclick="confirmExit()">メインメニューへ</button>
+      <div id="timer">⏱ <span id="time">00:00</span></div>
       <button type="button" onclick="confirmSubmit()">完了</button>
     </div>
   </main>
 
   <main class="container hidden" id="result-section">
-    <h2>Результат</h2>
+    <h2>結果</h2>
     <p id="score-result"></p>
-    <button onclick="location.reload()">Пройти заново</button>
+    <button onclick="location.reload()">テストを再度開始する</button>
   </main>
 
   <script src="./js/shikenScript.js"></script>

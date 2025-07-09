@@ -166,9 +166,6 @@ body {
   color: var(--header-text);
 }
 
-
-
-
 /* ==== Light Theme (default) ==== */
 :root {
   --background: #ffffff;
@@ -235,7 +232,7 @@ body {
   cursor: pointer;
 }
 
-/* ==== Light Theme Background Image ==== */
+/* ==== Light Theme Background Image ==== */  
 body {
   background-image: url("./front_photo/front_photo.jpg");
   background-size: cover;
