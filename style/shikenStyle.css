@@ -101,8 +101,8 @@ input[type="text"] {
 }
 
 button {
-  padding: 5px 10px;
-  font-size: 16px;
+  padding: 7px 20px;
+  font-size: 13px;
   border: none;
   border-radius: 5px;
   background-color: var(--button-bg);
@@ -117,11 +117,18 @@ button {
   right: 0;
   background: var(--header-bg);
   color: var(--header-text);
-  padding: 10px 20px;
+  padding: 5px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   z-index: 10;
+}
+
+#timer {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 18px;
+  color: white;
 }
 
 .class-block {
