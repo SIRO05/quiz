@@ -10,15 +10,16 @@
 <body class="light">
 
   <header>
-    <h1>試験テスト</h1>
+    <h1 class="moving-text">日本語オンラインテスト： 試験</h1>
     <button id="themeToggle" style="margin-left: auto; margin-right: 20px; padding: 8px 12px; border: none; border-radius: 5px; cursor: pointer;">☀️</button> <!--☼-->
   </header>
+    <main class="container" id="user-form" style="position: relative; min-height: 160px;">
+      <h2>データを入力</h2>
+      <input type="text" id="username" placeholder="  名前" />
 
-  <main class="container" id="user-form">
-    <h2>データを入力</h2>
-    <input type="text" id="username" placeholder="  名前" />
-    <button onclick="startTest()">テストを開始する</button>
-  </main>
+      <button onclick="goToMainMenu()" class="bottom-left">メニューに戻る</button>
+      <button id="startButton" onclick="startTest()" class="bottom-right">テストを開始する</button>
+    </main>
     <main class="container hidden" id="test-section">
     <form id="test-form"></form>
     <div class="footer">
@@ -33,7 +34,13 @@
     <p id="score-result"></p>
     <button onclick="location.reload()">テストを再度開始する</button>
   </main>
-
+  <div id="confirm-modal" class="modal-overlay hidden">
+  <div class="modal-content">
+    <p id="confirm-text">メッセージ</p>
+    <button id="confirm-yes">はい</button>
+    <button id="confirm-no">いいえ</button>
+  </div>
+</div>
   <script src="./js/shikenScript.js"></script>
 </body>
 </html>

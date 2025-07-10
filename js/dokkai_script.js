@@ -1,6 +1,6 @@
 const photoTests = [
   {
-    image: "./dokkai_photo/1.png",
+    image: "./dokkai_photo/01.png",
     questions: [
         {
         text: "19",
@@ -30,7 +30,7 @@ const photoTests = [
     ]
     },
     {
-    image: "./dokkai_photo/2.png",
+    image: "./dokkai_photo/02.png",
     questions: [
         {
         text: "19",
@@ -60,7 +60,7 @@ const photoTests = [
     ]
     },
     {
-    image: "./dokkai_photo/3.png",
+    image: "./dokkai_photo/03.png",
     questions: [
         {
         text: "19a/b",
@@ -90,7 +90,7 @@ const photoTests = [
     ]
     },
     {
-    image: "./dokkai_photo/4.png",
+    image: "./dokkai_photo/04.png",
     questions: [
         {
         text: "19",
@@ -120,7 +120,7 @@ const photoTests = [
     ]
     },
     {
-    image: "./dokkai_photo/5.png",
+    image: "./dokkai_photo/05.png",
     questions: [
         {
         text: "19",
@@ -150,7 +150,7 @@ const photoTests = [
     ]
     },
     {
-    image: "./dokkai_photo/6.png",
+    image: "./dokkai_photo/06.png",
     questions: [
         {
         text: "19",
@@ -180,7 +180,7 @@ const photoTests = [
     ]
     },
     {
-    image: "./dokkai_photo/7.png",
+    image: "./dokkai_photo/07.png",
     questions: [
         {
         text: "19",
@@ -210,7 +210,7 @@ const photoTests = [
     ]
     },
     {
-    image: "./dokkai_photo/8.png",
+    image: "./dokkai_photo/08.png",
     questions: [
         {
         text: "19a/b",
@@ -240,7 +240,7 @@ const photoTests = [
     ]
     },
     {
-    image: "./dokkai_photo/9.png",
+    image: "./dokkai_photo/09.png",
     questions: [
         {
         text: "19",
@@ -270,7 +270,7 @@ const photoTests = [
     ]
     },
     {
-    image: "./dokkai_photo/10.png",
+    image: "./dokkai_photo/010.png",
     questions: [
         {
         text: "19",
@@ -300,7 +300,7 @@ const photoTests = [
     ]
     },
     {
-    image: "./dokkai_photo/11.png",
+    image: "./dokkai_photo/011.png",
     questions: [
         {
         text: "19",
@@ -330,7 +330,7 @@ const photoTests = [
     ]
     },
     {
-    image: "./dokkai_photo/12.png",
+    image: "./dokkai_photo/012.png",
     questions: [
         {
         text: "19",
@@ -360,7 +360,7 @@ const photoTests = [
     ]
     },
     {
-    image: "./dokkai_photo/13.png",
+    image: "./dokkai_photo/013.png",
     questions: [
         {
         text: "19",
@@ -390,7 +390,7 @@ const photoTests = [
     ]
     },
     {
-    image: "./dokkai_photo/14.png",
+    image: "./dokkai_photo/014.png",
     questions: [
         {
         text: "19",
@@ -420,7 +420,7 @@ const photoTests = [
     ]
     },
     {
-    image: "./dokkai_photo/15.png",
+    image: "./dokkai_photo/015.png",
     questions: [
         {
         text: "19",
@@ -474,6 +474,54 @@ document.addEventListener('DOMContentLoaded', () => {
     startTest();
   });
 
+  // ✅ Кнопка キャンセル (отмена теста)
+document.getElementById("cancelBtn").addEventListener("click", () => {
+  window.location.href = "index.html";
+});
+
+  // Всплывающее окно подтверждения
+
+function showConfirm(message, callback) {
+  const modal = document.getElementById("customConfirm");
+  const msgEl = document.getElementById("confirmMessage");
+  const yesBtn = document.getElementById("confirmYes");
+  const noBtn = document.getElementById("confirmNo");
+
+  msgEl.textContent = message;
+  modal.style.display = "flex";
+
+  const cleanup = () => {
+    modal.style.display = "none";
+    yesBtn.onclick = null;
+    noBtn.onclick = null;
+  };
+
+  yesBtn.onclick = () => {
+    cleanup();
+    callback(true);
+  };
+
+  noBtn.onclick = () => {
+    cleanup();
+    callback(false);
+  };
+}
+
+  document.getElementById("backToMenuBtn").addEventListener("click", () => {
+        showConfirm("メインメニューに戻りますか。", (result) => {
+      if (result) window.location.href = "index.html";
+    });
+  });
+
+  document.getElementById("finishBtn").addEventListener("click", () => {
+        showConfirm("テストを終了しますか。", (result) => {
+      if (result) finishTest();
+    });
+  });
+});
+
+// Светлая - тёмная тема
+
   const themeButton = document.getElementById('toggle-theme');
   const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
 
@@ -489,19 +537,6 @@ document.addEventListener('DOMContentLoaded', () => {
     themeButton.textContent = isDark ? '☀️' : '🌙';
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
   });
-
-  document.getElementById("backToMenuBtn").addEventListener("click", () => {
-    if (confirm("本当にメニューに戻りますか？（進行状況は失われます）")) {
-      window.location.href = "index.html";
-    }
-  });
-
-  document.getElementById("finishBtn").addEventListener("click", () => {
-    if (confirm("テストを終了してもよろしいですか？")) {
-      finishTest();
-    }
-  });
-});
 
 
 function startTest() {

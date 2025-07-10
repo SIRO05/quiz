@@ -61,7 +61,6 @@ body {
 
 .question-set img {
   width: 100%;
-  max-height: 555px;
   object-fit: contain;
   margin-bottom: 20px;
   border-radius: 10px;
@@ -155,14 +154,19 @@ body {
   padding-top: 1px;
 }
 
-.header,
 .bottom-bar {
   background-color: var(--header-bg);
   color: var(--header-text);
 }
 
 #toggle-theme {
-  background-color: transparent;
+  font-size: 20px;
+  background: transparent;
+  border: none;
+  padding: 7px 20px;
+  font-size: 13px;
+  border-radius: 5px;
+  cursor: pointer;
   color: var(--header-text);
 }
 
@@ -179,6 +183,8 @@ body {
   --answer-text: #000000;
   --answer-bg: #e5e5e5;
   --choose-bg: #e5e5e5;
+  --modalbutton-bg: #ef1e1e;
+  --modal1button-bg: #0e9919;
 }
 
 /* ==== Dark Theme Custom ==== */
@@ -194,6 +200,8 @@ body.dark-mode {
   --answer-text: #ffffff;
   --answer-bg: rgba(0, 0, 0, 0.5);
   --choose-bg: #151515;
+  --modalbutton-bg: #ef1e1e;
+  --modal1button-bg: #0e7e17;
 }
 
 /* Применение переменных */
@@ -221,8 +229,7 @@ body {
 
 /* Кнопки */
 #stop_test,
-#back_button,
-#toggle-theme {
+#back_button {
   background-color: var(--button-bg);
   color: var(--button-text);
   border: none;
@@ -233,13 +240,6 @@ body {
 }
 
 /* ==== Light Theme Background Image ==== */  
-body {
-  background-image: url("./front_photo/front_photo.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-}
-
 /* ==== Dark Theme Background Image ==== */
 body.dark-mode {
   background-image: url("./front_photo/front_photo_dark.jpg"); /* Укажи здесь нужное изображение для темной темы */
@@ -292,7 +292,7 @@ body.dark-mode::before {
   padding: 30px;
   border-radius: 10px;
   text-align: center;
-  width: 300px;
+  width: 150px;
   background-color: var(--container-bg);
   color: var(--text-color);
 }
@@ -303,8 +303,17 @@ body.dark-mode::before {
   padding: 8px;
   font-size: 14px;
   border-radius: 5px;
+  border: none;
   color: var(--answer-text);
   background: var(--choose-bg);
+}
+
+#startBtn {
+  background-color: var(--modal1button-bg);
+}
+
+#cancelBtn {
+  background-color: var(--modalbutton-bg);
 }
 
 /* Кнопки в нижней панели */
@@ -322,4 +331,62 @@ body.dark-mode::before {
 .bottom-button.left {
   position: absolute;
   left: 5px;
+}
+
+/* Плавный переход темных и светлых тем */
+body,
+body::before,
+.container,
+.question,
+.choice_container,
+.header,
+.bottom-bar,
+#stop_test,
+#back_button,
+#toggle-theme,
+.modal-content,
+.modal-content button {
+  transition:
+    background-color 0.4s ease,
+    color 0.4s ease,
+    background-image 0.6s ease-in-out,
+    opacity 0.6s ease-in-out;
+}
+
+/* Обеспечиваем плавный переход фонового изображения */
+body::before {
+  transition:
+    background-image 0.8s ease-in-out,
+    opacity 0.8s ease-in-out;
+}
+
+/* Custom confirm modal style */
+.confirm-content {
+  background-color: var(--container-bg);
+  color: var(--text-color);
+  padding: 10px 5px;
+  border-radius: 10px;
+  max-width: 350px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.confirm-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.confirm-buttons button {
+  margin: 10px;
+  padding: 8px 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.confirm-buttons button:hover {
+  filter: brightness(1.1);
 }

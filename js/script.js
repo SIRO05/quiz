@@ -39,7 +39,7 @@ document.getElementById("start-test-btn").addEventListener("click", () => {
   const time = parseInt(document.getElementById("time-limit").value) || 60;
   timeLeft = time * 60;
 
-  fetch('questions.json')
+  fetch('./json/questions.json')
     .then(res => res.json())
     .then(data => {
       questions = shuffleArray(data[subject] || []).slice(0, count);
@@ -125,6 +125,11 @@ document.getElementById("confirm-exit-yes").addEventListener("click", () => {
 
 document.getElementById("confirm-exit-no").addEventListener("click", () => {
   document.getElementById("confirm-exit-modal").style.display = "none";
+});
+
+// ✅ Кнопка キャンセル (отмена теста)
+document.getElementById("cancel-test-btn").addEventListener("click", () => {
+  window.location.href = "index.html";
 });
 
 // Проверка

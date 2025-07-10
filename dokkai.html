@@ -39,6 +39,7 @@
       </select>
     </label>
     <button id="startBtn">テストを開始</button>
+    <button id="cancelBtn">キャンセル</button>
   </div>
 </div>
 
@@ -51,6 +52,18 @@
     <button class="finish-button" id="finishBtn">完了</button>
     <button id="backToMenuBtn" class="bottom-button left">戻る</button> <!--🏠 メニュー-->
   </div>
+
+  <!-- Custom Confirm Modal -->
+  <div id="customConfirm" class="modal" style="display: none;">
+    <div class="modal-content confirm-content">
+      <p id="confirmMessage">確認メッセージ</p>
+      <div class="confirm-buttons">
+        <button id="confirmYes">はい</button>
+        <button id="confirmNo">いいえ</button>
+      </div>
+    </div>
+  </div>
+
 
   <script src="./js/dokkai_script.js"></script>
 </body>
