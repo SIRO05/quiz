@@ -4,20 +4,20 @@
   <meta charset="UTF-8" />
   <link rel="icon" href="./logo/ssr_logo.jpg">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>日本語オンラインテスト | 文法</title>
+  <title>日本語オンラインテスト | 文字・語彙</title>
   <link rel="stylesheet" href="./style/style.css" />
 </head>
 <body>
 <header>
   <div class="header">
     <div class="wrapper">
-      <!-- <h1 class="moving-text">日本語オンラインテスト： 文法</h1> -->
+      <!-- <h1 class="moving-text">日本語オンラインテスト： 文字・語彙</h1> -->
     </div>
-    <p><h1 class="test-title">日本語オンラインテスト： 文法</h1></p>
+    <p><h1 class="test-title">日本語オンラインテスト： 文字・語彙</h1></p>
     <button id="toggle-theme" style="margin-left: auto; margin-right: 20px; padding: 8px 12px; border: none; border-radius: 5px; cursor: pointer;">☀️</button> <!--☼-->
   </div>
   <div class="bottom-bar">
-    <span id="timer">⏱ 00:00</span>
+    <span id="timer">⏱ 00:00</span> <!--残り時間:-->
     <button id="stop_test">完了</button>
     <button id="back_button">戻る</button>
   </div>
@@ -33,9 +33,9 @@
 <!-- ✅ Модальное окно: настройка теста -->
 <div id="start-settings-modal" class="modal-overlay">
   <div class="modal-content">
-    <h3 id="startTestBtn">テストの設定</h3>
+    <h3>テストの設定</h3>
     <label>問題の数:
-      <input type="number" id="question-count" min="1" max="200" value="20" />
+      <input type="number" id="question-count" min="1" max="525" value="20" />
     </label><br><br>
     <label>制限時間（分）:
       <input type="number" id="time-limit" min="1" max="180" value="60" />
@@ -63,6 +63,6 @@
   </div>
 </div>
 
-<script src="./js/script.js"></script>
+<script src="./js/n2script.js"></script>
 </body>
 </html>

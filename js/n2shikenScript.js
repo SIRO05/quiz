@@ -56,7 +56,7 @@ async function startTest() {
 
 // --- ЗАГРУЗКА JSON ---
 async function loadQuestions() {
-  const res = await fetch("./json/shikenQuestions.json");
+  const res = await fetch("./json/n2shikenQuestions.json");
   questionsData = await res.json();
 }
 
