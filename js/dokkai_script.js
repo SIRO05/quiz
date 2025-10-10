@@ -616,7 +616,7 @@ function finishTest() {
   clearInterval(interval);
   document.getElementById("testContainer").innerHTML = `
     <h2>テストが完了しました！</h2>
-    <p>${selectedTests.length * 6} 問中 ${score} 問正解しました。</p>
+    <p>${selectedTests.length * 5} 問中 ${score} 問正解しました。</p>
   `;
 }
 
