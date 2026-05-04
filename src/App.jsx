@@ -1,9 +1,9 @@
-import { useState } from 'react'
+import AppRouter from "./router"
 
 function App() {
   return (
     <>
-        <h1 className="text-3xl font-bold underline">start</h1>
+        <AppRouter />
     </>
   )
 }
