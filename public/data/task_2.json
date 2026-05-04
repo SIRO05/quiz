@@ -1,0 +1,23 @@
+{
+    "description": "mondai ni",
+    "grade": 1,
+    "tasks": [
+        {
+            "unit": 1,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "節約生活に疲れた消費者に安いだけの商品はあきられてきた。",
+                    "textHighlight": { "start": 20, "end": 25 },
+                    "options": [
+                        { "id": 1, "text": "飯きられて" },
+                        { "id": 2, "text": "飽きられて" },
+                        { "id": 3, "text": "館きられて" },
+                        { "id": 4, "text": "飲きられて" }
+                    ],
+                    "answer": 2
+                }
+            ]
+        }
+    ]
+}

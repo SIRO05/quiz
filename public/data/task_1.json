@@ -1,0 +1,23 @@
+{
+    "description": "mondai ichi",
+    "grade": 1,
+    "tasks": [
+        {
+            "unit": 1,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "彼女は子どものとき、行儀作法を家庭で厳しく教え込まれた。",
+                    "textHighlight": { "start": 10, "end": 12 },
+                    "options": [
+                        { "id": 1, "text": "こうぎ" },
+                        { "id": 2, "text": "こうき" },
+                        { "id": 3, "text": "ぎょうぎ" },
+                        { "id": 4, "text": "ぎょうき" }
+                    ],
+                    "answer": 3
+                }
+            ]
+        }
+    ]
+}
