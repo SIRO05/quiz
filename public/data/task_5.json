@@ -1,0 +1,981 @@
+{
+    "description": "mondai go",
+    "grade": 1,
+    "tasks": [
+        {
+            "unit": 1,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "この私鉄は次の駅でJRと連絡している。",
+                    "textHighlight": { "start": 12, "end": 18 },
+                    "options": [
+                        { "id": 1, "text": "乗り換えになる" },
+                        { "id": 2, "text": "交差している" },
+                        { "id": 3, "text": "一体化している" },
+                        { "id": 4, "text": "つながっている" }
+                    ],
+                    "answer": 4
+                },
+                {
+                    "id": 2,
+                    "text": "選挙の予想が外れた。",
+                    "textHighlight": { "start": 6, "end": 9 },
+                    "options": [
+                        { "id": 1, "text": "騒がれた" },
+                        { "id": 2, "text": "おかしかった" },
+                        { "id": 3, "text": "当たらなかった" },
+                        { "id": 4, "text": "難しかった" }
+                    ],
+                    "answer": 3
+                },
+                {
+                    "id": 3,
+                    "text": "近道したのにかえって時間がかかった。",
+                    "textHighlight": { "start": 6, "end": 10 },
+                    "options": [
+                        { "id": 1, "text": "非常に" },
+                        { "id": 2, "text": "改めて" },
+                        { "id": 3, "text": "逆に" },
+                        { "id": 4, "text": "多少" }
+                    ],
+                    "answer": 3
+                },
+                {
+                    "id": 4,
+                    "text": "はっきり意見を申し上げるなら、その案には反対です。",
+                    "textHighlight": { "start": 0, "end": 4 },
+                    "options": [
+                        { "id": 1, "text": "率直に" },
+                        { "id": 2, "text": "適当に" },
+                        { "id": 3, "text": "簡単に" },
+                        { "id": 4, "text": "自由に" }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 5,
+                    "text": "上司が休日出勤して、部下の遅れた仕事をカバーした。",
+                    "textHighlight": { "start": 19, "end": 24 },
+                    "options": [
+                        { "id": 1, "text": "進めた" },
+                        { "id": 2, "text": "終わらせた" },
+                        { "id": 3, "text": "引き受けた。" },
+                        { "id": 4, "text": "補った" }
+                    ],
+                    "answer": 4
+                }
+            ]
+        },
+        {
+            "unit": 2,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "試合に負けた悔しさを味わった。",
+                    "textHighlight": { "start": 10, "end": 14 },
+                    "options": [
+                        { "id": 1, "text": "記録した" },
+                        { "id": 2, "text": "発表した" },
+                        { "id": 3, "text": "重視した" },
+                        { "id": 4, "text": "経験した" }
+                    ],
+                    "answer": 4
+                },
+                {
+                    "id": 2,
+                    "text": "旅先で偶然昔の友人に出会った。",
+                    "textHighlight": { "start": 3, "end": 5 },
+                    "options": [
+                        { "id": 1, "text": "約束通り" },
+                        { "id": 2, "text": "思いがけなく" },
+                        { "id": 3, "text": "確かに" },
+                        { "id": 4, "text": "都合よく" }
+                    ],
+                    "answer": 2
+                },
+                {
+                    "id": 3,
+                    "text": "工場の単調な作業にあきてきた。",
+                    "textHighlight": { "start": 3, "end": 6 },
+                    "options": [
+                        { "id": 1, "text": "変化がない" },
+                        { "id": 2, "text": "よく変わる" },
+                        { "id": 3, "text": "手間がかかる" },
+                        { "id": 4, "text": "休みがない" }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 4,
+                    "text": "負けて困っているところに、強力な味方が現われた。",
+                    "textHighlight": { "start": 13, "end": 16 },
+                    "options": [
+                        { "id": 1, "text": "のんびりした" },
+                        { "id": 2, "text": "予想しない" },
+                        { "id": 3, "text": "頼りになる" },
+                        { "id": 4, "text": "元気のよい" }
+                    ],
+                    "answer": 3
+                },
+                {
+                    "id": 5,
+                    "text": "彼はバイリンガルだ。",
+                    "textHighlight": { "start": 2, "end": 9 },
+                    "options": [
+                        { "id": 1, "text": "国際性がある" },
+                        { "id": 2, "text": "物知りだ" },
+                        { "id": 3, "text": "二カ国語を話す" },
+                        { "id": 4, "text": "二重国籍だ" }
+                    ],
+                    "answer": 3
+                }
+            ]
+        },
+        {
+            "unit": 3,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "姉はいらないものまでやたらに買い込んでしまう。",
+                    "textHighlight": { "start": 10, "end": 14 },
+                    "options": [
+                        { "id": 1, "text": "考えなしに" },
+                        { "id": 2, "text": "思いっきり" },
+                        { "id": 3, "text": "絶えず" },
+                        { "id": 4, "text": "大量に" }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 2,
+                    "text": "彼女は際のない人だ。",
+                    "textHighlight": { "start": 3, "end": 4 },
+                    "options": [
+                        { "id": 1, "text": "余裕" },
+                        { "id": 2, "text": "夢" },
+                        { "id": 3, "text": "油断" },
+                        { "id": 4, "text": "特徴" }
+                    ],
+                    "answer": 3
+                },
+                {
+                    "id": 3,
+                    "text": "新しい法案作りを慎重に進める。",
+                    "textHighlight": { "start": 8, "end": 11 },
+                    "options": [
+                        { "id": 1, "text": "容易に" },
+                        { "id": 2, "text": "計画的に" },
+                        { "id": 3, "text": "注意深く" },
+                        { "id": 4, "text": "素早く" }
+                    ],
+                    "answer": 3
+                },
+                {
+                    "id": 4,
+                    "text": "事故を起こした会社の社長はマスコミに叩かれた。",
+                    "textHighlight": { "start": 18, "end": 22 },
+                    "options": [
+                        { "id": 1, "text": "質問された" },
+                        { "id": 2, "text": "称賛された" },
+                        { "id": 3, "text": "注目された" },
+                        { "id": 4, "text": "非難された" }
+                    ],
+                    "answer": 4
+                },
+                {
+                    "id": 5,
+                    "text": "このギターは限定生産のレアなものだ。",
+                    "textHighlight": { "start": 11, "end": 14 },
+                    "options": [
+                        { "id": 1, "text": "新しい" },
+                        { "id": 2, "text": "めずらしい" },
+                        { "id": 3, "text": "高い" },
+                        { "id": 4, "text": "すばらしい" }
+                    ],
+                    "answer": 2
+                }
+            ]
+        },
+        {
+            "unit": 4,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "給料前の急な出費は痛い。",
+                    "textHighlight": { "start": 9, "end": 11 },
+                    "options": [
+                        { "id": 1, "text": "とても困る" },
+                        { "id": 2, "text": "予定が狂う" },
+                        { "id": 3, "text": "頭に来る" },
+                        { "id": 4, "text": "不安だ" }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 2,
+                    "text": "春先の低温が響き、野菜の値段が高くなった。",
+                    "textHighlight": { "start": 6, "end": 8 },
+                    "options": [
+                        { "id": 1, "text": "続いて" },
+                        { "id": 2, "text": "影響して" },
+                        { "id": 3, "text": "戻って" },
+                        { "id": 4, "text": "ひどくて" }
+                    ],
+                    "answer": 2
+                },
+                {
+                    "id": 3,
+                    "text": "自分の荷物はめいめいで気をつけてください。",
+                    "textHighlight": { "start": 6, "end": 11 },
+                    "options": [
+                        { "id": 1, "text": "毎回" },
+                        { "id": 2, "text": "お互いに" },
+                        { "id": 3, "text": "各自" },
+                        { "id": 4, "text": "常に" }
+                    ],
+                    "answer": 3
+                },
+                {
+                    "id": 4,
+                    "text": "女性の社会進出には子育てという大きな壁がある。",
+                    "textHighlight": { "start": 18, "end": 19 },
+                    "options": [
+                        { "id": 1, "text": "障害" },
+                        { "id": 2, "text": "仕事" },
+                        { "id": 3, "text": "苦労" },
+                        { "id": 4, "text": "心配" }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 5,
+                    "text": "オフはもっぱらテレビを見て過ごす。",
+                    "textHighlight": { "start": 0, "end": 2 },
+                    "options": [
+                        { "id": 1, "text": "週末" },
+                        { "id": 2, "text": "昼休み" },
+                        { "id": 3, "text": "祝日" },
+                        { "id": 4, "text": "休みの日" }
+                    ],
+                    "answer": 4
+                }
+            ]
+        },
+        {
+            "unit": 5,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "ハイキングは雨で流れた。",
+                    "textHighlight": { "start": 8, "end": 11 },
+                    "options": [
+                        { "id": 1, "text": "延期になった" },
+                        { "id": 2, "text": "中止になった" },
+                        { "id": 3, "text": "見直された" },
+                        { "id": 4, "text": "変更になった" }
+                    ],
+                    "answer": 2
+                },
+                {
+                    "id": 2,
+                    "text": "空がにわかに暗くなり、大粒の雨が降り出した。",
+                    "textHighlight": { "start": 2, "end": 6 },
+                    "options": [
+                        { "id": 1, "text": "すっかり" },
+                        { "id": 2, "text": "ぼんやり" },
+                        { "id": 3, "text": "くっきり" },
+                        { "id": 4, "text": "いきなり" }
+                    ],
+                    "answer": 4
+                },
+                {
+                    "id": 3,
+                    "text": "彼女はいつも覚めた目で世間を見ている。",
+                    "textHighlight": { "start": 6, "end": 9 },
+                    "options": [
+                        { "id": 1, "text": "冷静な" },
+                        { "id": 2, "text": "鋭い" },
+                        { "id": 3, "text": "確かな" },
+                        { "id": 4, "text": "温かい" }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 4,
+                    "text": "友人に強引にパーティーに連れて行かれた。",
+                    "textHighlight": { "start": 3, "end": 6 },
+                    "options": [
+                        { "id": 1, "text": "むりやり" },
+                        { "id": 2, "text": "こっそり" },
+                        { "id": 3, "text": "しきりに" },
+                        { "id": 4, "text": "わざわざ" }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 5,
+                    "text": "先輩は私の仕事をサポートしてくれる。",
+                    "textHighlight": { "start": 8, "end": 14 },
+                    "options": [
+                        { "id": 1, "text": "理解して" },
+                        { "id": 2, "text": "評価して" },
+                        { "id": 3, "text": "応援して" },
+                        { "id": 4, "text": "仕上げて" }
+                    ],
+                    "answer": 3
+                }
+            ]
+        },
+        {
+            "unit": 6,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "担当者が戻りましたら、折り返し電話を差し上げます。",
+                    "textHighlight": { "start": 11, "end": 15 },
+                    "options": [
+                        { "id": 1, "text": "すぐに" },
+                        { "id": 2, "text": "明日までに" },
+                        { "id": 3, "text": "必ず" },
+                        { "id": 4, "text": "取りあえず" }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 2,
+                    "text": "あの教授の話はすぐそれる。",
+                    "textHighlight": { "start": 9, "end": 12 },
+                    "options": [
+                        { "id": 1, "text": "出版する" },
+                        { "id": 2, "text": "翻訳する" },
+                        { "id": 3, "text": "脱線する" },
+                        { "id": 4, "text": "延長する" }
+                    ],
+                    "answer": 3
+                },
+                {
+                    "id": 3,
+                    "text": "マラソン選手は、一気に坂を下った。",
+                    "textHighlight": { "start": 8, "end": 11 },
+                    "options": [
+                        { "id": 1, "text": "全速力で" },
+                        { "id": 2, "text": "たちまち" },
+                        { "id": 3, "text": "休まずに" },
+                        { "id": 4, "text": "なんとか" }
+                    ],
+                    "answer": 3
+                },
+                {
+                    "id": 4,
+                    "text": "そのニュースを聞いて父は苦い顔をした。",
+                    "textHighlight": { "start": 12, "end": 14 },
+                    "options": [
+                        { "id": 1, "text": "不愉快な" },
+                        { "id": 2, "text": "不安な" },
+                        { "id": 3, "text": "真剣な" },
+                        { "id": 4, "text": "得意な" }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 5,
+                    "text": "彼らの語学力はレベルアップしている。",
+                    "textHighlight": { "start": 7, "end": 13 },
+                    "options": [
+                        { "id": 1, "text": "低下" },
+                        { "id": 2, "text": "上達" },
+                        { "id": 3, "text": "信用" },
+                        { "id": 4, "text": "承知" }
+                    ],
+                    "answer": 2
+                }
+            ]
+        },
+        {
+            "unit": 7,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "ライバルは自信にあふれていた。",
+                    "textHighlight": { "start": 8, "end": 14 },
+                    "options": [
+                        { "id": 1, "text": "欠けていた" },
+                        { "id": 2, "text": "満ちていた" },
+                        { "id": 3, "text": "輝いていた" },
+                        { "id": 4, "text": "甘えていた" }
+                    ],
+                    "answer": 2
+                },
+                {
+                    "id": 2,
+                    "text": "事件の裏をこっそり調べる。",
+                    "textHighlight": { "start": 3, "end": 4 },
+                    "options": [
+                        { "id": 1, "text": "その後" },
+                        { "id": 2, "text": "犯人" },
+                        { "id": 3, "text": "隠れた事情" },
+                        { "id": 4, "text": "被害" }
+                    ],
+                    "answer": 3
+                },
+                {
+                    "id": 3,
+                    "text": "犯人はあの人です。現に私はこの目で見たんですから。",
+                    "textHighlight": { "start": 9, "end": 11 },
+                    "options": [
+                        { "id": 1, "text": "その場で" },
+                        { "id": 2, "text": "一瞬" },
+                        { "id": 3, "text": "本来" },
+                        { "id": 4, "text": "実際に" }
+                    ],
+                    "answer": 4
+                },
+                {
+                    "id": 4,
+                    "text": "先生が自ら手を取って生徒を指導した。",
+                    "textHighlight": { "start": 5, "end": 10 },
+                    "options": [
+                        { "id": 1, "text": "丁寧に" },
+                        { "id": 2, "text": "進んで" },
+                        { "id": 3, "text": "無理に" },
+                        { "id": 4, "text": "適切に" }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 5,
+                    "text": "システムのエラーで、大事なメールを送れなかった。",
+                    "textHighlight": { "start": 5, "end": 8 },
+                    "options": [
+                        { "id": 1, "text": "更新" },
+                        { "id": 2, "text": "誤り" },
+                        { "id": 3, "text": "破壊" },
+                        { "id": 4, "text": "変更" }
+                    ],
+                    "answer": 2
+                }
+            ]
+        },
+        {
+            "unit": 8,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "彼は信頼するに足りる人物だ。",
+                    "textHighlight": { "start": 7, "end": 10 },
+                    "options": [
+                        { "id": 1, "text": "不安な" },
+                        { "id": 2, "text": "十分な" },
+                        { "id": 3, "text": "危うい" },
+                        { "id": 4, "text": "問題の" }
+                    ],
+                    "answer": 2
+                },
+                {
+                    "id": 2,
+                    "text": "祭りに集まる観光客は、ざっと十万人だろう。",
+                    "textHighlight": { "start": 11, "end": 14 },
+                    "options": [
+                        { "id": 1, "text": "おおよそ" },
+                        { "id": 2, "text": "おそらく" },
+                        { "id": 3, "text": "少なくとも" },
+                        { "id": 4, "text": "多ければ" }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 3,
+                    "text": "その行動は法律に触れる。",
+                    "textHighlight": { "start": 8, "end": 11 },
+                    "options": [
+                        { "id": 1, "text": "よっている" },
+                        { "id": 2, "text": "基づく" },
+                        { "id": 3, "text": "違反する" },
+                        { "id": 4, "text": "合っている" }
+                    ],
+                    "answer": 3
+                },
+                {
+                    "id": 4,
+                    "text": "お寺のふすまの絵は架空の動物だ。",
+                    "textHighlight": { "start": 9, "end": 12 },
+                    "options": [
+                        { "id": 1, "text": "信仰上の" },
+                        { "id": 2, "text": "不思議な" },
+                        { "id": 3, "text": "特殊な" },
+                        { "id": 4, "text": "想像上の" }
+                    ],
+                    "answer": 4
+                },
+                {
+                    "id": 5,
+                    "text": "大学ごとに、その学校のカラーというものがある。",
+                    "textHighlight": { "start": 11, "end": 14 },
+                    "options": [
+                        { "id": 1, "text": "規則" },
+                        { "id": 2, "text": "特色" },
+                        { "id": 3, "text": "方針" },
+                        { "id": 4, "text": "伝統" }
+                    ],
+                    "answer": 2
+                }
+            ]
+        },
+        {
+            "unit": 9,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "彼は電話を切るとあわただしく部屋を出ていった。",
+                    "textHighlight": { "start": 8, "end": 14 },
+                    "options": [
+                        { "id": 1, "text": "さっさと" },
+                        { "id": 2, "text": "うろうろと" },
+                        { "id": 3, "text": "そうっと" },
+                        { "id": 4, "text": "ゆうゆうと" }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 2,
+                    "text": "語順をさかさまにして、表現を強調する。",
+                    "textHighlight": { "start": 3, "end": 8 },
+                    "options": [
+                        { "id": 1, "text": "変更" },
+                        { "id": 2, "text": "考慮" },
+                        { "id": 3, "text": "逆に" },
+                        { "id": 4, "text": "無視" }
+                    ],
+                    "answer": 3
+                },
+                {
+                    "id": 3,
+                    "text": "オリンピックの準備は、着々と進んでいる。",
+                    "textHighlight": { "start": 11, "end": 14 },
+                    "options": [
+                        { "id": 1, "text": "順調に" },
+                        { "id": 2, "text": "徐々に" },
+                        { "id": 3, "text": "急速に" },
+                        { "id": 4, "text": "意外に" }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 4,
+                    "text": "たかが風邪だと言って、甘く見てはいけません。",
+                    "textHighlight": { "start": 11, "end": 15 },
+                    "options": [
+                        { "id": 1, "text": "中断して" },
+                        { "id": 2, "text": "停止して" },
+                        { "id": 3, "text": "変更して" },
+                        { "id": 4, "text": "油断して" }
+                    ],
+                    "answer": 4
+                },
+                {
+                    "id": 5,
+                    "text": "最近のテレビドラマはマンネリ化している。",
+                    "textHighlight": { "start": 10, "end": 19 },
+                    "options": [
+                        { "id": 1, "text": "評判が悪い" },
+                        { "id": 2, "text": "新鮮味がない" },
+                        { "id": 3, "text": "人気がある" },
+                        { "id": 4, "text": "いい加減だ" }
+                    ],
+                    "answer": 2
+                }
+            ]
+        },
+        {
+            "unit": 10,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "ネットで最新のトピックを検索する。",
+                    "textHighlight": { "start": 7, "end": 11 },
+                    "options": [
+                        { "id": 1, "text": "課題" },
+                        { "id": 2, "text": "問題" },
+                        { "id": 3, "text": "例題" },
+                        { "id": 4, "text": "話題" }
+                    ],
+                    "answer": 4
+                },
+                {
+                    "id": 2,
+                    "text": "花火大会当日、あいにく雨が降り出してきた。",
+                    "textHighlight": { "start": 7, "end": 11 },
+                    "options": [
+                        { "id": 1, "text": "激しく" },
+                        { "id": 2, "text": "急に" },
+                        { "id": 3, "text": "運悪く" },
+                        { "id": 4, "text": "予想通り" }
+                    ],
+                    "answer": 3
+                },
+                {
+                    "id": 3,
+                    "text": "口のうまいあの男に担がれた。",
+                    "textHighlight": { "start": 9, "end": 13 },
+                    "options": [
+                        { "id": 1, "text": "だまされた" },
+                        { "id": 2, "text": "断られた" },
+                        { "id": 3, "text": "誘われた" },
+                        { "id": 4, "text": "馬鹿にされた" }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 4,
+                    "text": "あの人、ああ見えても根はまじめなんですよ。",
+                    "textHighlight": { "start": 10, "end": 11 },
+                    "options": [
+                        { "id": 1, "text": "仕事ぶり" },
+                        { "id": 2, "text": "普段" },
+                        { "id": 3, "text": "学習態度" },
+                        { "id": 4, "text": "性質" }
+                    ],
+                    "answer": 4
+                },
+                {
+                    "id": 5,
+                    "text": "結構なものをいただき、ありがとうございます。",
+                    "textHighlight": { "start": 0, "end": 3 },
+                    "options": [
+                        { "id": 1, "text": "めずらしい" },
+                        { "id": 2, "text": "すばらしい" },
+                        { "id": 3, "text": "おいしい" },
+                        { "id": 4, "text": "なつかしい" }
+                    ],
+                    "answer": 2
+                }
+            ]
+        },
+        {
+            "unit": 11,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "田中さんはこのごろ、一段ときれいになった。",
+                    "textHighlight": { "start": 10, "end": 13 },
+                    "options": [
+                        { "id": 1, "text": "急に" },
+                        { "id": 2, "text": "少しだけ" },
+                        { "id": 3, "text": "ますます" },
+                        { "id": 4, "text": "まあまあ" }
+                    ],
+                    "answer": 3
+                },
+                {
+                    "id": 2,
+                    "text": "彼はこのところ営業成績がふるわない。",
+                    "textHighlight": { "start": 12, "end": 17 },
+                    "options": [
+                        { "id": 1, "text": "上がった" },
+                        { "id": 2, "text": "落ちた" },
+                        { "id": 3, "text": "順調だ" },
+                        { "id": 4, "text": "不調だ" }
+                    ],
+                    "answer": 4
+                },
+                {
+                    "id": 3,
+                    "text": "彼は普通のものさしでは語れない人物だ。",
+                    "textHighlight": { "start": 5, "end": 9 },
+                    "options": [
+                        { "id": 1, "text": "表現" },
+                        { "id": 2, "text": "基準" },
+                        { "id": 3, "text": "常識" },
+                        { "id": 4, "text": "方法" }
+                    ],
+                    "answer": 2
+                },
+                {
+                    "id": 4,
+                    "text": "人のものを勝手に使うとはあつかましいやつだ。",
+                    "textHighlight": { "start": 12, "end": 18 },
+                    "options": [
+                        { "id": 1, "text": "のんきな" },
+                        { "id": 2, "text": "気楽な" },
+                        { "id": 3, "text": "無愛想な" },
+                        { "id": 4, "text": "無遠慮な" }
+                    ],
+                    "answer": 4
+                },
+                {
+                    "id": 5,
+                    "text": "音楽番組のスポンサーが決まった。",
+                    "textHighlight": { "start": 5, "end": 10 },
+                    "options": [
+                        { "id": 1, "text": "広告主" },
+                        { "id": 2, "text": "協力者" },
+                        { "id": 3, "text": "指導者" },
+                        { "id": 4, "text": "責任者" }
+                    ],
+                    "answer": 1
+                }
+            ]
+        },
+        {
+            "unit": 12,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "とうとう店をたたむことにした。",
+                    "textHighlight": { "start": 6, "end": 9 },
+                    "options": [
+                        { "id": 1, "text": "始める" },
+                        { "id": 2, "text": "休む" },
+                        { "id": 3, "text": "直す" },
+                        { "id": 4, "text": "閉じる" }
+                    ],
+                    "answer": 4
+                },
+                {
+                    "id": 2,
+                    "text": "決勝レースのスタートが告げられると、場内はしいんとなった。",
+                    "textHighlight": { "start": 21, "end": 25 },
+                    "options": [
+                        { "id": 1, "text": "華やかに" },
+                        { "id": 2, "text": "明るく" },
+                        { "id": 3, "text": "静かに" },
+                        { "id": 4, "text": "騒がしく" }
+                    ],
+                    "answer": 3
+                },
+                {
+                    "id": 3,
+                    "text": "古い民家を改造して喫茶店にする。",
+                    "textHighlight": { "start": 5, "end": 9 },
+                    "options": [
+                        { "id": 1, "text": "作り直して" },
+                        { "id": 2, "text": "取り消して" },
+                        { "id": 3, "text": "利用して" },
+                        { "id": 4, "text": "掃除して" }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 4,
+                    "text": "お金にはなぜか縁がない。",
+                    "textHighlight": { "start": 7, "end": 8 },
+                    "options": [
+                        { "id": 1, "text": "興味" },
+                        { "id": 2, "text": "関係" },
+                        { "id": 3, "text": "運" },
+                        { "id": 4, "text": "苦労" }
+                    ],
+                    "answer": 2
+                },
+                {
+                    "id": 5,
+                    "text": "彼のストレートな発言に、みな驚いた。",
+                    "textHighlight": { "start": 2, "end": 8 },
+                    "options": [
+                        { "id": 1, "text": "常識のない" },
+                        { "id": 2, "text": "期待はずれの" },
+                        { "id": 3, "text": "遠慮ない" },
+                        { "id": 4, "text": "突然の" }
+                    ],
+                    "answer": 3
+                }
+            ]
+        },
+        {
+            "unit": 13,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "あの選手はもう盛りを過ぎた。",
+                    "textHighlight": { "start": 7, "end": 9 },
+                    "options": [
+                        { "id": 1, "text": "リミット" },
+                        { "id": 2, "text": "ゴール" },
+                        { "id": 3, "text": "ピーク" },
+                        { "id": 4, "text": "チェックポイント" }
+                    ],
+                    "answer": 3
+                },
+                {
+                    "id": 2,
+                    "text": "就職の際の学歴の有効性はまだいくぶんある。",
+                    "textHighlight": { "start": 8, "end": 11 },
+                    "options": [
+                        { "id": 1, "text": "効力" },
+                        { "id": 2, "text": "意味" },
+                        { "id": 3, "text": "評価" },
+                        { "id": 4, "text": "損得" }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 3,
+                    "text": "小学生の学力テストが全国でいっせいに行われた。",
+                    "textHighlight": { "start": 13, "end": 18 },
+                    "options": [
+                        { "id": 1, "text": "別々に" },
+                        { "id": 2, "text": "続々と" },
+                        { "id": 3, "text": "同時に" },
+                        { "id": 4, "text": "突然に" }
+                    ],
+                    "answer": 3
+                },
+                {
+                    "id": 4,
+                    "text": "母親は息子の気持ちを察している。",
+                    "textHighlight": { "start": 10, "end": 13 },
+                    "options": [
+                        { "id": 1, "text": "予測して" },
+                        { "id": 2, "text": "見抜いて" },
+                        { "id": 3, "text": "受け取って" },
+                        { "id": 4, "text": "尊重して" }
+                    ],
+                    "answer": 2
+                },
+                {
+                    "id": 5,
+                    "text": "会社の重要な情報をリークする。",
+                    "textHighlight": { "start": 9, "end": 14 },
+                    "options": [
+                        { "id": 1, "text": "口外する" },
+                        { "id": 2, "text": "利用する" },
+                        { "id": 3, "text": "制限する" },
+                        { "id": 4, "text": "混乱させる" }
+                    ],
+                    "answer": 1
+                }
+            ]
+        },
+        {
+            "unit": 14,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "彼は自分の発言を打ち消した。",
+                    "textHighlight": { "start": 8, "end": 13 },
+                    "options": [
+                        { "id": 1, "text": "修正した" },
+                        { "id": 2, "text": "伝達した" },
+                        { "id": 3, "text": "記録した" },
+                        { "id": 4, "text": "否定した" }
+                    ],
+                    "answer": 4
+                },
+                {
+                    "id": 2,
+                    "text": "政治を批判したこの新聞記事は、とても鋭い。",
+                    "textHighlight": { "start": 18, "end": 20 },
+                    "options": [
+                        { "id": 1, "text": "間違っている" },
+                        { "id": 2, "text": "優れている" },
+                        { "id": 3, "text": "冷静である" },
+                        { "id": 4, "text": "読まれている" }
+                    ],
+                    "answer": 2
+                },
+                {
+                    "id": 3,
+                    "text": "木村さんは、始終携帯のメールをチェックしている。",
+                    "textHighlight": { "start": 6, "end": 8 },
+                    "options": [
+                        { "id": 1, "text": "何度か" },
+                        { "id": 2, "text": "いつも" },
+                        { "id": 3, "text": "はじめに" },
+                        { "id": 4, "text": "たまに" }
+                    ],
+                    "answer": 2
+                },
+                {
+                    "id": 4,
+                    "text": "君にこの仕事を任せるからせいぜいがんばってくれ。",
+                    "textHighlight": { "start": 12, "end": 16 },
+                    "options": [
+                        { "id": 1, "text": "いいかげんに" },
+                        { "id": 2, "text": "つらくても" },
+                        { "id": 3, "text": "できるだけ" },
+                        { "id": 4, "text": "最後まで" }
+                    ],
+                    "answer": 3
+                },
+                {
+                    "id": 5,
+                    "text": "この計画を実施する場合、どんなメリットがありますか。",
+                    "textHighlight": { "start": 15, "end": 19 },
+                    "options": [
+                        { "id": 1, "text": "不利な点" },
+                        { "id": 2, "text": "有利な点" },
+                        { "id": 3, "text": "疑問点" },
+                        { "id": 4, "text": "問題点" }
+                    ],
+                    "answer": 2
+                }
+            ]
+        },
+        {
+            "unit": 15,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "ネット犯罪に対する意識が薄い人は多い。",
+                    "textHighlight": { "start": 12, "end": 14 },
+                    "options": [
+                        { "id": 1, "text": "不十分な" },
+                        { "id": 2, "text": "不正確な" },
+                        { "id": 3, "text": "不明な" },
+                        { "id": 4, "text": "不透明な" }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 2,
+                    "text": "この曲を聞くたびに、川の流れを連想する。",
+                    "textHighlight": { "start": 15, "end": 19 },
+                    "options": [
+                        { "id": 1, "text": "思い当たる" },
+                        { "id": 2, "text": "思い上がる" },
+                        { "id": 3, "text": "思い浮かべる" },
+                        { "id": 4, "text": "思い出す" }
+                    ],
+                    "answer": 3
+                },
+                {
+                    "id": 3,
+                    "text": "万一地震があっても、荷物を持ち出せるように準備している。",
+                    "textHighlight": { "start": 0, "end": 2 },
+                    "options": [
+                        { "id": 1, "text": "だから" },
+                        { "id": 2, "text": "やがて" },
+                        { "id": 3, "text": "どんな" },
+                        { "id": 4, "text": "もしも" }
+                    ],
+                    "answer": 4
+                },
+                {
+                    "id": 4,
+                    "text": "木村先輩はサークル活動にいちいち口を出す。",
+                    "textHighlight": { "start": 12, "end": 16 },
+                    "options": [
+                        { "id": 1, "text": "細かく" },
+                        { "id": 2, "text": "少しは" },
+                        { "id": 3, "text": "最初から" },
+                        { "id": 4, "text": "勝手に" }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 5,
+                    "text": "今年は過去最高の速度で交通事故の死者が増えている。",
+                    "textHighlight": { "start": 8, "end": 10 },
+                    "options": [
+                        { "id": 1, "text": "ベース" },
+                        { "id": 2, "text": "ペース" },
+                        { "id": 3, "text": "メーター" },
+                        { "id": 4, "text": "パーセント" }
+                    ],
+                    "answer": 2
+                }
+            ]
+        }
+    ]
+}

@@ -16,6 +16,964 @@
                         { "id": 4, "text": "ぎょうき" }
                     ],
                     "answer": 3
+                },
+                {
+                    "id": 2,
+                    "text": "国際コンクールでの優勝は、若い音楽家の人生を一瞬にして変えた。",
+                    "textHighlight": { "start": 22, "end": 24 },
+                    "options": [
+                        { "id": 1, "text": "いちしゅん" },
+                        { "id": 2, "text": "いつしゅん" },
+                        { "id": 3, "text": "いっじゅん" },
+                        { "id": 4, "text": "いっしゅん" }
+                    ],
+                    "answer": 4
+                },
+                {
+                    "id": 3,
+                    "text": "「残りわずか」の声に誘われて、思わずテレビショッピングで買い物をしてしまった。",
+                    "textHighlight": { "start": 10, "end": 14 },
+                    "options": [
+                        { "id": 1, "text": "さそわれて" },
+                        { "id": 2, "text": "おそわれて" },
+                        { "id": 3, "text": "とらわれて" },
+                        { "id": 4, "text": "うたわれて" }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 4,
+                    "text": "以前は静かな町だったのに、最近は物騒な事件が多くなった。",
+                    "textHighlight": { "start": 16, "end": 18 },
+                    "options": [
+                        { "id": 1, "text": "ぶっぞう" },
+                        { "id": 2, "text": "ぶっそう" },
+                        { "id": 3, "text": "ぶつそう" },
+                        { "id": 4, "text": "ぶつぞう" }
+                    ],
+                    "answer": 2
+                },
+                {
+                    "id": 5,
+                    "text": "インフルエンザでの死亡率が低い理由の1つに、国民の衛生知識の高さがあげられる。",
+                    "textHighlight": { "start": 25, "end": 27 },
+                    "options": [
+                        { "id": 1, "text": "ええせい" },
+                        { "id": 2, "text": "えいぜい" },
+                        { "id": 3, "text": "えいせい" },
+                        { "id": 4, "text": "ええぜい" }
+                    ],
+                    "answer": 3
+                }
+            ]
+        },
+        {
+            "unit": 2,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "ネット環境が整えばオフィスに縛られることなく、どこにいても仕事ができる。",
+                    "textHighlight": { "start": 14, "end": 18 },
+                    "options": [
+                        { "id": 1, "text": "はめられる" },
+                        { "id": 2, "text": "おさめられる" },
+                        { "id": 3, "text": "とられる" },
+                        { "id": 4, "text": "しばられる" }
+                    ],
+                    "answer": 4
+                },
+                {
+                    "id": 2,
+                    "text": "電車の中は、たくさんの子どもが乗っていて騒々しかった。",
+                    "textHighlight": { "start": 20, "end": 22 },
+                    "options": [
+                        { "id": 1, "text": "そうぞう" },
+                        { "id": 2, "text": "ずうずう" },
+                        { "id": 3, "text": "あらあら" },
+                        { "id": 4, "text": "いまいま" }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 3,
+                    "text": "我が社は今年から面接の回数を増やして、知識より人物重視で社員を採用する。",
+                    "textHighlight": { "start": 25, "end": 27 },
+                    "options": [
+                        { "id": 1, "text": "ちょうし" },
+                        { "id": 2, "text": "ちょうじ" },
+                        { "id": 3, "text": "しゅうじ" },
+                        { "id": 4, "text": "じゅうし" }
+                    ],
+                    "answer": 4
+                },
+                {
+                    "id": 4,
+                    "text": "お買い物でためたポイントは、商品券に交換できます。",
+                    "textHighlight": { "start": 18, "end": 20 },
+                    "options": [
+                        { "id": 1, "text": "こうかん" },
+                        { "id": 2, "text": "ごうがん" },
+                        { "id": 3, "text": "こうがん" },
+                        { "id": 4, "text": "ごうかん" }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 5,
+                    "text": "スーパーでは食品の包装を少なくする活動が進んでいる。",
+                    "textHighlight": { "start": 9, "end": 11 },
+                    "options": [
+                        { "id": 1, "text": "ほうぞう" },
+                        { "id": 2, "text": "ぼうそう" },
+                        { "id": 3, "text": "ほうそう" },
+                        { "id": 4, "text": "ぼうぞう" }
+                    ],
+                    "answer": 3
+                }
+            ]
+        },
+        {
+            "unit": 3,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "ボランティア活動を選択科目に取り入れている大学が多くなっている。",
+                    "textHighlight": { "start": 9, "end": 11 },
+                    "options": [
+                        { "id": 1, "text": "せんだく" },
+                        { "id": 2, "text": "ぜんだく" },
+                        { "id": 3, "text": "せんたく" },
+                        { "id": 4, "text": "ぜんたく" }
+                    ],
+                    "answer": 3
+                },
+                {
+                    "id": 2,
+                    "text": "飛行場を建設するには膨大な費用がかかる。",
+                    "textHighlight": { "start": 10, "end": 12 },
+                    "options": [
+                        { "id": 1, "text": "ぼうだい" },
+                        { "id": 2, "text": "ちょうだい" },
+                        { "id": 3, "text": "ばくだい" },
+                        { "id": 4, "text": "じんだい" }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 3,
+                    "text": "軽く言ったつもりの冗談が友人を傷つけてしまった。",
+                    "textHighlight": { "start": 9, "end": 11 },
+                    "options": [
+                        { "id": 1, "text": "しょうだん" },
+                        { "id": 2, "text": "じょだん" },
+                        { "id": 3, "text": "じょうたん" },
+                        { "id": 4, "text": "じょうだん" }
+                    ],
+                    "answer": 4
+                },
+                {
+                    "id": 4,
+                    "text": "このまま人口が増え続ければ、世界中で食糧や水の奪い合いになるであろう。",
+                    "textHighlight": { "start": 23, "end": 25 },
+                    "options": [
+                        { "id": 1, "text": "きそい" },
+                        { "id": 2, "text": "うばい" },
+                        { "id": 3, "text": "あらそい" },
+                        { "id": 4, "text": "うかがい" }
+                    ],
+                    "answer": 2
+                },
+                {
+                    "id": 5,
+                    "text": "最近は防犯性能が高いマンションや住宅を作るさまざまな取り組みが進んでいる。",
+                    "textHighlight": { "start": 5, "end": 7 },
+                    "options": [
+                        { "id": 1, "text": "ぜいのう" },
+                        { "id": 2, "text": "しょうのう" },
+                        { "id": 3, "text": "すうのう" },
+                        { "id": 4, "text": "せいのう" }
+                    ],
+                    "answer": 4
+                }
+            ]
+        },
+        {
+            "unit": 4,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "ロボットは、工場はもちろん国際宇宙ステーションまで、至る所で使われている。",
+                    "textHighlight": { "start": 26, "end": 28 },
+                    "options": [
+                        { "id": 1, "text": "いわゆる" },
+                        { "id": 2, "text": "あらゆる" },
+                        { "id": 3, "text": "いたる" },
+                        { "id": 4, "text": "とおる" }
+                    ],
+                    "answer": 3
+                },
+                {
+                    "id": 2,
+                    "text": "10日前までに予約をすると、早期割引で宿泊料金が安くなる。",
+                    "textHighlight": { "start": 16, "end": 18 },
+                    "options": [
+                        { "id": 1, "text": "わりひき" },
+                        { "id": 2, "text": "わりびき" },
+                        { "id": 3, "text": "かつひき" },
+                        { "id": 4, "text": "かつびき" }
+                    ],
+                    "answer": 2
+                },
+                {
+                    "id": 3,
+                    "text": "机に向かっているときより、散歩中に仕事の発想がわいてくることが多い。",
+                    "textHighlight": { "start": 20, "end": 22 },
+                    "options": [
+                        { "id": 1, "text": "はっそう" },
+                        { "id": 2, "text": "はつそう" },
+                        { "id": 3, "text": "はっぞう" },
+                        { "id": 4, "text": "はつぞう" }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 4,
+                    "text": "金銭感覚のなかった父に、母はずっと苦労させられていた。",
+                    "textHighlight": { "start": 2, "end": 4 },
+                    "options": [
+                        { "id": 1, "text": "かんがく" },
+                        { "id": 2, "text": "かんかく" },
+                        { "id": 3, "text": "がんかく" },
+                        { "id": 4, "text": "がんがく" }
+                    ],
+                    "answer": 2
+                },
+                {
+                    "id": 5,
+                    "text": "結婚は人生の一大事だから慎重に考えなさい。",
+                    "textHighlight": { "start": 12, "end": 14 },
+                    "options": [
+                        { "id": 1, "text": "じんじゅう" },
+                        { "id": 2, "text": "しんじゅう" },
+                        { "id": 3, "text": "じんちょう" },
+                        { "id": 4, "text": "しんちょう" }
+                    ],
+                    "answer": 4
+                }
+            ]
+        },
+        {
+            "unit": 5,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "親の経済事情で、専門学校へ進路を変更した。",
+                    "textHighlight": { "start": 16, "end": 18 },
+                    "options": [
+                        { "id": 1, "text": "へんごう" },
+                        { "id": 2, "text": "へんか" },
+                        { "id": 3, "text": "へんこう" },
+                        { "id": 4, "text": "へんかん" }
+                    ],
+                    "answer": 3
+                },
+                {
+                    "id": 2,
+                    "text": "この種目ではオリンピック初となるメダルへの期待が膨らんだ。",
+                    "textHighlight": { "start": 24, "end": 28 },
+                    "options": [
+                        { "id": 1, "text": "からんだ" },
+                        { "id": 2, "text": "ふくらんだ" },
+                        { "id": 3, "text": "にらんだ" },
+                        { "id": 4, "text": "はらんだ" }
+                    ],
+                    "answer": 2
+                },
+                {
+                    "id": 3,
+                    "text": "学生に人気があるのは「経済学概論」の講座だ。",
+                    "textHighlight": { "start": 14, "end": 16 },
+                    "options": [
+                        { "id": 1, "text": "きろん" },
+                        { "id": 2, "text": "しょろん" },
+                        { "id": 3, "text": "がいろん" },
+                        { "id": 4, "text": "じろん" }
+                    ],
+                    "answer": 3
+                },
+                {
+                    "id": 4,
+                    "text": "私の登山の目的は頂上に立つことではなく、大自然をゆっくり楽しむことにある。",
+                    "textHighlight": { "start": 8, "end": 10 },
+                    "options": [
+                        { "id": 1, "text": "とうじょう" },
+                        { "id": 2, "text": "ちょうじょう" },
+                        { "id": 3, "text": "こうじょう" },
+                        { "id": 4, "text": "ていじょう" }
+                    ],
+                    "answer": 2
+                },
+                {
+                    "id": 5,
+                    "text": "東京都は医療水準の向上を目指す新制度を発表した。",
+                    "textHighlight": { "start": 6, "end": 8 },
+                    "options": [
+                        { "id": 1, "text": "ずいじゅん" },
+                        { "id": 2, "text": "すいじゅん" },
+                        { "id": 3, "text": "すいしゅん" },
+                        { "id": 4, "text": "ずいしゅん" }
+                    ],
+                    "answer": 2
+                }
+            ]
+        },
+        {
+            "unit": 6,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "この品質で1万円なら、まあ妥当な値段でしょう。",
+                    "textHighlight": { "start": 13, "end": 15 },
+                    "options": [
+                        { "id": 1, "text": "だどう" },
+                        { "id": 2, "text": "だっとう" },
+                        { "id": 3, "text": "だとう" },
+                        { "id": 4, "text": "たとう" }
+                    ],
+                    "answer": 3
+                },
+                {
+                    "id": 2,
+                    "text": "血液の循環が悪くなると、疲れが取れにくい体になってしまう。",
+                    "textHighlight": { "start": 3, "end": 5 },
+                    "options": [
+                        { "id": 1, "text": "じゅんがん" },
+                        { "id": 2, "text": "しゅんかん" },
+                        { "id": 3, "text": "しゅんがん" },
+                        { "id": 4, "text": "じゅんかん" }
+                    ],
+                    "answer": 4
+                },
+                {
+                    "id": 3,
+                    "text": "あの人はいつも損得を判断して行動するような人間だ。",
+                    "textHighlight": { "start": 7, "end": 9 },
+                    "options": [
+                        { "id": 1, "text": "そんとく" },
+                        { "id": 2, "text": "そんどく" },
+                        { "id": 3, "text": "そうとく" },
+                        { "id": 4, "text": "そうどぐ" }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 4,
+                    "text": "衣食住に順位をつけるなら、私の場合、食の次に住がくる。",
+                    "textHighlight": { "start": 0, "end": 3 },
+                    "options": [
+                        { "id": 1, "text": "いじょくしゅう" },
+                        { "id": 2, "text": "いじょくじゅう" },
+                        { "id": 3, "text": "いしょくじゅう" },
+                        { "id": 4, "text": "いじょぐしゅう" }
+                    ],
+                    "answer": 3
+                },
+                {
+                    "id": 5,
+                    "text": "料理の手間を省く調理器具を母の日のプレゼントにした。",
+                    "textHighlight": { "start": 6, "end": 8 },
+                    "options": [
+                        { "id": 1, "text": "ぬく" },
+                        { "id": 2, "text": "くだく" },
+                        { "id": 3, "text": "のぞく" },
+                        { "id": 4, "text": "はぶく" }
+                    ],
+                    "answer": 4
+                }
+            ]
+        },
+        {
+            "unit": 7,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "こんなに食費がかかるとは勘定に入れてなかった。",
+                    "textHighlight": { "start": 12, "end": 14 },
+                    "options": [
+                        { "id": 1, "text": "かんてい" },
+                        { "id": 2, "text": "かんじょう" },
+                        { "id": 3, "text": "かんでい" },
+                        { "id": 4, "text": "かんしょう" }
+                    ],
+                    "answer": 2
+                },
+                {
+                    "id": 2,
+                    "text": "飛行機事故の原因を徹底的に調査する。",
+                    "textHighlight": { "start": 9, "end": 12 },
+                    "options": [
+                        { "id": 1, "text": "てっていでき" },
+                        { "id": 2, "text": "てつていてき" },
+                        { "id": 3, "text": "てつでいてき" },
+                        { "id": 4, "text": "てっていてき" }
+                    ],
+                    "answer": 4
+                },
+                {
+                    "id": 3,
+                    "text": "太陽光に干した野菜は、ビタミンDが増える。",
+                    "textHighlight": { "start": 4, "end": 7 },
+                    "options": [
+                        { "id": 1, "text": "かわかした" },
+                        { "id": 2, "text": "さらした" },
+                        { "id": 3, "text": "みたした" },
+                        { "id": 4, "text": "ほした" }
+                    ],
+                    "answer": 4
+                },
+                {
+                    "id": 4,
+                    "text": "あの会社の経営状況はここ数年下降している。",
+                    "textHighlight": { "start": 14, "end": 16 },
+                    "options": [
+                        { "id": 1, "text": "げこう" },
+                        { "id": 2, "text": "げごう" },
+                        { "id": 3, "text": "かこう" },
+                        { "id": 4, "text": "かごう" }
+                    ],
+                    "answer": 3
+                },
+                {
+                    "id": 5,
+                    "text": "休んでも取れない疲れを抱えている現代人が多くなった。",
+                    "textHighlight": { "start": 11, "end": 14 },
+                    "options": [
+                        { "id": 1, "text": "かかえて" },
+                        { "id": 2, "text": "おぼえて" },
+                        { "id": 3, "text": "たくわえて" },
+                        { "id": 4, "text": "おさえて" }
+                    ],
+                    "answer": 1
+                }
+            ]
+        },
+        {
+            "unit": 8,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "食器洗浄機は、使ってみると不便なところもある。",
+                    "textHighlight": { "start": 2, "end": 4 },
+                    "options": [
+                        { "id": 1, "text": "せんじょ" },
+                        { "id": 2, "text": "せんざい" },
+                        { "id": 3, "text": "せんじょう" },
+                        { "id": 4, "text": "せんたく" }
+                    ],
+                    "answer": 3
+                },
+                {
+                    "id": 2,
+                    "text": "後輩の第一印象は神経質で頼りない感じだ。",
+                    "textHighlight": { "start": 8, "end": 11 },
+                    "options": [
+                        { "id": 1, "text": "しんけいしつ" },
+                        { "id": 2, "text": "しんきょうしつ" },
+                        { "id": 3, "text": "じんけいしつ" },
+                        { "id": 4, "text": "じんきょうしつ" }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 3,
+                    "text": "途上国の女性が収入を得られるように、裁縫技術の研修を開始した。",
+                    "textHighlight": { "start": 18, "end": 20 },
+                    "options": [
+                        { "id": 1, "text": "ざいもう" },
+                        { "id": 2, "text": "さいぼう" },
+                        { "id": 3, "text": "さいもう" },
+                        { "id": 4, "text": "さいほう" }
+                    ],
+                    "answer": 4
+                },
+                {
+                    "id": 4,
+                    "text": "経済は、都市に集まってくる有能で意欲のある人々の努力で成長してきたといえる。",
+                    "textHighlight": { "start": 13, "end": 15 },
+                    "options": [
+                        { "id": 1, "text": "うのう" },
+                        { "id": 2, "text": "ゆうえき" },
+                        { "id": 3, "text": "ゆうのう" },
+                        { "id": 4, "text": "ゆうこう" }
+                    ],
+                    "answer": 3
+                },
+                {
+                    "id": 5,
+                    "text": "楽をして稼ぐことを恥としない日本人が多くなってしまった。",
+                    "textHighlight": { "start": 4, "end": 6 },
+                    "options": [
+                        { "id": 1, "text": "ふせぐ" },
+                        { "id": 2, "text": "かせぐ" },
+                        { "id": 3, "text": "そそぐ" },
+                        { "id": 4, "text": "かつぐ" }
+                    ],
+                    "answer": 2
+                }
+            ]
+        },
+        {
+            "unit": 9,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "標準的な体重なのに、太っていると悩む女性が多い。",
+                    "textHighlight": { "start": 0, "end": 2 },
+                    "options": [
+                        { "id": 1, "text": "すいじゅん" },
+                        { "id": 2, "text": "すいしゅん" },
+                        { "id": 3, "text": "ひょうじゅん" },
+                        { "id": 4, "text": "ひょうしゅん" }
+                    ],
+                    "answer": 3
+                },
+                {
+                    "id": 2,
+                    "text": "国会では、与党と野党の攻防が続いている。",
+                    "textHighlight": { "start": 11, "end": 13 },
+                    "options": [
+                        { "id": 1, "text": "せいぼう" },
+                        { "id": 2, "text": "こうぼう" },
+                        { "id": 3, "text": "せいほう" },
+                        { "id": 4, "text": "こうほう" }
+                    ],
+                    "answer": 2
+                },
+                {
+                    "id": 3,
+                    "text": "人間ドックは医師から1対1で検査結果の詳しい説明が受けられる。",
+                    "textHighlight": { "start": 19, "end": 22 },
+                    "options": [
+                        { "id": 1, "text": "とほしい" },
+                        { "id": 2, "text": "ただしい" },
+                        { "id": 3, "text": "くわしい" },
+                        { "id": 4, "text": "きびしい" }
+                    ],
+                    "answer": 3
+                },
+                {
+                    "id": 4,
+                    "text": "大学生の学力低下の原因は入試制度の欠陥だと主張する人は多い。",
+                    "textHighlight": { "start": 17, "end": 19 },
+                    "options": [
+                        { "id": 1, "text": "けっかん" },
+                        { "id": 2, "text": "けってん" },
+                        { "id": 3, "text": "けつぼう" },
+                        { "id": 4, "text": "けつらく" }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 5,
+                    "text": "国道沿いの立て看板にはかなりの広告効果がある。",
+                    "textHighlight": { "start": 5, "end": 9 },
+                    "options": [
+                        { "id": 1, "text": "だてかんばん" },
+                        { "id": 2, "text": "たてかんばん" },
+                        { "id": 3, "text": "たてがんばん" },
+                        { "id": 4, "text": "だてがんはん" }
+                    ],
+                    "answer": 2
+                }
+            ]
+        },
+        {
+            "unit": 10,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "発売日より1日早く、新商品が入荷した。",
+                    "textHighlight": { "start": 14, "end": 16 },
+                    "options": [
+                        { "id": 1, "text": "にゅうに" },
+                        { "id": 2, "text": "にゅうか" },
+                        { "id": 3, "text": "にゅうこ" },
+                        { "id": 4, "text": "にゅうひん" }
+                    ],
+                    "answer": 2
+                },
+                {
+                    "id": 2,
+                    "text": "我が社は採用の際、コミュニケーション能力の有無を重視します。",
+                    "textHighlight": { "start": 21, "end": 23 },
+                    "options": [
+                        { "id": 1, "text": "ありむ" },
+                        { "id": 2, "text": "ゆうぶ" },
+                        { "id": 3, "text": "うむ" },
+                        { "id": 4, "text": "うぶ" }
+                    ],
+                    "answer": 3
+                },
+                {
+                    "id": 3,
+                    "text": "ダブルのスーツはお年寄りには懐かしく、若者の目には新鮮にうつるようだ。",
+                    "textHighlight": { "start": 14, "end": 18 },
+                    "options": [
+                        { "id": 1, "text": "なつかしく" },
+                        { "id": 2, "text": "はずかしく" },
+                        { "id": 3, "text": "ちかしく" },
+                        { "id": 4, "text": "ふるめかしく" }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 4,
+                    "text": "就職が決まらず落ち込む友人をどう慰めてよいのか、言葉が見つからない。",
+                    "textHighlight": { "start": 17, "end": 19 },
+                    "options": [
+                        { "id": 1, "text": "なだめて" },
+                        { "id": 2, "text": "いましめて" },
+                        { "id": 3, "text": "おさめて" },
+                        { "id": 4, "text": "なぐさめて" }
+                    ],
+                    "answer": 4
+                },
+                {
+                    "id": 5,
+                    "text": "父親が亡くなり、家や土地などの財産を相続した。",
+                    "textHighlight": { "start": 18, "end": 20 },
+                    "options": [
+                        { "id": 1, "text": "しょうぞく" },
+                        { "id": 2, "text": "そうぞく" },
+                        { "id": 3, "text": "しょうそく" },
+                        { "id": 4, "text": "そうそく" }
+                    ],
+                    "answer": 2
+                }
+            ]
+        },
+        {
+            "unit": 11,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "夜型の生活をしているうちに睡眠障害になってしまった。",
+                    "textHighlight": { "start": 15, "end": 17 },
+                    "options": [
+                        { "id": 1, "text": "しょうかい" },
+                        { "id": 2, "text": "じょうがい" },
+                        { "id": 3, "text": "しょうがい" },
+                        { "id": 4, "text": "じょうかい" }
+                    ],
+                    "answer": 3
+                },
+                {
+                    "id": 2,
+                    "text": "地球に降る太陽光の1時間のエネルギー量は、人類が1年間に使う量に相当する。",
+                    "textHighlight": { "start": 32, "end": 34 },
+                    "options": [
+                        { "id": 1, "text": "そうとう" },
+                        { "id": 2, "text": "しょうとう" },
+                        { "id": 3, "text": "あいとう" },
+                        { "id": 4, "text": "そうおう" }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 3,
+                    "text": "少子化が進み、親が先回りして子どもを助ける傾向が強い。",
+                    "textHighlight": { "start": 21, "end": 23 },
+                    "options": [
+                        { "id": 1, "text": "かたこう" },
+                        { "id": 2, "text": "けいむき" },
+                        { "id": 3, "text": "かたむき" },
+                        { "id": 4, "text": "けいこう" }
+                    ],
+                    "answer": 4
+                },
+                {
+                    "id": 4,
+                    "text": "私は自分の長所を磨き続ければ必ず成功すると信じている。",
+                    "textHighlight": { "start": 8, "end": 10 },
+                    "options": [
+                        { "id": 1, "text": "みがき" },
+                        { "id": 2, "text": "いき" },
+                        { "id": 3, "text": "かがやき" },
+                        { "id": 4, "text": "たたき" }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 5,
+                    "text": "人間は困ったことが起きたときのほうが、持っている力を発揮できる。",
+                    "textHighlight": { "start": 26, "end": 28 },
+                    "options": [
+                        { "id": 1, "text": "はっこう" },
+                        { "id": 2, "text": "はっき" },
+                        { "id": 3, "text": "ほっこう" },
+                        { "id": 4, "text": "ほっき" }
+                    ],
+                    "answer": 2
+                }
+            ]
+        },
+        {
+            "unit": 12,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "現地の人々が技術を身につけ、仕事に就けるような援助が必要だ。",
+                    "textHighlight": { "start": 17, "end": 20 },
+                    "options": [
+                        { "id": 1, "text": "とける" },
+                        { "id": 2, "text": "かける" },
+                        { "id": 3, "text": "つける" },
+                        { "id": 4, "text": "あける" }
+                    ],
+                    "answer": 3
+                },
+                {
+                    "id": 2,
+                    "text": "運動不足であると、汗をかいて体温を調節する機能が弱くなってしまう。",
+                    "textHighlight": { "start": 17, "end": 19 },
+                    "options": [
+                        { "id": 1, "text": "ちょうせつ" },
+                        { "id": 2, "text": "ちゅうせつ" },
+                        { "id": 3, "text": "ちょうせち" },
+                        { "id": 4, "text": "ちゅうせち" }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 3,
+                    "text": "朝、起床するのがつらい人は、午前中、太陽光線を浴びるとよい。",
+                    "textHighlight": { "start": 2, "end": 4 },
+                    "options": [
+                        { "id": 1, "text": "きじょう" },
+                        { "id": 2, "text": "きしょう" },
+                        { "id": 3, "text": "ぎじょう" },
+                        { "id": 4, "text": "きっしょう" }
+                    ],
+                    "answer": 2
+                },
+                {
+                    "id": 4,
+                    "text": "佐藤さんは、オンラインゲームに熱中している。",
+                    "textHighlight": { "start": 15, "end": 17 },
+                    "options": [
+                        { "id": 1, "text": "ねつちゅう" },
+                        { "id": 2, "text": "ねつじゅう" },
+                        { "id": 3, "text": "ねっちゅう" },
+                        { "id": 4, "text": "ねっじゅう" }
+                    ],
+                    "answer": 3
+                },
+                {
+                    "id": 5,
+                    "text": "バスや電車でお年寄りに席を譲らない若者が多い。",
+                    "textHighlight": { "start": 13, "end": 17 },
+                    "options": [
+                        { "id": 1, "text": "うつらない" },
+                        { "id": 2, "text": "ゆずらない" },
+                        { "id": 3, "text": "まわらない" },
+                        { "id": 4, "text": "さがらない" }
+                    ],
+                    "answer": 2
+                }
+            ]
+        },
+        {
+            "unit": 13,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "太平洋高気圧に覆われて晴れる日が多く、各地で激しい暑さが続いている。",
+                    "textHighlight": { "start": 7, "end": 11 },
+                    "options": [
+                        { "id": 1, "text": "おおわれて" },
+                        { "id": 2, "text": "ねらわれて" },
+                        { "id": 3, "text": "みまわれて" },
+                        { "id": 4, "text": "ためらわれて" }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 2,
+                    "text": "彼は運動神経が抜群にいい。",
+                    "textHighlight": { "start": 7, "end": 9 },
+                    "options": [
+                        { "id": 1, "text": "ばつくん" },
+                        { "id": 2, "text": "ぱっくん" },
+                        { "id": 3, "text": "ばつぐん" },
+                        { "id": 4, "text": "ばっぐん" }
+                    ],
+                    "answer": 3
+                },
+                {
+                    "id": 3,
+                    "text": "博物館の鯨の標本を見上げて、その大きさを実感した。",
+                    "textHighlight": { "start": 6, "end": 8 },
+                    "options": [
+                        { "id": 1, "text": "びょうほん" },
+                        { "id": 2, "text": "ひょうぽん" },
+                        { "id": 3, "text": "ひょうほん" },
+                        { "id": 4, "text": "びょうぽん" }
+                    ],
+                    "answer": 3
+                },
+                {
+                    "id": 4,
+                    "text": "古いパソコンなので、動作が鈍い。",
+                    "textHighlight": { "start": 13, "end": 15 },
+                    "options": [
+                        { "id": 1, "text": "とろい" },
+                        { "id": 2, "text": "はやい" },
+                        { "id": 3, "text": "わるい" },
+                        { "id": 4, "text": "にぶい" }
+                    ],
+                    "answer": 4
+                },
+                {
+                    "id": 5,
+                    "text": "彼女は子どものころから、医者となって世の中に貢献したいと考えていた。",
+                    "textHighlight": { "start": 22, "end": 24 },
+                    "options": [
+                        { "id": 1, "text": "みつけん" },
+                        { "id": 2, "text": "こうけん" },
+                        { "id": 3, "text": "みつこん" },
+                        { "id": 4, "text": "こうこん" }
+                    ],
+                    "answer": 2
+                }
+            ]
+        },
+        {
+            "unit": 14,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "責任をとって、議員を辞める。",
+                    "textHighlight": { "start": 10, "end": 13 },
+                    "options": [
+                        { "id": 1, "text": "あきらめる" },
+                        { "id": 2, "text": "うめる" },
+                        { "id": 3, "text": "つとめる" },
+                        { "id": 4, "text": "やめる" }
+                    ],
+                    "answer": 4
+                },
+                {
+                    "id": 2,
+                    "text": "LED電球は消費電力が少なく寿命が長い。",
+                    "textHighlight": { "start": 6, "end": 8 },
+                    "options": [
+                        { "id": 1, "text": "じょうひ" },
+                        { "id": 2, "text": "しょうひ" },
+                        { "id": 3, "text": "しょうび" },
+                        { "id": 4, "text": "じょうび" }
+                    ],
+                    "answer": 2
+                },
+                {
+                    "id": 3,
+                    "text": "将来に明確な目標をもって努力することが大切だ。",
+                    "textHighlight": { "start": 3, "end": 5 },
+                    "options": [
+                        { "id": 1, "text": "めいたく" },
+                        { "id": 2, "text": "めいかく" },
+                        { "id": 3, "text": "みょうたく" },
+                        { "id": 4, "text": "みょうかく" }
+                    ],
+                    "answer": 2
+                },
+                {
+                    "id": 4,
+                    "text": "急に寒さが逆戻りしたため、風邪をひいてしまった。",
+                    "textHighlight": { "start": 5, "end": 8 },
+                    "options": [
+                        { "id": 1, "text": "さかもどり" },
+                        { "id": 2, "text": "ぎゃくもどり" },
+                        { "id": 3, "text": "ぎゃくもとり" },
+                        { "id": 4, "text": "さかさもどり" }
+                    ],
+                    "answer": 2
+                },
+                {
+                    "id": 5,
+                    "text": "彼は仕事はできるが、時間の観念がない。",
+                    "textHighlight": { "start": 13, "end": 15 },
+                    "options": [
+                        { "id": 1, "text": "がいねん" },
+                        { "id": 2, "text": "けねん" },
+                        { "id": 3, "text": "かんねん" },
+                        { "id": 4, "text": "りねん" }
+                    ],
+                    "answer": 3
+                }
+            ]
+        },
+        {
+            "unit": 15,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "朝食をとると睡眠中に低下した体温が上がるので、午前中の集中力が高まる。",
+                    "textHighlight": { "start": 10, "end": 12 },
+                    "options": [
+                        { "id": 1, "text": "ていか" },
+                        { "id": 2, "text": "ていが" },
+                        { "id": 3, "text": "ていげ" },
+                        { "id": 4, "text": "でいが" }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 2,
+                    "text": "手抜き工事のせいで、家の床が歩くと沈む。",
+                    "textHighlight": { "start": 17, "end": 19 },
+                    "options": [
+                        { "id": 1, "text": "しずむ" },
+                        { "id": 2, "text": "ひずむ" },
+                        { "id": 3, "text": "すすむ" },
+                        { "id": 4, "text": "ゆがむ" }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 3,
+                    "text": "景気の回復は就職活動中の学生にとって最大の関心事である。",
+                    "textHighlight": { "start": 21, "end": 24 },
+                    "options": [
+                        { "id": 1, "text": "かんじんじ" },
+                        { "id": 2, "text": "がんじんじ" },
+                        { "id": 3, "text": "かんしんじ" },
+                        { "id": 4, "text": "かんじんし" }
+                    ],
+                    "answer": 3
+                },
+                {
+                    "id": 4,
+                    "text": "異常気象による農産物の被害が各地で起きている。",
+                    "textHighlight": { "start": 7, "end": 10 },
+                    "options": [
+                        { "id": 1, "text": "のうさんぷつ" },
+                        { "id": 2, "text": "のうざんふつ" },
+                        { "id": 3, "text": "のうさんもっ" },
+                        { "id": 4, "text": "のうさくもつ" }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 5,
+                    "text": "赤ちゃん用おもちゃの安全基準は厳し過ぎることはない。",
+                    "textHighlight": { "start": 12, "end": 14 },
+                    "options": [
+                        { "id": 1, "text": "きてい" },
+                        { "id": 2, "text": "きそく" },
+                        { "id": 3, "text": "きじゅん" },
+                        { "id": 4, "text": "きはん" }
+                    ],
+                    "answer": 3
                 }
             ]
         }
