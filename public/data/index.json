@@ -1,4 +1,11 @@
 [
-    {"task": 1, "url": "/data/task_1.json"},
-    {"task": 2, "url": "/data/task_2.json"}
+    {"task": 1, "url": "data/task_1.json"},
+    {"task": 2, "url": "data/task_2.json"},
+    {"task": 3, "url": "data/task_3.json"},
+    {"task": 4, "url": "data/task_4.json"},
+    {"task": 5, "url": "data/task_5.json"},
+    {"task": 6, "url": "data/task_6.json"},
+    {"task": 7, "url": "data/task_7.json"},
+    {"task": 8, "url": "data/task_8.json"},
+    {"task": 9, "url": "data/task_9.json"}
 ]

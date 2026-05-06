@@ -1,0 +1,25 @@
+{
+    "description": "mondai hachi",
+    "grade": 1,
+    "tasks": [
+        {
+            "unit": 1,
+            "questions": [
+                {
+                    "id": 1,
+                    "textLeft": "そんな勉強のやり方で合格",
+                    "textRight": "みればいいよ。",
+                    "starIndex": 2,
+                    "options": [
+                        {"id": 1, "text": "やれる"},
+                        {"id": 2, "text": "やって"},
+                        {"id": 3, "text": "できるか"},
+                        {"id": 4, "text": "ものなら"}
+                    ],
+                    "correctOrder": [3, 1, 4, 2],
+                    "answer": 4
+                }
+            ]
+        }
+    ]
+}

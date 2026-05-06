@@ -1,0 +1,38 @@
+{
+    "description": "monday roku",
+    "grade": 1,
+    "tasks": [
+        {
+            "unit": 1,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "通用",
+                    "options": [
+                        {
+                            "id": 1,
+                            "text": "そんなへたな言い訳は、私には通用しない。",
+                            "textHighlight": { "start": 14, "end": 16 }
+                        },
+                        {
+                            "id": 2,
+                            "text": "この本はあなたの勉強に通用するのでお読みなさい。",
+                            "textHighlight": { "start": 11, "end": 13 }
+                        },
+                        {
+                            "id": 3,
+                            "text": "この仕事には能力のある人物を通用する予定だ。",
+                            "textHighlight": { "start": 14, "end": 16 }
+                        },
+                        {
+                            "id": 4,
+                            "text": "この危険な仕事に、これだけの給料では通用しない。",
+                            "textHighlight": { "start": 18, "end": 20 }
+                        }
+                    ],
+                    "answer": 0
+                }
+            ]
+        }
+    ]
+}
