@@ -1,1 +1,69 @@
-@import "tailwindcss"
+@import "tailwindcss";
+
+@theme {
+  /* Fonts */
+  --font-sans: "DM Sans", ui-sans-serif, system-ui;
+  --font-hand: "Patrick Hand", cursive;
+
+  /* Colors - Journal (Light) */
+  --color-journal-mint: #E8F5E9;
+  --color-journal-lavender: #F3E5F5;
+  --color-journal-peach: #FFE0B2;
+  --color-journal-cream: #FFF9C4;
+  --color-journal-sky: #E1F5FE;
+  --color-journal-rose: #FFEBEE;
+  --color-journal-text: #2C3E50;
+  --color-journal-accent: #FF7043;
+
+  /* Colors - Night (Dark) */
+  --color-night-bg: #2D2B3E;
+  --color-night-surface: #3A3849;
+  --color-night-text: #F5F5F5;
+  --color-night-neon-blue: #00E5FF;
+  --color-night-neon-pink: #FF4081;
+  --color-night-neon-lime: #C6FF00;
+
+  /* Category Colors */
+  --color-cat-coral: #FF8A80;
+  --color-cat-blue: #82B1FF;
+  --color-cat-yellow: #FFD54F;
+  --color-cat-green: #AED581;
+  --color-cat-purple: #CE93D8;
+  --color-cat-orange: #FFAB91;
+  --color-cat-all: #9CA3AF;
+
+  /* Shadows */
+  --shadow-soft: 0 4px 20px -2px rgba(0, 0, 0, 0.05);
+  --shadow-lift: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+  --shadow-neon: 0 0 10px rgba(0, 229, 255, 0.5);
+}
+
+@layer base {
+  :root {
+    --site-bg: white;
+    --site-text: #2C3E50; /* journal-text */
+  }
+
+  /* Явно меняем значения переменных при наличии класса .dark */
+  .dark {
+    --site-bg: #2D2B3E;   /* night-bg */
+    --site-text: #F5F5F5; /* night-text */
+  }
+
+  body {
+    @apply transition-colors duration-500 font-sans;
+    background-color: var(--site-bg);
+    color: var(--site-text);
+    min-height: 100vh;
+  }
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@variant dark (&:where(.dark, .dark *));
