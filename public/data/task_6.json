@@ -1,0 +1,2106 @@
+{
+    "description": "mondai roku",
+    "grade": 1,
+    "tasks": [
+        {
+            "unit": 1,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "通用",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "そんなへたな言い訳は、私には通用しない。", 
+                            "textHighlight": { "start": 14, "end": 16 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "この本はあなたの勉強に通用するのでお読みなさい。", 
+                            "textHighlight": { "start": 11, "end": 13 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "この仕事には能力のある人物を通用する予定だ。", 
+                            "textHighlight": { "start": 14, "end": 16 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "この危険な仕事に、これだけの給料では通用しない。", 
+                            "textHighlight": { "start": 18, "end": 20 } 
+                        }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 2,
+                    "text": "あらすじ",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "この小説のあらすじを400字以内にまとめなさい。", 
+                            "textHighlight": { "start": 5, "end": 9 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "論文は、あらすじ書き上がっています。", 
+                            "textHighlight": { "start": 4, "end": 8 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "会議で経営方針のあらすじが決まった。", 
+                            "textHighlight": { "start": 8, "end": 12 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "仲間同士で激しいあらすじになってしまった。", 
+                            "textHighlight": { "start": 8, "end": 12 } 
+                        }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 3,
+                    "text": "迷惑",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "込んでいる電車の中で新聞を広げるのは、他の客に迷惑だ。", 
+                            "textHighlight": { "start": 23, "end": 25 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "こんな少ない給料では家族の生活はいい迷惑だ。", 
+                            "textHighlight": { "start": 18, "end": 20 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "病気だとわかったときにはもうすでに手遅れで、迷惑な状態だった。", 
+                            "textHighlight": { "start": 22, "end": 24 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "だれにでも迷惑な思い出の1つや2つはあるものだ。", 
+                            "textHighlight": { "start": 5, "end": 7 } 
+                        }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 4,
+                    "text": "売買",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "不動産を売買するには資格が必要だ。", 
+                            "textHighlight": { "start": 4, "end": 6 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "この店は土日も休まず売買している。", 
+                            "textHighlight": { "start": 10, "end": 12 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "この商品は売買がよくて、生産が追いつかない。", 
+                            "textHighlight": { "start": 5, "end": 7 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "やむを得ない事情でこの土地を売買することにした。", 
+                            "textHighlight": { "start": 14, "end": 16 } 
+                        }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 5,
+                    "text": "過半数",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "新しい法案は過半数の賛成を得たので国会で成立した。", 
+                            "textHighlight": { "start": 6, "end": 9 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "今回の地震の被害者の数は過半数だった。", 
+                            "textHighlight": { "start": 12, "end": 15 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "狭い会場にファンが過半数で押しかけてきた。", 
+                            "textHighlight": { "start": 9, "end": 12 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "彼が犯人だという証拠は過半数である。", 
+                            "textHighlight": { "start": 11, "end": 14 } 
+                        }
+                    ],
+                    "answer": 1
+                }
+            ]
+        },
+        {
+            "unit": 2,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "反映",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "客の希望を反映して、配達のサービスを始めた。", 
+                            "textHighlight": { "start": 5, "end": 7 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "黒のドレスは色白の女性の美しさを特に反映していた。", 
+                            "textHighlight": { "start": 18, "end": 20 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "彼は酒を飲むとすぐに本性を反映する。", 
+                            "textHighlight": { "start": 13, "end": 15 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "隠していた事実がついに世間に反映されてしまった。", 
+                            "textHighlight": { "start": 14, "end": 16 } 
+                        }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 2,
+                    "text": "ためいき",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "息子のひどい成績に母は思わずためいきをついた。", 
+                            "textHighlight": { "start": 14, "end": 18 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "プールに入る前に、ためいきをしてください。", 
+                            "textHighlight": { "start": 9, "end": 13 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "話がおもしろくてためいきが出た。", 
+                            "textHighlight": { "start": 8, "end": 12 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "苦手な上司の声を聞いただけで、ぞっとためいきが出る。", 
+                            "textHighlight": { "start": 18, "end": 22 } 
+                        }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 3,
+                    "text": "特殊",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "動物には、人間にない特殊な能力を持つものが多い。", 
+                            "textHighlight": { "start": 10, "end": 12 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "夜中に特殊な物音がして目が覚めた。", 
+                            "textHighlight": { "start": 3, "end": 5 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "彼って特殊にもてるけど、どこがいいのかしらね。", 
+                            "textHighlight": { "start": 3, "end": 5 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "今日は特殊にあなただけにプレゼントをあげます。", 
+                            "textHighlight": { "start": 3, "end": 5 } 
+                        }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 4,
+                    "text": "加速度",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "地上を離れた飛行機は一気に加速度を増した。", 
+                            "textHighlight": { "start": 13, "end": 16 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "授業は個々の生徒の能力に合った加速度で進める。", 
+                            "textHighlight": { "start": 15, "end": 18 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "もう少し加速度をつけないと時間に遅れてしまう。", 
+                            "textHighlight": { "start": 4, "end": 7 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "あの人とはなぜか話の加速度が合わない。", 
+                            "textHighlight": { "start": 10, "end": 13 } 
+                        }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 5,
+                    "text": "矛盾",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "税金は安くして行政サービスはよくしろだなんて、矛盾している。", 
+                            "textHighlight": { "start": 23, "end": 25 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "やっぱり聞くことと見ることでは矛盾している。", 
+                            "textHighlight": { "start": 15, "end": 17 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "私は工場建設に賛成の彼とは矛盾する立場にある。", 
+                            "textHighlight": { "start": 13, "end": 15 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "2人は最初から最後まで矛盾ばかりだ。", 
+                            "textHighlight": { "start": 11, "end": 13 } 
+                        }
+                    ],
+                    "answer": 1
+                }
+            ]
+        },
+        {
+            "unit": 3,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "恩恵",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "この祭りは自然の恩恵に浴する感謝を表している。", 
+                            "textHighlight": { "start": 8, "end": 10 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "お世話になった人に恩恵返しをする。", 
+                            "textHighlight": { "start": 9, "end": 11 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "この神社のお守りは恩恵があると評判だ。", 
+                            "textHighlight": { "start": 9, "end": 11 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "先生の恩惠で、無事卒業することができた。", 
+                            "textHighlight": { "start": 3, "end": 5 } 
+                        }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 2,
+                    "text": "素人",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "これはとても素人には作れない料理だ。", 
+                            "textHighlight": { "start": 6, "end": 8 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "どこの素人かわからない男に娘を嫁にやるわけにはいかない。", 
+                            "textHighlight": { "start": 3, "end": 5 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "彼女は素人だけあって、とても美しい。", 
+                            "textHighlight": { "start": 3, "end": 5 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "税金が上がって、素人の生活は苦しくなった。", 
+                            "textHighlight": { "start": 8, "end": 10 } 
+                        }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 3,
+                    "text": "だらしない",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "そんなことで落ちこむなんて、だらしないやつだ。", 
+                            "textHighlight": { "start": 14, "end": 19 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "彼女はきちんと家計簿をつけていて、とてもお金にだらしない。", 
+                            "textHighlight": { "start": 23, "end": 28 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "夫に家事を手伝ってもらったが、ちょっとだらしない。", 
+                            "textHighlight": { "start": 19, "end": 24 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "こんなつまらない仕事、だらしなくてやっていられない。", 
+                            "textHighlight": { "start": 11, "end": 17 } 
+                        }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 4,
+                    "text": "重点",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "日本では、話すことより読む勉強に重点を置く学校がいまだ多い。", 
+                            "textHighlight": { "start": 16, "end": 18 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "この計画の成功の重点は君の活躍にかかっている。", 
+                            "textHighlight": { "start": 8, "end": 10 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "彼は長年財界の重点だった。", 
+                            "textHighlight": { "start": 7, "end": 9 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "あの作家の重点のある言葉が気に入っている。", 
+                            "textHighlight": { "start": 5, "end": 7 } 
+                        }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 5,
+                    "text": "支給",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "この会社は、給料のほかに家族手当が支給される。", 
+                            "textHighlight": { "start": 17, "end": 19 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "このコース修了者には資格を支給する。", 
+                            "textHighlight": { "start": 13, "end": 15 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "客は店員に品物の代金を現金で支給した。", 
+                            "textHighlight": { "start": 14, "end": 16 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "海外旅行をするなら旅券の支給手続きをしてください。", 
+                            "textHighlight": { "start": 12, "end": 14 } 
+                        }
+                    ],
+                    "answer": 1
+                }
+            ]
+        },
+        {
+            "unit": 4,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "演説",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "新しい首相は、政策について国会で演説した。", 
+                            "textHighlight": { "start": 16, "end": 18 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "あの男は義務も果たさずに権利ばかり演説する。", 
+                            "textHighlight": { "start": 17, "end": 19 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "私どもの協会は何よりも自由と平等を演説しております。", 
+                            "textHighlight": { "start": 17, "end": 19 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "選挙中、声を限りに候補者の名前を演説した。", 
+                            "textHighlight": { "start": 16, "end": 18 } 
+                        }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 2,
+                    "text": "生まれ",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "彼女は生まれがよいのか、どこか品がある。", 
+                            "textHighlight": { "start": 3, "end": 6 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "あなたの生まれは何月何日ですか。", 
+                            "textHighlight": { "start": 4, "end": 7 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "彼のあのがんこさは生まれのものでどうにもならない。", 
+                            "textHighlight": { "start": 9, "end": 12 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "乳歯から永久歯の生まれは10歳ぐらいに起きる。", 
+                            "textHighlight": { "start": 8, "end": 11 } 
+                        }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 3,
+                    "text": "危うい",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "おぼれかけたが、危ういところで助けられた。", 
+                            "textHighlight": { "start": 8, "end": 11 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "最近子どもの様子が少し危うい。", 
+                            "textHighlight": { "start": 11, "end": 14 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "近所を危うい男がうろついている。", 
+                            "textHighlight": { "start": 3, "end": 6 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "この道路は夜とても暗いので、1人で歩くのは危うい。", 
+                            "textHighlight": { "start": 21, "end": 24 } 
+                        }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 4,
+                    "text": "実物",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "写真では見ていたが、実物の美しさは想像以上だった。", 
+                            "textHighlight": { "start": 10, "end": 12 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "もし実物のダイヤなら、すごい値段のはずだ。", 
+                            "textHighlight": { "start": 2, "end": 4 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "彼のゴルフの腕前はまさに実物だ。", 
+                            "textHighlight": { "start": 12, "end": 14 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "この会社は名前だけで実物がない。", 
+                            "textHighlight": { "start": 10, "end": 12 } 
+                        }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 5,
+                    "text": "予測",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "気象庁が春に予測した通り、今年の夏は異常に暑い。", 
+                            "textHighlight": { "start": 6, "end": 8 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "彼の競馬の予測は当たったためしがない。", 
+                            "textHighlight": { "start": 5, "end": 7 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "予測せぬ事態が起こり、会場は大混乱になった。", 
+                            "textHighlight": { "start": 0, "end": 2 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "雨でもバザーは予測通りに行います。", 
+                            "textHighlight": { "start": 7, "end": 9 } 
+                        }
+                    ],
+                    "answer": 1
+                }
+            ]
+        },
+        {
+            "unit": 5,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "圧縮",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "袋にふとんを入れて空気を抜くと、薄く圧縮できる。", 
+                            "textHighlight": { "start": 18, "end": 20 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "スカート丈を3センチ圧縮したら、イメージが変わった。", 
+                            "textHighlight": { "start": 10, "end": 12 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "通勤時間を圧縮するため引っ越しをする。", 
+                            "textHighlight": { "start": 5, "end": 7 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "景気が悪いので、社員数を圧縮しなければならない。", 
+                            "textHighlight": { "start": 12, "end": 14 } 
+                        }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 2,
+                    "text": "ぼろ",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "彼女、上品ぶっているけれど、そのうちぼろを出すよ。", 
+                            "textHighlight": { "start": 18, "end": 20 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "去年買った服のデザインがぼろになって着られない。", 
+                            "textHighlight": { "start": 12, "end": 14 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "彼は他人のぼろばかり探すいやな男だ。", 
+                            "textHighlight": { "start": 5, "end": 7 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "このお菓子の名前はぼろがいい。", 
+                            "textHighlight": { "start": 9, "end": 11 } 
+                        }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 3,
+                    "text": "上等",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "これはたいへん上等なお品でございます。", 
+                            "textHighlight": { "start": 7, "end": 9 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "あの子は病気の母親の世話をして上等だ。", 
+                            "textHighlight": { "start": 15, "end": 17 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "上等な考えを持っている若者もたくさんいる。", 
+                            "textHighlight": { "start": 0, "end": 2 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "彼女は1人で5人の子どもを育てた上等な女性だ。", 
+                            "textHighlight": { "start": 16, "end": 18 } 
+                        }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 4,
+                    "text": "規律",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "彼はまるで軍隊のように規律正しい生活をしている。", 
+                            "textHighlight": { "start": 11, "end": 13 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "社長の大胆な規律で会社は危機を脱した。", 
+                            "textHighlight": { "start": 6, "end": 8 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "受験資格を経験者だけに規律する。", 
+                            "textHighlight": { "start": 11, "end": 13 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "今日の練習の規律はいつもより忙しい。", 
+                            "textHighlight": { "start": 6, "end": 8 } 
+                        }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 5,
+                    "text": "空想",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "彼女は「もし大金持ちと結婚したら」とか、空想ばかりしている。", 
+                            "textHighlight": { "start": 20, "end": 22 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "こんな結果になるなんて空想もつきませんでした。", 
+                            "textHighlight": { "start": 11, "end": 13 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "子どものころからスターになる空想を見続けている。", 
+                            "textHighlight": { "start": 14, "end": 16 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "将来の生活の空想を立ててください。", 
+                            "textHighlight": { "start": 6, "end": 8 } 
+                        }
+                    ],
+                    "answer": 1
+                }
+            ]
+        },
+        {
+            "unit": 6,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "往復",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "家と会社の間を往復するだけの毎日だ。", 
+                            "textHighlight": { "start": 7, "end": 9 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "子どものころの思い出が頭の中を往復する。", 
+                            "textHighlight": { "start": 15, "end": 17 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "毎朝学校へバスで往復している。", 
+                            "textHighlight": { "start": 8, "end": 10 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "工事が終わり、道路はすっかり往復している。", 
+                            "textHighlight": { "start": 14, "end": 16 } 
+                        }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 2,
+                    "text": "あらわれ",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "この投票率の低さは、政治への無関心のあらわれだ。", 
+                            "textHighlight": { "start": 18, "end": 22 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "お祭りには、たくさんの人々のあらわれがある。", 
+                            "textHighlight": { "start": 14, "end": 18 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "昔の町並みをあらわれにして観光客を呼ぶ。", 
+                            "textHighlight": { "start": 6, "end": 10 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "一度あきらめた歌手になる希望があらわれになった。", 
+                            "textHighlight": { "start": 15, "end": 19 } 
+                        }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 3,
+                    "text": "効力",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "この薬は古くなると、効力がほとんど失われる。", 
+                            "textHighlight": { "start": 10, "end": 12 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "この部屋の間取りは効力が悪い。", 
+                            "textHighlight": { "start": 9, "end": 11 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "勉強した効力があって合格した。", 
+                            "textHighlight": { "start": 4, "end": 6 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "仕事をまかせられて大きな効力を感じる。", 
+                            "textHighlight": { "start": 12, "end": 14 } 
+                        }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 4,
+                    "text": "見事",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "私の友人の画家は有名ではないが見事な絵を描く。", 
+                            "textHighlight": { "start": 15, "end": 17 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "20歳になればもう見事な大人といえる。", 
+                            "textHighlight": { "start": 9, "end": 11 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "あの子は幼い弟の世話をよくする見事な子どもだ。", 
+                            "textHighlight": { "start": 15, "end": 17 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "息子は見事な会社に就職できて喜んでいる。", 
+                            "textHighlight": { "start": 3, "end": 5 } 
+                        }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 5,
+                    "text": "開放",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "この庭園は、日曜日だけ市民に開放される。", 
+                            "textHighlight": { "start": 14, "end": 16 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "旅行から帰ってきて、駅でみんな開放した。", 
+                            "textHighlight": { "start": 15, "end": 17 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "最近景気がようやく開放してきた。", 
+                            "textHighlight": { "start": 9, "end": 11 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "犯人につかまっていた人質が開放された。", 
+                            "textHighlight": { "start": 13, "end": 15 } 
+                        }
+                    ],
+                    "answer": 1
+                }
+            ]
+        },
+        {
+            "unit": 7,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "加減",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "この料理を作るときは、ときどき火の強さを加減しなさい。", 
+                            "textHighlight": { "start": 20, "end": 22 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "加減の悪いことに、出かけようとしたときに雨が降り出してきた。", 
+                            "textHighlight": { "start": 0, "end": 2 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "あの男の常識の加減はその程度のものだよ。", 
+                            "textHighlight": { "start": 7, "end": 9 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "風邪をひいて、すっかり加減ができなくなった。", 
+                            "textHighlight": { "start": 11, "end": 13 } 
+                        }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 2,
+                    "text": "ねらい",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "税金を下げた政府のねらいは、今度の選挙に勝つことだ。", 
+                            "textHighlight": { "start": 9, "end": 12 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "この道路は来年までの完成をねらいにしている。", 
+                            "textHighlight": { "start": 13, "end": 16 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "今日の買い物のねらいは冬の洋服です。", 
+                            "textHighlight": { "start": 7, "end": 10 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "優勝という大きなねらいに向かってがんばる。", 
+                            "textHighlight": { "start": 8, "end": 11 } 
+                        }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 3,
+                    "text": "陽気",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "あの子は陽気にふるまっているが、両親の離婚にとても傷ついている。", 
+                            "textHighlight": { "start": 4, "end": 6 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "しっかり勉強すれば若い君たちの将来は陽気だ。", 
+                            "textHighlight": { "start": 18, "end": 20 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "今日は母親の陽気がいつになくいい。", 
+                            "textHighlight": { "start": 6, "end": 8 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "会社は法律に陽気な人を求めています。", 
+                            "textHighlight": { "start": 6, "end": 8 } 
+                        }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 4,
+                    "text": "気配",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "この家は人の住んでいる気配がまったくない。", 
+                            "textHighlight": { "start": 11, "end": 13 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "彼女はとても気配のいい人だ。", 
+                            "textHighlight": { "start": 6, "end": 8 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "被災地の人々の気配をレポートする。", 
+                            "textHighlight": { "start": 7, "end": 9 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "故郷の町はすっかり気配が変わってしまった。", 
+                            "textHighlight": { "start": 9, "end": 2 } 
+                        }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 5,
+                    "text": "引用",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "西洋の小説には、聖書から引用された言葉が多い。", 
+                            "textHighlight": { "start": 12, "end": 14 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "秘密の情報がこっそり国外に引用されてしまった。", 
+                            "textHighlight": { "start": 13, "end": 15 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "教授の本を1週間引用させていただいた。", 
+                            "textHighlight": { "start": 8, "end": 10 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "他人の力をいつも引用するわけにはいかない", 
+                            "textHighlight": { "start": 8, "end": 10 } 
+                        }
+                    ],
+                    "answer": 1
+                }
+            ]
+        },
+        {
+            "unit": 8,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "警告",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "世界各地の気候変化は人類に地球の異常を警告している。", 
+                            "textHighlight": { "start": 19, "end": 21 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "二度とこのような失敗をしないよう警告してまいります。", 
+                            "textHighlight": { "start": 16, "end": 18 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "電車の中で騒いでいる子どもにだれも警告しなかった。", 
+                            "textHighlight": { "start": 17, "end": 19 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "彼は他人の間違いばかり警告するいやな人間だ。", 
+                            "textHighlight": { "start": 11, "end": 13 } 
+                        }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 2,
+                    "text": "つながり",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "彼は夫の兄で、私とは血のつながりはない。", 
+                            "textHighlight": { "start": 12, "end": 16 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "大企業につながりの子会社に入社した。", 
+                            "textHighlight": { "start": 4, "end": 8 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "来月工事が完成すると道路はつながりになる。", 
+                            "textHighlight": { "start": 13, "end": 17 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "子どもたちは手をつながりながら歩いている。", 
+                            "textHighlight": { "start": 8, "end": 12 } 
+                        }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 3,
+                    "text": "余計",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "ついひと言余計なことを言って、上司を怒らせてしまった。", 
+                            "textHighlight": { "start": 5, "end": 7 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "お金なら余計にあるのでどうぞ心配しないでください。", 
+                            "textHighlight": { "start": 4, "end": 6 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "今年の会費の余計は来年に回しますのでよろしく。", 
+                            "textHighlight": { "start": 6, "end": 8 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "会社の経営がうまくいっていないという証拠は余計にある。", 
+                            "textHighlight": { "start": 21, "end": 23 } 
+                        }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 4,
+                    "text": "世間",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "法律上は罪にならないが、世間が許しません。", 
+                            "textHighlight": { "start": 12, "end": 14 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "大人になったら広い世間を旅行してみたい。", 
+                            "textHighlight": { "start": 9, "end": 11 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "退職したら畑仕事でもしてのんびり世間を送りたい。", 
+                            "textHighlight": { "start": 16, "end": 18 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "若者の世間ではそんなことは常識だそうだ。", 
+                            "textHighlight": { "start": 3, "end": 5 } 
+                        }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 5,
+                    "text": "交代",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "昼と夜姉妹で交代しながら、母の看病をした。", 
+                            "textHighlight": { "start": 6, "end": 8 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "このぼくの本と君の本を交代しないか。", 
+                            "textHighlight": { "start": 11, "end": 13 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "彼は文系志望だったのだが、理系に交代した。", 
+                            "textHighlight": { "start": 16, "end": 18 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "テレビが故障したので、新しいものと交代した。", 
+                            "textHighlight": { "start": 17, "end": 19 } 
+                        }
+                    ],
+                    "answer": 1
+                }
+            ]
+        },
+        {
+            "unit": 9,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "推定",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "電話の声から推定すると、犯人は若い男性だ。", 
+                            "textHighlight": { "start": 6, "end": 8 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "人の秘密を推定するのはやめなさい。", 
+                            "textHighlight": { "start": 5, "end": 7 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "子どもを失った親の悲しみはとても推定できない。", 
+                            "textHighlight": { "start": 16, "end": 18 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "病院で毎月血圧を推定しています。", 
+                            "textHighlight": { "start": 8, "end": 10 } 
+                        }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 2,
+                    "text": "ごぶさた",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "大学を卒業以来、先生にはすっかりごぶさたしている。", 
+                            "textHighlight": { "start": 16, "end": 20 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "遅くなったので、そろそろごぶさたします。", 
+                            "textHighlight": { "start": 12, "end": 16 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "病気のため、会議はごぶさたさせてもらう。", 
+                            "textHighlight": { "start": 9, "end": 13 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "先日は突然お宅にごぶさたし、失礼いたしました。", 
+                            "textHighlight": { "start": 8, "end": 12 } 
+                        }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 3,
+                    "text": "単純",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "彼は単純な性格だから、細かいことは気にしないと思う。", 
+                            "textHighlight": { "start": 2, "end": 4 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "まさか1回戦で単純に負けてしまうとはだれも思わなかった。", 
+                            "textHighlight": { "start": 7, "end": 9 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "たとえ単純な食事でもいいから朝食は食べなさい。", 
+                            "textHighlight": { "start": 3, "end": 5 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "思ったよりも単純に運転免許が取れた。", 
+                            "textHighlight": { "start": 6, "end": 8 } 
+                        }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 4,
+                    "text": "足元",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "お酒を飲みすぎて足元がふらつき、ひとりで歩けない。", 
+                            "textHighlight": { "start": 8, "end": 10 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "親の足元を離れてからもうだいぶたった。", 
+                            "textHighlight": { "start": 2, "end": 4 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "買い物は足元の店で済ますことが多い。", 
+                            "textHighlight": { "start": 4, "end": 6 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "お互いこんな足元に住んでいるとは知らなかった。", 
+                            "textHighlight": { "start": 6, "end": 8 } 
+                        }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 5,
+                    "text": "超過",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "家を建てたのだが、最初の予算をかなり超過してしまい大変だ。", 
+                            "textHighlight": { "start": 18, "end": 20 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "薬を超過するときは必ず医師に相談してください。", 
+                            "textHighlight": { "start": 2, "end": 4 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "最近はうつ病患者が超過している。", 
+                            "textHighlight": { "start": 9, "end": 11 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "タクシー会社は深夜の料金を超過する。", 
+                            "textHighlight": { "start": 13, "end": 15 } 
+                        }
+                    ],
+                    "answer": 1
+                }
+            ]
+        },
+        {
+            "unit": 10,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "調整",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "みなの都合を聞いて次の会議の日程を調整する。", 
+                            "textHighlight": { "start": 17, "end": 19 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "都会の農地のほとんどが、住宅地に調整されてしまった。", 
+                            "textHighlight": { "start": 16, "end": 18 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "部屋の冷房の強弱は自由に調整できます。", 
+                            "textHighlight": { "start": 12, "end": 14 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "荒れた土地を調整して、野菜畑にした。", 
+                            "textHighlight": { "start": 6, "end": 8 } 
+                        }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 2,
+                    "text": "すきずき",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "だれがいちばん美人かだって? それはすきずきだよ。", 
+                            "textHighlight": { "start": 18, "end": 22 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "娘は食べ物のすきずきが多くて困っています。", 
+                            "textHighlight": { "start": 6, "end": 10 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "この洋服のデザインは私のすきずきに合わない。", 
+                            "textHighlight": { "start": 12, "end": 16 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "何もこんな大変な仕事すきずきですることない。", 
+                            "textHighlight": { "start": 10, "end": 14 } 
+                        }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 3,
+                    "text": "透明",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "歌手の透明な歌声がコンサート会場に響き渡った。", 
+                            "textHighlight": { "start": 3, "end": 5 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "嫌な仕事が片付いて気持ちが透明になった。", 
+                            "textHighlight": { "start": 13, "end": 15 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "何かわからないが透明な不安を感じる。", 
+                            "textHighlight": { "start": 8, "end": 10 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "あの人は政治的には透明なので、意見を聞いてみよう。", 
+                            "textHighlight": { "start": 9, "end": 11 } 
+                        }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 4,
+                    "text": "見当",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "断りの理由は言わないが、彼の表情で大体の見当がついた。", 
+                            "textHighlight": { "start": 20, "end": 22 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "明日の雨が降る見当は50パーセントです。", 
+                            "textHighlight": { "start": 7, "end": 9 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "優勝候補が相手では勝てる見当はない。", 
+                            "textHighlight": { "start": 12, "end": 14 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "彼女のトランプ占いの見当は気味が悪いほどよく当たる。", 
+                            "textHighlight": { "start": 10, "end": 12 } 
+                        }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 5,
+                    "text": "申請",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "海外旅行に行くのでパスポートを申請した。", 
+                            "textHighlight": { "start": 15, "end": 17 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "恋人に思い切って結婚を申請した。", 
+                            "textHighlight": { "start": 11, "end": 13 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "飛行機を予約するときはいつも窓際の席を申請する。", 
+                            "textHighlight": { "start": 19, "end": 21 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "両親に借金を申請してみようと思う。", 
+                            "textHighlight": { "start": 6, "end": 8 } 
+                        }
+                    ],
+                    "answer": 1
+                }
+            ]
+        },
+        {
+            "unit": 11,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "合流",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "先生たちと6時に駅で合流して、そこから食事に行こう。", 
+                            "textHighlight": { "start": 10, "end": 12 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "クラス全員が合流して、野外学習に出かけた。", 
+                            "textHighlight": { "start": 6, "end": 8 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "出版社と合流して、テレビドラマを製作する。", 
+                            "textHighlight": { "start": 4, "end": 6 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "あの2人はひそかに合流しあっている。", 
+                            "textHighlight": { "start": 9, "end": 11 } 
+                        }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 2,
+                    "text": "でたらめ",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "この週刊誌の記事は、ほとんどでたらめばかりだ。", 
+                            "textHighlight": { "start": 14, "end": 18 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "でたらめを使って、授業をさぼった。", 
+                            "textHighlight": { "start": 0, "end": 4 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "彼女がそんなにでたらめだとは気づかずに、だまされてしまった。", 
+                            "textHighlight": { "start": 7, "end": 11 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "ずっと掃除していなかったので、部屋がでたらめだ。", 
+                            "textHighlight": { "start": 18, "end": 22 } 
+                        }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 3,
+                    "text": "肯定的",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "上司はその企画に対し、肯定的な意見を持っている。", 
+                            "textHighlight": { "start": 11, "end": 14 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "これだけ元気になれば外出も肯定的でしょうね。", 
+                            "textHighlight": { "start": 13, "end": 16 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "その件は肯定的にお受けいたします。", 
+                            "textHighlight": { "start": 4, "end": 7 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "大学を新設する計画はどうやら肯定的に結論された。", 
+                            "textHighlight": { "start": 14, "end": 17 } 
+                        }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 4,
+                    "text": "要旨",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "論文には、その要旨を書いたものを付けてください。", 
+                            "textHighlight": { "start": 7, "end": 9 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "今回の事件にはいろいろな要旨が関係している。", 
+                            "textHighlight": { "start": 12, "end": 14 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "大統領の演説は要旨をおさえている。", 
+                            "textHighlight": { "start": 7, "end": 9 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "この町は交通上の要旨として発達した。", 
+                            "textHighlight": { "start": 8, "end": 10 } 
+                        }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 5,
+                    "text": "指定",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "パーティーの参加者は指定された服装で来てください。", 
+                            "textHighlight": { "start": 10, "end": 12 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "この事件の犯人を指定するのは難しい。", 
+                            "textHighlight": { "start": 8, "end": 10 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "就職はその人の人生を指定するともいえる。", 
+                            "textHighlight": { "start": 10, "end": 12 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "代表者は投票によって指定しようではないか。", 
+                            "textHighlight": { "start": 10, "end": 12 } 
+                        }
+                    ],
+                    "answer": 1
+                }
+            ]
+        },
+        {
+            "unit": 12,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "恐縮",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "泊めていただいた上にごちそうにまでなって、恐縮です。", 
+                            "textHighlight": { "start": 21, "end": 23 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "みなで恐縮して卒業記念の写真をとってもらった。", 
+                            "textHighlight": { "start": 3, "end": 5 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "大勢の人の前で話すなんて、まったく恐縮してしまった。", 
+                            "textHighlight": { "start": 17, "end": 19 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "上司と一緒に外出すると緊張で恐縮してしまう。", 
+                            "textHighlight": { "start": 14, "end": 16 } 
+                        }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 2,
+                    "text": "心当たり",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "娘が帰ってこないので、心当たりに次々と電話した。", 
+                            "textHighlight": { "start": 11, "end": 15 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "あんないい奥さんをもらうなんて、彼は女性の心当たりがある。", 
+                            "textHighlight": { "start": 21, "end": 25 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "私の本当の気持ちを、親友に心当たりに打ち明けた。", 
+                            "textHighlight": { "start": 13, "end": 17 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "君はふだんからの心当たりがなっていない。", 
+                            "textHighlight": { "start": 8, "end": 12 } 
+                        }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 3,
+                    "text": "さわやか",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "受付の女性はさわやかな笑顔で応待している。", 
+                            "textHighlight": { "start": 6, "end": 10 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "5月の空に鳥がさわやかに飛んでいる。", 
+                            "textHighlight": { "start": 7, "end": 11 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "彼女は細くてさわやかな字を書く。", 
+                            "textHighlight": { "start": 6, "end": 10 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "今日は寒いので、さわやかな食べ物がいい。", 
+                            "textHighlight": { "start": 8, "end": 12 } 
+                        }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 4,
+                    "text": "焦点",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "2人の話し合いは焦点がずれていて、結論が出ない。", 
+                            "textHighlight": { "start": 8, "end": 10 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "今年の入社試験は面接が焦点です。", 
+                            "textHighlight": { "start": 11, "end": 13 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "よくわかるように焦点してください。", 
+                            "textHighlight": { "start": 8, "end": 10 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "この企画は先輩が焦点となって進められる。", 
+                            "textHighlight": { "start": 8, "end": 10 } 
+                        }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 5,
+                    "text": "考慮",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "参加者の年齢や体力を考慮して、旅行プランを立てた。", 
+                            "textHighlight": { "start": 10, "end": 12 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "どうも今回の事件にはあの人物が考慮しているようだ。", 
+                            "textHighlight": { "start": 15, "end": 17 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "くれぐれも、みなさま方の考慮ある行動をお願い致します。", 
+                            "textHighlight": { "start": 12, "end": 14 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "あの社員にはしっかりした考慮があるので仕事をまかせられる。", 
+                            "textHighlight": { "start": 12, "end": 14 } 
+                        }
+                    ],
+                    "answer": 1
+                }
+            ]
+        },
+        {
+            "unit": 13,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "測定",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "子どもの運動能力を測定するためにテストを行う。", 
+                            "textHighlight": { "start": 9, "end": 11 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "今、事故の原因を測定しているところです。", 
+                            "textHighlight": { "start": 8, "end": 10 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "この程度のトラブルは前もって測定していた。", 
+                            "textHighlight": { "start": 14, "end": 16 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "学者はこの地域に大地震が起こると測定した。", 
+                            "textHighlight": { "start": 16, "end": 18 } 
+                        }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 2,
+                    "text": "筋",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "あいつの言うことはめちゃくちゃで、筋が通っていない。", 
+                            "textHighlight": { "start": 17, "end": 18 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "上司とはことごとく筋が合わない。", 
+                            "textHighlight": { "start": 9, "end": 10 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "あんなことをする彼の筋は理解できない。", 
+                            "textHighlight": { "start": 10, "end": 11 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "彼女のすぐれた音感は生まれつきの筋である。", 
+                            "textHighlight": { "start": 16, "end": 17 } 
+                        }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 3,
+                    "text": "ひきょう",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "彼なら途中で逃げ出すようなひきょうなことは絶対にしないはずだ。", 
+                            "textHighlight": { "start": 13, "end": 17 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "こんなひきょうなテレビ番組は子どもに見せたくない。", 
+                            "textHighlight": { "start": 3, "end": 7 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "若い女性が電車の中で化粧するなんてひきょうだ。", 
+                            "textHighlight": { "start": 17, "end": 21 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "酔っぱらったひきょうな姿を彼女に見られてしまって恥ずかしい。", 
+                            "textHighlight": { "start": 6, "end": 10 } 
+                        }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 4,
+                    "text": "見解",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "この問題には、老人と若者の間に大きな見解の差がある。", 
+                            "textHighlight": { "start": 18, "end": 20 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "この件に関して、いい見解があったらぜひ教えてください。", 
+                            "textHighlight": { "start": 10, "end": 12 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "その考えには不満の見解が、あちこちであがった。", 
+                            "textHighlight": { "start": 9, "end": 11 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "今後、いっそうの努力をする見解でありますので、よろしくお願いします。", 
+                            "textHighlight": { "start": 13, "end": 15 } 
+                        }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 5,
+                    "text": "清書",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "作文の間違いを調べて、清書して出した。", 
+                            "textHighlight": { "start": 11, "end": 13 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "受付でご自分のお名前とご住所を清書してください。", 
+                            "textHighlight": { "start": 15, "end": 17 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "政治は今年度の清書を発表した。", 
+                            "textHighlight": { "start": 7, "end": 9 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "連絡先の電話番号を紙切れにさっと清書して彼女に渡した。", 
+                            "textHighlight": { "start": 16, "end": 18 } 
+                        }
+                    ],
+                    "answer": 1
+                }
+            ]
+        },
+        {
+            "unit": 14,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "大半",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "日本はエネルギーの大半を輸入に頼っている。", 
+                            "textHighlight": { "start": 9, "end": 11 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "彼が犯人だという証拠は大半ある。", 
+                            "textHighlight": { "start": 11, "end": 13 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "あの人は株で大半の富を得たらしい。", 
+                            "textHighlight": { "start": 6, "end": 8 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "地震の被害は2兆円の大半に達した。", 
+                            "textHighlight": { "start": 10, "end": 12 } 
+                        }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 2,
+                    "text": "口実",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "夫は仕事の付き合いを口実に、毎晩飲んで帰ってくる。", 
+                            "textHighlight": { "start": 10, "end": 12 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "財布を拾ったことが口実で彼女と知り合いになった。", 
+                            "textHighlight": { "start": 9, "end": 11 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "お金を借りるには一定の口実がある。", 
+                            "textHighlight": { "start": 11, "end": 13 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "学校に来ないのはどうもいじめが口実のようだ。", 
+                            "textHighlight": { "start": 15, "end": 17 } 
+                        }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 3,
+                    "text": "あいまい",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "あいまいな発言を繰り返す首相に国民は失望した。", 
+                            "textHighlight": { "start": 0, "end": 4 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "その情報は今のところあいまいなので、確からしい。", 
+                            "textHighlight": { "start": 10, "end": 14 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "暇がなくてあいまいになっている本がたくさんある。", 
+                            "textHighlight": { "start": 5, "end": 9 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "明け方、亡くなった母のあいまいな夢を見た。", 
+                            "textHighlight": { "start": 11, "end": 15 } 
+                        }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 4,
+                    "text": "要点",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "人に説明するときは、要点をおさえて話しなさい。", 
+                            "textHighlight": { "start": 10, "end": 12 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "古都の要点を1日案内してもらった。", 
+                            "textHighlight": { "start": 3, "end": 5 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "この演説は要点よくまとめられている。", 
+                            "textHighlight": { "start": 5, "end": 7 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "彼は何をやらせても要点が悪い。", 
+                            "textHighlight": { "start": 9, "end": 11 } 
+                        }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 5,
+                    "text": "持続",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "この頭痛薬は約12時間、効き目が持続する。", 
+                            "textHighlight": { "start": 16, "end": 18 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "一晩中持続して運転しないと、明日の朝までに故郷に帰れない。", 
+                            "textHighlight": { "start": 3, "end": 5 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "このところ、いやな事件が持続して起こる。", 
+                            "textHighlight": { "start": 12, "end": 14 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "この和菓子はあまり持続しないので早目に食べてください。", 
+                            "textHighlight": { "start": 9, "end": 11 } 
+                        }
+                    ],
+                    "answer": 1
+                }
+            ]
+        },
+        {
+            "unit": 15,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "みじめ",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "彼は事業に失敗し、今ではみじめな生活をしているという。", 
+                            "textHighlight": { "start": 12, "end": 15 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "犯罪が低年齢化しているとは、なんとみじめなことだ。", 
+                            "textHighlight": { "start": 17, "end": 20 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "親友が交通事故で亡くなったというみじめな知らせを受け取った。", 
+                            "textHighlight": { "start": 16, "end": 19 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "息子が口答えしたら母はみじめな顔をした。", 
+                            "textHighlight": { "start": 11, "end": 14 } 
+                        }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 2,
+                    "text": "具合",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "車のエンジンの具合が悪くて、変な音がする。", 
+                            "textHighlight": { "start": 7, "end": 9 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "最近は経済の具合が悪いので仕事が少ない。", 
+                            "textHighlight": { "start": 6, "end": 8 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "頭の具合がよくないといい考えが浮かばない。", 
+                            "textHighlight": { "start": 2, "end": 4 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "政治の具合がよくならないと国民の生活も大変だ。", 
+                            "textHighlight": { "start": 3, "end": 5 } 
+                        }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 3,
+                    "text": "世の中",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "そんな甘い考えでは世の中渡っていけない。", 
+                            "textHighlight": { "start": 9, "end": 12 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "彼は若くして政治の世の中に入った。", 
+                            "textHighlight": { "start": 9, "end": 12 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "子どもが世の中に目を覚ますことが多く寝不足気味だ。", 
+                            "textHighlight": { "start": 4, "end": 7 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "動物の世の中は力の関係がはっきりしている。", 
+                            "textHighlight": { "start": 3, "end": 6 } 
+                        }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 4,
+                    "text": "雑音",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "このラジオは雑音がひどくて、声が聞き取りにくい。", 
+                            "textHighlight": { "start": 6, "end": 8 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "飛行場の近くの住民は、飛行機の雑音に悩まされている。", 
+                            "textHighlight": { "start": 15, "end": 17 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "私の母は細かいことまで雑音を言う。", 
+                            "textHighlight": { "start": 11, "end": 13 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "道路工事の雑音がして一晩中眠れなかった。", 
+                            "textHighlight": { "start": 5, "end": 7 } 
+                        }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 5,
+                    "text": "拡張",
+                    "options": [
+                        { 
+                            "id": 1, 
+                            "text": "海外事業を拡張するため、社員を募集する。", 
+                            "textHighlight": { "start": 5, "end": 7 } 
+                        },
+                        { 
+                            "id": 2, 
+                            "text": "山頂に着くと目の前に美しい景色が拡張した。", 
+                            "textHighlight": { "start": 16, "end": 18 } 
+                        },
+                        { 
+                            "id": 3, 
+                            "text": "ペットの写真を拡張して、部屋に飾った。", 
+                            "textHighlight": { "start": 7, "end": 9 } 
+                        },
+                        { 
+                            "id": 4, 
+                            "text": "あっという間に彼らの結婚のうわさが拡張した。", 
+                            "textHighlight": { "start": 17, "end": 19 } 
+                        }
+                    ],
+                    "answer": 1
+                }
+            ]
+        }
+    ]
+}
