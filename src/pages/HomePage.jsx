@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
-import { DarkModeToggle } from "../components/DarkModeToggle";
+
+import { Navbar } from "../components/Navbar";
+import { div } from 'framer-motion/client';
 
 const HomePage = () => {
     const [data, setData] = useState(null)
@@ -16,18 +18,31 @@ const HomePage = () => {
 
     return (
         <>
-
-            <h1 className="text-3xl font-bold underline">HomePage</h1>
-            <DarkModeToggle />
+            <Navbar />
             {data && data.length > 0 ? (
-                <div>
-                    {data.map((item) => (
-                        <p key={item.task} className='text-blue-500'>Task {item.task}: {item.url}</p>
-                    ))}
+                <div className='container mx-auto mt-5 px-4'> 
+                    <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center'>
+                        {data.map((item) => (
+                            <div 
+                                key={item.task} 
+                                className='w-full max-w-sm p-4 rounded-xl bg-journal-mint dark:bg-night-surface shadow-soft border border-black/5 transition-transform hover:scale-[1.02] cursor-pointer'
+                            >
+                                <p className="font-bold text-journal-text dark:text-night-text">
+                                    {item.title}
+                                </p>
+                                <p className="text-muted-500 break-all text-sm">
+                                    {item.description}
+                                </p>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             ) : (
-                <p>Loading...</p>
+                <div className="flex justify-center mt-10">
+                    <p className="animate-pulse text-journal-accent">Loading...</p>
+                </div>
             )}
+
         </>
     )
 }

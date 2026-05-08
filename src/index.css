@@ -65,5 +65,8 @@
 .hide-scrollbar::-webkit-scrollbar {
   display: none;
 }
+.cursor-pointer {
+  cursor: pointer;
+}
 
 @variant dark (&:where(.dark, .dark *));
