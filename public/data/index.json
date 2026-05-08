@@ -1,11 +1,11 @@
 [
-    {"task": 1, "url": "data/task_1.json"},
-    {"task": 2, "url": "data/task_2.json"},
-    {"task": 3, "url": "data/task_3.json"},
-    {"task": 4, "url": "data/task_4.json"},
-    {"task": 5, "url": "data/task_5.json"},
-    {"task": 6, "url": "data/task_6.json"},
-    {"task": 7, "url": "data/task_7.json"},
-    {"task": 8, "url": "data/task_8.json"},
-    {"task": 9, "url": "data/task_9.json"}
+    {"task": 1, "url": "data/task_1.json", "title": "Task 1", "description": "Task 1: mojigoi mondai 1"},
+    {"task": 2, "url": "data/task_2.json", "title": "Task 2", "description": "Task 2: mojigoi mondai 2"},
+    {"task": 3, "url": "data/task_3.json", "title": "Task 3", "description": "Task 3: mojigoi mondai 3"},
+    {"task": 4, "url": "data/task_4.json", "title": "Task 4", "description": "Task 4: mojigoi mondai 4"},
+    {"task": 5, "url": "data/task_5.json", "title": "Task 5", "description": "Task 5: mojigoi mondai 5"},
+    {"task": 6, "url": "data/task_6.json", "title": "Task 6", "description": "Task 6: bunpou mondai 6"},
+    {"task": 7, "url": "data/task_7.json", "title": "Task 7", "description": "Task 7: bunpou mondai 7"},
+    {"task": 8, "url": "data/task_8.json", "title": "Task 8", "description": "Task 8: hoshi mondai 8"},
+    {"task": 9, "url": "data/task_9.json", "title": "Task 9", "description": "Task 9: dokkai mondai 9"}
 ]
