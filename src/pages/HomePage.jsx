@@ -2,9 +2,12 @@ import { useEffect, useState } from 'react'
 
 import { Navbar } from "../components/Navbar";
 import { div } from 'framer-motion/client';
+import { ModalSettings } from '../components/ModalSettings';
 
 const HomePage = () => {
     const [data, setData] = useState(null)
+    const [isModalOpen, setIsModalOpen] = useState(false)
+    const [selectedTask, setSelectedTask] = useState(null)
 
     useEffect(() => {
         const fetchData = async () => {
@@ -26,6 +29,10 @@ const HomePage = () => {
                             <div 
                                 key={item.task} 
                                 className='w-full max-w-sm p-4 rounded-xl bg-journal-mint dark:bg-night-surface shadow-soft border border-black/5 transition-transform hover:scale-[1.02] cursor-pointer'
+                                onClick={() => {
+                                    setSelectedTask(item)
+                                    setIsModalOpen(true)
+                                }}
                             >
                                 <p className="font-bold text-journal-text dark:text-night-text">
                                     {item.title}
@@ -42,7 +49,14 @@ const HomePage = () => {
                     <p className="animate-pulse text-journal-accent">Loading...</p>
                 </div>
             )}
-
+            <ModalSettings
+                isOpen={isModalOpen}
+                onClose={() => setIsModalOpen(false)}
+                title={selectedTask?.title || "Task Details"}
+                url={selectedTask?.url}
+            >
+                <p className="text-gray-700">{selectedTask?.description}</p>
+            </ModalSettings>
         </>
     )
 }
