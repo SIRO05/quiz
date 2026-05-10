@@ -1,6 +1,6 @@
 {
-    "description": "mondai go",
-    "grade": 1,
+    "description": "問題5 の言葉に意味が最も近いものを、１・２・３・４から一つ選びなさい。",
+    "grade": 1.5,
     "tasks": [
         {
             "unit": 1,

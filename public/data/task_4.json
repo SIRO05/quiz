@@ -1,6 +1,6 @@
 {
-    "description": "mondai yon",
-    "grade": 1,
+    "description": "問題4 に入れるのに最もよいものを、１・２・３・４から一つ選びなさい。",
+    "grade": 1.5,
     "tasks": [
         {
             "unit": 1,

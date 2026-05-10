@@ -1,6 +1,6 @@
 {
-    "description": "mondai san",
-    "grade": 1,
+    "description": "問題3 ( ) に入れるのに最もよいものを、１・２・３・４から一つ選びなさい。",
+    "grade": 0.8,
     "tasks": [
         {
             "unit": 1,
