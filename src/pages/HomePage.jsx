@@ -1,20 +1,24 @@
 import { useEffect, useState } from 'react'
 
 import { Navbar } from "../components/Navbar";
-import { div } from 'framer-motion/client';
+import { ModalSettings } from '../components/ModalSettings';
+import { normalizeIndexTask, readJson } from "../utils/jsonReader";
 
 const HomePage = () => {
     const [data, setData] = useState(null)
+    const [isModalOpen, setIsModalOpen] = useState(false)
+    const [selectedTask, setSelectedTask] = useState(null)
 
     useEffect(() => {
         const fetchData = async () => {
-            const response = await fetch('data/index.json')
-            const jsonData = await response.json()
+            const jsonData = await readJson('data/index.json', normalizeIndexTask)
             setData(jsonData)
         }
 
         fetchData()
     }, [])
+    
+    const allUrls = data?.map(i => i.url).filter(Boolean) ?? []
 
     return (
         <>
@@ -22,10 +26,50 @@ const HomePage = () => {
             {data && data.length > 0 ? (
                 <div className='container mx-auto mt-5 px-4'> 
                     <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center'>
+                        <div 
+                            key="exam-all-tests"
+                            className='w-full max-w-sm p-4 rounded-xl bg-journal-mint dark:bg-night-surface shadow-soft border border-black/5 transition-transform hover:scale-[1.02] cursor-pointer'
+                            onClick={() => {
+                                setSelectedTask({
+                                    title: 'Exam: All Tests',
+                                    description: 'Run all available tests in one exam.',
+                                    url: allUrls,
+                                    preselectAll: true,
+                                    selectionMode: 'all'
+                                })
+                                setIsModalOpen(true)
+                            }}
+                        >
+                            <p className="font-bold text-journal-text dark:text-night-text">Exam: All Tests</p>
+                            <p className="text-muted-500 break-all text-sm">Run all available tests in one exam.</p>
+                        </div>
+
+                        <div 
+                            key="custom-exam"
+                            className='w-full max-w-sm p-4 rounded-xl bg-journal-mint dark:bg-night-surface shadow-soft border border-black/5 transition-transform hover:scale-[1.02] cursor-pointer'
+                            onClick={() => {
+                                setSelectedTask({
+                                    title: 'Custom Exam',
+                                    description: 'Choose which tasks to include in the exam.',
+                                    url: allUrls,
+                                    preselectAll: false,
+                                    selectionMode: 'custom'
+                                })
+                                setIsModalOpen(true)
+                            }}
+                        >
+                            <p className="font-bold text-journal-text dark:text-night-text">Custom Exam</p>
+                            <p className="text-muted-500 break-all text-sm">Choose which tasks to include in the exam.</p>
+                        </div>
+
                         {data.map((item) => (
                             <div 
-                                key={item.task} 
+                                key={item.task ?? item.url ?? item.title}
                                 className='w-full max-w-sm p-4 rounded-xl bg-journal-mint dark:bg-night-surface shadow-soft border border-black/5 transition-transform hover:scale-[1.02] cursor-pointer'
+                                onClick={() => {
+                                    setSelectedTask({ ...item, selectionMode: 'single' })
+                                    setIsModalOpen(true)
+                                }}
                             >
                                 <p className="font-bold text-journal-text dark:text-night-text">
                                     {item.title}
@@ -42,7 +86,16 @@ const HomePage = () => {
                     <p className="animate-pulse text-journal-accent">Loading...</p>
                 </div>
             )}
-
+            <ModalSettings
+                isOpen={isModalOpen}
+                onClose={() => setIsModalOpen(false)}
+                title={selectedTask?.title || "Task Details"}
+                url={selectedTask?.url}
+                preselectAll={selectedTask?.preselectAll}
+                selectionMode={selectedTask?.selectionMode}
+            >
+                <p className="text-gray-700">{selectedTask?.description}</p>
+            </ModalSettings>
         </>
     )
 }
