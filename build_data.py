@@ -6,7 +6,7 @@ def build():
     output_file = 'public/data/task_9.json'
     
     final_output = {
-        "description": "mondai kyuu",
+        "description": "問題9 次の文章を読んで ( 50 ) から ( 54 ) の中に入る最もよいものを、１・２・３・４から一つ選びなさい。",
         "grade": 1,
         "tasks": []
     }
