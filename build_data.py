@@ -8,7 +8,7 @@ def build():
     output_file = f'public/data/{level}/task_9.json'
 
     final_output = {
-        "description": "問題9 次の文章を読んで ( 50 ) から ( 54 ) の中に入る最もよいものを、１・２・３・４から一つ選びなさい。",
+        "description": "問題9 次の文章を読んで ( 1 ) から ( 5 ) の中に入る最もよいものを、１・２・３・４から一つ選びなさい。",
         "grade": 1,
         "tasks": []
     }
