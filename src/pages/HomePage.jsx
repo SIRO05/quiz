@@ -4,6 +4,14 @@ import { Navbar } from "../components/Navbar";
 import { ModalSettings } from '../components/ModalSettings';
 import { normalizeIndexTask, readJson } from "../utils/jsonReader";
 
+const INDEX_KEY = "N2"
+const TASK_DATA_DIR = `data/${INDEX_KEY}`
+
+const resolveTaskUrl = (taskUrl) => {
+    const fileName = taskUrl?.split('/').filter(Boolean).pop()
+    return fileName ? `${TASK_DATA_DIR}/${fileName}` : ''
+}
+
 const HomePage = () => {
     const [data, setData] = useState(null)
     const [isModalOpen, setIsModalOpen] = useState(false)
@@ -11,14 +19,21 @@ const HomePage = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const jsonData = await readJson('data/index.json', normalizeIndexTask)
-            setData(jsonData)
+            const jsonData = await readJson('data/N2/index.json')
+            const tasks = Array.isArray(jsonData?.[INDEX_KEY])
+                ? jsonData[INDEX_KEY].map((task) => ({
+                    ...normalizeIndexTask(task),
+                    url: resolveTaskUrl(task.url),
+                }))
+                : []
+
+            setData(tasks)
         }
 
         fetchData()
     }, [])
     
-    const allUrls = data?.map(i => i.url).filter(Boolean) ?? []
+    const allTasks = data ?? []
 
     return (
         <>
@@ -33,7 +48,7 @@ const HomePage = () => {
                                 setSelectedTask({
                                     title: 'Exam: All Tests',
                                     description: 'Run all available tests in one exam.',
-                                    url: allUrls,
+                                    url: allTasks,
                                     preselectAll: true,
                                     selectionMode: 'all'
                                 })
@@ -51,7 +66,7 @@ const HomePage = () => {
                                 setSelectedTask({
                                     title: 'Custom Exam',
                                     description: 'Choose which tasks to include in the exam.',
-                                    url: allUrls,
+                                    url: allTasks,
                                     preselectAll: false,
                                     selectionMode: 'custom'
                                 })

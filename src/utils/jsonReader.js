@@ -49,21 +49,24 @@ export function normalizeTaskFile(taskFile = {}) {
 }
 
 function normalizeUnit(unit = {}) {
+  const unitPassage = unit.passage ?? ""
+
   return {
     unit: unit.unit ?? null,
+    passage: unitPassage,
     questions: Array.isArray(unit.questions)
-      ? unit.questions.map(normalizeQuestion)
+      ? unit.questions.map((q) => normalizeQuestion(q, unitPassage))
       : [],
   }
 }
 
-function normalizeQuestion(question = {}) {
+function normalizeQuestion(question = {}, unitPassage = "") {
   const textLeft = question.textLeft ?? ""
   const textRight = question.textRight ?? ""
 
   return {
     id: question.id ?? null,
-    text: question.text ?? "",
+    text: question.text ?? unitPassage,
     textLeft,
     textRight,
     starIndex: question.starIndex ?? null,
