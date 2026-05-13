@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { createPortal } from "react-dom"
 import { motion, AnimatePresence } from "framer-motion"
 import { normalizeTaskFile, readJson } from "../utils/jsonReader"
+import { buildSelectedQuiz } from "../utils/quizBuilder"
 
 const resolveSource = (source, index) => {
   if (typeof source === "string") {
@@ -163,25 +164,30 @@ export function ModalSettings({ isOpen, onClose, url, title, children, preselect
   }
 
   const getSubmissionPayload = () => {
+    const selectedQuiz = buildSelectedQuiz({
+      data: loadedState.data,
+      selectionMode,
+      selectedUnits,
+    })
+
     const basePayload = {
       mode: selectionMode,
       title,
       randomizeQuestions,
       randomizeAnswers,
       showAnswers,
+      selectedQuiz,
     }
 
     if (isCustomExam) {
       return {
         ...basePayload,
-        lessons: loadedState.data?.lessons ?? [],
         selectedUnitKeys: [...selectedUnits],
       }
     }
 
     return {
       ...basePayload,
-      tasks: loadedState.data?.tasks ?? [],
       selectedUnitIds: [...selectedUnits],
     }
   }
