@@ -3,6 +3,24 @@ import { createPortal } from "react-dom"
 import { motion, AnimatePresence } from "framer-motion"
 import { normalizeTaskFile, readJson } from "../utils/jsonReader"
 
+const resolveSource = (source, index) => {
+  if (typeof source === "string") {
+    const fileName = source.split('/').filter(Boolean).pop()
+
+    return {
+      url: source,
+      title: fileName?.replace(/\.json$/i, '') ?? `Lesson ${index + 1}`,
+      description: '',
+    }
+  }
+
+  return {
+    url: source?.url ?? '',
+    title: source?.title ?? `Lesson ${index + 1}`,
+    description: source?.description ?? '',
+  }
+}
+
 export function ModalSettings({ isOpen, onClose, url, title, children, preselectAll, selectionMode = "single" }) {
   const [loadedState, setLoadedState] = useState({ url: null, data: null })
   const [selectedUnits, setSelectedUnits] = useState(new Set())
@@ -23,12 +41,14 @@ export function ModalSettings({ isOpen, onClose, url, title, children, preselect
         let jsonData
 
         if (selectionMode === "all" || selectionMode === "custom") {
-          const results = await Promise.all(url.map(async (u, index) => {
-            const data = await readJson(u, normalizeTaskFile)
+          const results = await Promise.all(url.map(async (source, index) => {
+            const resolvedSource = resolveSource(source, index)
+            const data = await readJson(resolvedSource.url, normalizeTaskFile)
+
             return {
-              url: u,
-              title: u.split('/').pop()?.replace(/\.json$/i, '') ?? `Lesson ${index + 1}`,
-              description: data?.description ?? '',
+              url: resolvedSource.url,
+              title: resolvedSource.title,
+              description: resolvedSource.description ?? data?.description ?? '',
               tasks: data?.tasks ?? [],
             }
           }))
@@ -168,8 +188,10 @@ export function ModalSettings({ isOpen, onClose, url, title, children, preselect
 
   const handleSubmitForm = () => {
     const payload = getSubmissionPayload()
-    console.log("submit-form-stub", payload)
-    return payload
+    const jsonString = JSON.stringify(payload, null, 2)
+    const blob = new Blob([jsonString], { type: 'application/json' })
+    const url = URL.createObjectURL(blob)
+    window.open(url, '_blank')
   }
 
   const hasSelection = selectedUnits.size > 0
