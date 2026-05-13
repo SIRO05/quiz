@@ -1,10 +1,12 @@
 import json
 import os
+import re
 
 def build():
-    source_dir = 'reading_data'
-    output_file = 'public/data/task_9.json'
-    
+    level = 'N2'
+    source_dir = f"reading_data/{level}"
+    output_file = f'public/data/{level}/task_9.json'
+
     final_output = {
         "description": "問題9 次の文章を読んで ( 50 ) から ( 54 ) の中に入る最もよいものを、１・２・３・４から一つ選びなさい。",
         "grade": 1,
@@ -12,7 +14,10 @@ def build():
     }
 
     # Проходим по папкам юнитов (unit_1, unit_2...)
-    units = sorted([d for d in os.listdir(source_dir) if os.path.isdir(os.path.join(source_dir, d))])
+    units = sorted(
+        [d for d in os.listdir(source_dir) if os.path.isdir(os.path.join(source_dir, d))],
+        key=lambda x: int(re.search(r'\d+', x).group())
+    )
 
     for unit_folder in units:
         unit_path = os.path.join(source_dir, unit_folder)
@@ -25,13 +30,10 @@ def build():
         with open(os.path.join(unit_path, 'questions.json'), 'r', encoding='utf-8') as f:
             questions_list = json.load(f)
 
-        # Добавляем текст доккай в каждый вопрос
-        for q in questions_list:
-            q["text"] = passage_text
-
         # 3. Формируем структуру юнита
         unit_data = {
             "unit": int(unit_folder.replace('unit_', '')),
+            "passage": passage_text,
             "questions": questions_list
         }
         
@@ -42,7 +44,7 @@ def build():
     with open(output_file, 'w', encoding='utf-8') as f:
         json.dump(final_output, f, ensure_ascii=False, indent=4)
     
-    print(f"Успех! Файл {output_file} обновлен.")
+    print(f"Done! file {output_file} updated.")
 
 if __name__ == "__main__":
     build()
