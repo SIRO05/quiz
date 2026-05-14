@@ -19,7 +19,7 @@ const HomePage = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const jsonData = await readJson('data/N2/index.json')
+            const jsonData = await readJson('data/index.json')
             const tasks = Array.isArray(jsonData?.[INDEX_KEY])
                 ? jsonData[INDEX_KEY].map((task) => ({
                     ...normalizeIndexTask(task),
