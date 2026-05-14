@@ -219,13 +219,13 @@ export function ModalSettings({ isOpen, onClose, url, title, children, preselect
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             transition={{ duration: 0.2, ease: "easeOut" }}
-            className="relative w-full max-w-lg max-h-[92vh] overflow-hidden rounded-t-2xl sm:rounded-xl bg-white p-4 sm:p-6 shadow-2xl border border-gray-100"
+            className="relative w-full max-w-lg max-h-[92vh] overflow-hidden rounded-t-2xl sm:rounded-xl bg-white dark:bg-night-surface p-4 sm:p-6 shadow-2xl border border-gray-100 dark:border-white/10"
           >
-            <div className="flex items-center justify-between border-b border-gray-100 pb-4 mb-4 gap-3">
-              <h3 className="text-lg sm:text-xl font-medium text-gray-800 break-words">{title}</h3>
+            <div className="flex items-center justify-between border-b border-gray-100 dark:border-white/10 pb-4 mb-4 gap-3">
+              <h3 className="text-lg sm:text-xl font-medium text-gray-800 dark:text-night-text break-words">{title}</h3>
               <button
                 onClick={onClose}
-                className="text-gray-400 hover:text-gray-600 transition-colors"
+                className="text-gray-400 hover:text-gray-600 dark:text-night-text/60 dark:hover:text-night-text transition-colors"
               >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
@@ -233,11 +233,11 @@ export function ModalSettings({ isOpen, onClose, url, title, children, preselect
               </button>
             </div>
 
-            <div className="text-gray-600 leading-relaxed max-h-[calc(92vh-88px)] overflow-y-auto pr-1 pb-4">
+            <div className="text-gray-600 dark:text-night-text/80 leading-relaxed max-h-[calc(92vh-88px)] overflow-y-auto pr-1 pb-4">
               {isAllExam ? (
                 <div className="flex min-h-[220px] flex-col justify-between pt-4 pb-1">
                   <div className="flex flex-1 items-center justify-center px-4 text-center">
-                    <p className="text-sm sm:text-base text-gray-500">
+                    <p className="text-sm sm:text-base text-gray-500 dark:text-night-text/70">
                       Экзамен будет собран автоматически из всех доступных заданий.
                     </p>
                   </div>
@@ -253,7 +253,7 @@ export function ModalSettings({ isOpen, onClose, url, title, children, preselect
                 <>
                   {children}
                   {selectionMode !== "single" && !hasLoadedData && url ? (
-                    <p className="mt-2 text-sm text-gray-400">Loading...</p>
+                    <p className="mt-2 text-sm text-gray-400 dark:text-night-text/60">Loading...</p>
                   ) : null}
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4">
                 <div className="flex flex-col items-center">
@@ -265,9 +265,9 @@ export function ModalSettings({ isOpen, onClose, url, title, children, preselect
                       className="sr-only peer"
                       title="Рандомный порядок вопросов"
                     />
-                    <div className="relative w-9 h-5 bg-gray-300 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-blue-400 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-blue-500"></div>
+                    <div className="relative w-9 h-5 bg-gray-300 dark:bg-night-bg peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-blue-400 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-blue-500"></div>
                   </label>
-                  <span className="text-xs text-gray-500 mt-1">Рандомные вопросы</span>
+                  <span className="text-xs text-gray-500 dark:text-night-text/60 mt-1">Рандомные вопросы</span>
                 </div>
                 <div className="flex flex-col items-center">
                   <label className="inline-flex items-center cursor-pointer">
@@ -278,9 +278,9 @@ export function ModalSettings({ isOpen, onClose, url, title, children, preselect
                       className="sr-only peer"
                       title="Рандомный порядок ответов"
                     />
-                    <div className="relative w-9 h-5 bg-gray-300 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-blue-400 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-blue-500"></div>
+                    <div className="relative w-9 h-5 bg-gray-300 dark:bg-night-bg peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-blue-400 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-blue-500"></div>
                   </label>
-                  <span className="text-xs text-gray-500 mt-1">Рандомные ответы</span>
+                  <span className="text-xs text-gray-500 dark:text-night-text/60 mt-1">Рандомные ответы</span>
                 </div>
                 <div className="flex flex-col items-center">
                   <label className="inline-flex items-center cursor-pointer">
@@ -291,33 +291,33 @@ export function ModalSettings({ isOpen, onClose, url, title, children, preselect
                       className="sr-only peer"
                       title="Показать ответы"
                     />
-                    <div className="relative w-9 h-5 bg-gray-300 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-blue-400 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-blue-500"></div>
+                    <div className="relative w-9 h-5 bg-gray-300 dark:bg-night-bg peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-blue-400 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-blue-500"></div>
                   </label>
-                  <span className="text-xs text-gray-500 mt-1">Показать ответы</span>
+                  <span className="text-xs text-gray-500 dark:text-night-text/60 mt-1">Показать ответы</span>
                 </div>
               </div>
               {isCustomExam ? (
                 <div className="space-y-3">
-                  <p className="text-sm text-gray-500">Нажмите на урок, чтобы раскрыть юниты.</p>
+                  <p className="text-sm text-gray-500 dark:text-night-text/60">Нажмите на урок, чтобы раскрыть юниты.</p>
                   {loadedState.data?.lessons?.map((lesson) => {
                     const lessonKey = lesson.url
                     const isExpanded = expandedLessons.has(lessonKey)
 
                     return (
-                      <div key={lessonKey} className="rounded-lg border border-gray-200 bg-gray-50 overflow-hidden">
+                      <div key={lessonKey} className="rounded-lg border border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-night-bg/40 overflow-hidden">
                         <button
                           type="button"
                           onClick={() => toggleLesson(lessonKey)}
                           className="flex w-full items-center justify-between gap-3 px-3 py-3 text-left"
                         >
                           <div className="min-w-0">
-                            <p className="font-medium text-gray-800 truncate">{lesson.title}</p>
+                            <p className="font-medium text-gray-800 dark:text-night-text truncate">{lesson.title}</p>
                             {lesson.description ? (
-                              <p className="text-xs text-gray-500 truncate">{lesson.description}</p>
+                              <p className="text-xs text-gray-500 dark:text-night-text/60 truncate">{lesson.description}</p>
                             ) : null}
                           </div>
                           <svg
-                            className={`h-4 w-4 shrink-0 text-gray-500 transition-transform ${isExpanded ? 'rotate-180' : ''}`}
+                            className={`h-4 w-4 shrink-0 text-gray-500 dark:text-night-text/60 transition-transform ${isExpanded ? 'rotate-180' : ''}`}
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
@@ -327,8 +327,8 @@ export function ModalSettings({ isOpen, onClose, url, title, children, preselect
                         </button>
 
                         {isExpanded ? (
-                          <div className="border-t border-gray-200 bg-white px-3 py-3">
-                            <div className="mb-4 p-3 border border-gray-200 rounded-lg bg-gray-50">
+                          <div className="border-t border-gray-200 dark:border-white/10 bg-white dark:bg-night-bg/60 px-3 py-3">
+                            <div className="mb-4 p-3 border border-gray-200 dark:border-white/10 rounded-lg bg-gray-50 dark:bg-night-surface/60">
                               <label className="flex items-center gap-2 cursor-pointer">
                                 <input
                                   type="checkbox"
@@ -336,21 +336,21 @@ export function ModalSettings({ isOpen, onClose, url, title, children, preselect
                                   onChange={() => toggleCustomLessonUnits(lesson)}
                                   className="w-4 h-4"
                                 />
-                                <span className="font-medium text-gray-700 cursor-pointer">Все юниты</span>
+                                <span className="font-medium text-gray-700 dark:text-night-text cursor-pointer">Все юниты</span>
                               </label>
                             </div>
                             <div className="space-y-2">
                               {lesson.tasks.map((unit) => {
                                 const unitKey = `${lessonKey}:${unit.unit}`
                                 return (
-                                  <label key={unitKey} className="flex items-center gap-2 cursor-pointer rounded-md px-2 py-2 hover:bg-gray-50">
+                                  <label key={unitKey} className="flex items-center gap-2 cursor-pointer rounded-md px-2 py-2 hover:bg-gray-50 dark:hover:bg-night-bg">
                                     <input
                                       type="checkbox"
                                       checked={selectedUnits.has(unitKey)}
                                       onChange={() => toggleCustomUnit(lessonKey, unit.unit)}
                                       className="w-4 h-4"
                                     />
-                                    <span className="text-sm text-gray-700">Unit {unit.unit}</span>
+                                    <span className="text-sm text-gray-700 dark:text-night-text">Unit {unit.unit}</span>
                                   </label>
                                 )
                               })}
@@ -367,7 +367,7 @@ export function ModalSettings({ isOpen, onClose, url, title, children, preselect
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: 8 }}
                         transition={{ duration: 0.2, ease: "easeOut" }}
-                        className="sticky bottom-0 pt-3 pb-1 bg-white/95 backdrop-blur-sm"
+                        className="sticky bottom-0 pt-3 pb-1 bg-white/95 dark:bg-night-surface/90 backdrop-blur-sm"
                       >
                         <button
                           type="button"
@@ -383,7 +383,7 @@ export function ModalSettings({ isOpen, onClose, url, title, children, preselect
               ) : isAllExam || selectionMode === "single" ? (
                 <form action="">
                   {totalUnits > 0 && (
-                    <div className="mb-4 p-3 border border-gray-200 rounded-lg bg-gray-50">
+                    <div className="mb-4 p-3 border border-gray-200 dark:border-white/10 rounded-lg bg-gray-50 dark:bg-night-bg/40">
                       <label className="flex items-center gap-2 cursor-pointer">
                         <input
                           type="checkbox"
@@ -391,12 +391,12 @@ export function ModalSettings({ isOpen, onClose, url, title, children, preselect
                           onChange={toggleAllUnits}
                           className="w-4 h-4"
                         />
-                        <span className="font-medium text-gray-700 cursor-pointer">Все юниты</span>
+                        <span className="font-medium text-gray-700 dark:text-night-text cursor-pointer">Все юниты</span>
                       </label>
                     </div>
                   )}
                   {loadedState.data?.tasks?.map((unit) => (
-                      <div key={unit.unit} className="mb-2 p-2 flex items-center gap-2 hover:bg-gray-50 rounded cursor-pointer">
+                      <div key={unit.unit} className="mb-2 p-2 flex items-center gap-2 hover:bg-gray-50 dark:hover:bg-night-bg rounded cursor-pointer">
                           <input
                             type="checkbox"
                             id={`unit-${unit.unit}`}
@@ -404,7 +404,7 @@ export function ModalSettings({ isOpen, onClose, url, title, children, preselect
                             onChange={() => toggleUnit(unit.unit)}
                             className="w-4 h-4"
                           />
-                          <label htmlFor={`unit-${unit.unit}`} className="cursor-pointer flex-1">
+                          <label htmlFor={`unit-${unit.unit}`} className="cursor-pointer flex-1 dark:text-night-text">
                             Unit {unit.unit}
                           </label>
                        </div>
