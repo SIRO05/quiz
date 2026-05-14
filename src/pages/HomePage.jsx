@@ -2,43 +2,78 @@ import { useEffect, useState } from 'react'
 
 import { Navbar } from "../components/Navbar";
 import { ModalSettings } from '../components/ModalSettings';
+import { SelectLevel } from '../components/SelectLevel';
+
 import { normalizeIndexTask, readJson } from "../utils/jsonReader";
 
-const INDEX_KEY = "N2"
-const TASK_DATA_DIR = `data/${INDEX_KEY}`
+const DEFAULT_LEVEL = "N2"
 
-const resolveTaskUrl = (taskUrl) => {
+const resolveTaskUrl = (taskUrl, level) => {
     const fileName = taskUrl?.split('/').filter(Boolean).pop()
-    return fileName ? `${TASK_DATA_DIR}/${fileName}` : ''
+    return fileName && level ? `data/${level}/${fileName}` : ''
 }
 
 const HomePage = () => {
-    const [data, setData] = useState(null)
+    const [indexData, setIndexData] = useState(null)
+    const [data, setData] = useState([])
     const [isModalOpen, setIsModalOpen] = useState(false)
     const [selectedTask, setSelectedTask] = useState(null)
+    const [levels, setLevels] = useState([])
+    const [selectedLevel, setSelectedLevel] = useState(DEFAULT_LEVEL)
 
     useEffect(() => {
         const fetchData = async () => {
             const jsonData = await readJson('data/index.json')
-            const tasks = Array.isArray(jsonData?.[INDEX_KEY])
-                ? jsonData[INDEX_KEY].map((task) => ({
-                    ...normalizeIndexTask(task),
-                    url: resolveTaskUrl(task.url),
-                }))
-                : []
+            const safeData = jsonData ?? {}
+            const levelsData = Object.keys(safeData)
 
-            setData(tasks)
+            setLevels(levelsData)
+            setIndexData(safeData)
+
+            setSelectedLevel((prevLevel) => (
+                levelsData.includes(prevLevel) ? prevLevel : (levelsData[0] ?? '')
+            ))
         }
 
         fetchData()
     }, [])
     
-    const allTasks = data ?? []
+    useEffect(() => {
+        if (!indexData || !selectedLevel) {
+            setData([])
+            return
+        }
+
+        const tasks = Array.isArray(indexData?.[selectedLevel])
+            ? indexData[selectedLevel].map((task) => ({
+                ...normalizeIndexTask(task),
+                url: resolveTaskUrl(task.url, selectedLevel),
+            }))
+            : []
+
+        setData(tasks)
+    }, [indexData, selectedLevel])
+
+    const handleLevelChange = (nextLevel) => {
+        setSelectedLevel(nextLevel)
+        setSelectedTask(null)
+        setIsModalOpen(false)
+    }
+
+    const allTasks = data
 
     return (
         <>
-            <Navbar />
-            {data && data.length > 0 ? (
+            <Navbar
+                control={(
+                    <SelectLevel
+                        levels={levels}
+                        value={selectedLevel}
+                        onChange={handleLevelChange}
+                    />
+                )}
+            />
+            {data.length > 0 ? (
                 <div className='container mx-auto mt-5 px-4'> 
                     <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 justify-items-center'>
                         <div 
@@ -109,7 +144,7 @@ const HomePage = () => {
                 preselectAll={selectedTask?.preselectAll}
                 selectionMode={selectedTask?.selectionMode}
             >
-                <p className="text-gray-700">{selectedTask?.description}</p>
+                <p className="text-gray-700 dark:text-night-text">{selectedTask?.description}</p>
             </ModalSettings>
         </>
     )

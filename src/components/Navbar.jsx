@@ -1,6 +1,6 @@
 import { DarkModeToggle } from "./DarkModeToggle";
 
-export function Navbar({ timer }) {
+export function Navbar({ control }) {
     return (
         // Добавляем враппер с фиксированным позиционированием, чтобы контейнер не прыгал
         <div className="sticky top-0 z-50 w-full px-4 pt-4"> 
@@ -8,9 +8,9 @@ export function Navbar({ timer }) {
                 <h1 className="text-xl font-bold">QUIZ</h1>
                 
                 {/* Центрируем таймер и скрываем div, если его нет */}
-                {timer && (
+                {control && (
                     <div className="font-mono font-bold text-journal-accent dark:text-night-neon-blue">
-                        {timer}
+                        {control}
                     </div>
                 )}
 
