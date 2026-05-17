@@ -41,7 +41,7 @@ const TestingPage = () => {
                     <Link to="/" className="px-3 py-1 rounded bg-gray-100">Home</Link>
                 </div>
             </header> */}
-            <Navbar />
+            <Navbar control={<Link to="/" className="px-3 py-1 rounded bg-gray-100">Home</Link>}/>
 
             <main className='container mx-auto mt-5 px-4'>
                 {items.map((question, idx) => (
