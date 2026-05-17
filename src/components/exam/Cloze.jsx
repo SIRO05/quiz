@@ -1,40 +1,41 @@
 import React, { useState } from 'react'
 
+// Утилита переноса строк
 const renderWithLineBreaks = (text) => {
   if (typeof text !== 'string') return text
   const parts = text.split('\n')
   return parts.flatMap((p, i) => (i < parts.length - 1 ? [p, <br key={i} />] : [p]))
 }
 
+// Утилита для парсинга подсветки
 function buildParts(text, hl) {
   const full = text ?? ''
-  if (!hl || typeof hl.start !== 'number' || typeof hl.end !== 'number') return { before: full, highlight: null, after: '' }
+  if (!hl || typeof hl.start !== 'number' || typeof hl.end !== 'number') {
+    return { before: full, highlight: null, after: '' }
+  }
   const start = Math.max(0, hl.start)
   const end = Math.min(full.length, hl.end)
   if (start >= end) return { before: full, highlight: null, after: '' }
-  return { before: full.slice(0, start), highlight: full.slice(start, end), after: full.slice(end) }
+  
+  return { 
+    before: full.slice(0, start), 
+    highlight: full.slice(start, end), 
+    after: full.slice(end) 
+  }
 }
 
 export default function Cloze({ question, showAnswers = false, onAnswer }) {
-  // If starIndex is present, treat as single-blank selection even if correctOrder exists.
-  const hasStar = typeof question.starIndex === 'number'
-  const isOrdering = !hasStar && Array.isArray(question.correctOrder) && question.correctOrder.length > 0
-  const [selected, setSelected] = useState(isOrdering ? [] : null)
+  // Выбор всегда один, поэтому храним просто ID или null
+  const [selected, setSelected] = useState(null)
+
+  if (!question) return null
 
   const options = Array.isArray(question.options) ? question.options : []
 
-  function handleSelectSingle(id) {
+  // Простая функция выбора (без сайд-эффектов внутри setState)
+  function handleSelect(id) {
     setSelected(id)
     onAnswer?.(question.id, id)
-  }
-
-  function handleSelectOrder(id) {
-    setSelected((prev) => {
-      const exists = prev.includes(id)
-      const next = exists ? prev.filter((x) => x !== id) : [...prev, id]
-      onAnswer?.(question.id, next)
-      return next
-    })
   }
 
   const left = question.textLeft ?? ''
@@ -44,21 +45,18 @@ export default function Cloze({ question, showAnswers = false, onAnswer }) {
   return (
     <div className="max-w-2xl mx-auto">
       <div className="border rounded-lg p-6 bg-white dark:bg-night-surface shadow-sm">
-        {question && (
-          <div className="mb-3 text-sm text-gray-500 dark:text-night-text/60 text-left">{/* header could be injected by parent */}</div>
-        )}
-
+        
+        {/* Текст с пропусками (блочный вывод, чтобы текст не ломался) */}
         <div className="min-h-[120px] flex flex-col items-center justify-center text-center">
-          <div className="text-base leading-relaxed flex items-center justify-center gap-2">
+          <div className="text-base leading-relaxed text-center">
             <span>{renderWithLineBreaks(left)}</span>
 
-            <span className="inline-flex items-center gap-2">
+            <span className="inline-flex items-center gap-1 mx-2 align-middle">
               {Array.from({ length: question.underlinesCount ?? 4 }).map((_, i) => {
-                const idx = i + 1
                 const isStar = star === i
                 return (
-                  <span key={i} className="inline-block w-10 border-b border-gray-300 h-6 flex items-end justify-center">
-                    <span className="text-sm">{isStar ? '*' : ''}</span>
+                  <span key={i} className="inline-block w-8 border-b-2 border-gray-400 h-6 text-center text-sm font-bold text-sky-500">
+                    {isStar ? '*' : ''}
                   </span>
                 )
               })}
@@ -68,28 +66,46 @@ export default function Cloze({ question, showAnswers = false, onAnswer }) {
           </div>
         </div>
 
-        <div className="mt-4 flex flex-wrap justify-center gap-3">
+        {/* Варианты ответов */}
+        <div className="mt-6 flex flex-wrap justify-center gap-3">
           {options.map((opt) => {
             const o = buildParts(opt.text, opt.textHighlight)
-            const isSelected = isOrdering ? selected.includes(opt.id) : selected === opt.id
+            const isSelected = selected === opt.id
+            
+            // Если showAnswers активен, ищем правильный ответ либо в correctOrder, либо в answer
+            const isCorrect = Array.isArray(question.correctOrder)
+              ? question.correctOrder.includes(opt.id)
+              : question.answer === opt.id
+
             return (
               <button
                 key={opt.id}
                 type="button"
-                onClick={() => (isOrdering ? handleSelectOrder(opt.id) : handleSelectSingle(opt.id))}
-                className={`inline-flex items-center gap-2 px-4 py-2 rounded-full border transition ${isSelected ? 'bg-sky-100 border-sky-300' : 'bg-white dark:bg-night-surface border-gray-200 dark:border-white/10'}`}>
-                  <span className="text-sm">
+                onClick={() => handleSelect(opt.id)}
+                className={`inline-flex items-center gap-2 px-4 py-2 rounded-full border transition cursor-pointer text-sm ${
+                  isSelected 
+                    ? 'bg-sky-100 border-sky-300 font-medium' 
+                    : 'bg-white dark:bg-night-surface border-gray-200 dark:border-white/10'
+                }`}
+              >
+                <span>
                   {renderWithLineBreaks(o.before)}
-                  {o.highlight ? (
+                  {o.highlight && (
                     <>
                       {o.before && !/\s$/.test(o.before) ? ' ' : ''}
-                      <span className="px-2 mx-1 underline decoration-yellow-300 decoration-2">{renderWithLineBreaks(o.highlight)}</span>
+                      <span className="px-1 mx-0.5 underline decoration-yellow-400 decoration-2 font-semibold">
+                        {renderWithLineBreaks(o.highlight)}
+                      </span>
                       {o.after && !/^\s/.test(o.after) ? ' ' : ''}
                     </>
-                  ) : null}
+                  )}
                   {renderWithLineBreaks(o.after)}
                 </span>
-                {showAnswers && question.answer === opt.id && <span className="ml-2 text-green-600">✓</span>}
+
+                {/* Галочка правильного ответа */}
+                {showAnswers && isCorrect && (
+                  <span className="ml-1 text-green-600 font-bold">✓</span>
+                )}
               </button>
             )
           })}
