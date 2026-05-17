@@ -6,18 +6,23 @@ const isPlainObject = (value) =>
 export async function readJson(url, normalize = identity) {
   if (!url) return null
 
-  const response = await fetch(url)
-  if (!response.ok) {
-    throw new Error(`Failed to load JSON from ${url}`)
-  }
+  try {
+    const response = await fetch(url)
+    if (!response.ok) {
+      throw new Error(`Failed to load JSON from ${url}`)
+    }
 
-  const data = await response.json()
-  return normalizeJson(data, normalize)
+    const data = await response.json()
+    return normalizeJson(data, normalize)
+  } catch (error) {
+    console.error(`Error reading JSON from ${url}:`, error)
+    return null 
+  }
 }
 
 export function normalizeJson(data, normalize = identity) {
   if (Array.isArray(data)) {
-    return data.map((item, index) => normalize(item, index))
+    return data.map((item) => normalize(item)) 
   }
 
   if (isPlainObject(data)) {
@@ -61,14 +66,11 @@ function normalizeUnit(unit = {}) {
 }
 
 function normalizeQuestion(question = {}, unitPassage = "") {
-  const textLeft = question.textLeft ?? ""
-  const textRight = question.textRight ?? ""
-
   return {
     id: question.id ?? null,
     text: question.text ?? unitPassage,
-    textLeft,
-    textRight,
+    textLeft: question.textLeft ?? "",
+    textRight: question.textRight ?? "",
     starIndex: question.starIndex ?? null,
     textHighlight: normalizeTextHighlight(question.textHighlight),
     options: Array.isArray(question.options)
@@ -76,7 +78,7 @@ function normalizeQuestion(question = {}, unitPassage = "") {
       : [],
     answer: question.answer ?? null,
     correctOrder: Array.isArray(question.correctOrder)
-      ? question.correctOrder.map((value) => value)
+      ? [...question.correctOrder]
       : null,
   }
 }
