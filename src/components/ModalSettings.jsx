@@ -3,6 +3,8 @@ import { createPortal } from "react-dom"
 import { motion, AnimatePresence } from "framer-motion"
 import { normalizeTaskFile, readJson } from "../utils/jsonReader"
 import { buildSelectedQuiz } from "../utils/quizBuilder"
+import { useNavigate } from 'react-router-dom'
+import { useExam } from '../contexts/ExamContext.jsx'
 
 const resolveSource = (source, index) => {
   if (typeof source === "string") {
@@ -29,6 +31,8 @@ export function ModalSettings({ isOpen, onClose, url, title, children, preselect
   const [randomizeQuestions, setRandomizeQuestions] = useState(false)
   const [randomizeAnswers, setRandomizeAnswers] = useState(false)
   const [showAnswers, setShowAnswers] = useState(false)
+  const navigate = useNavigate()
+  const { setExam } = useExam()
 
   useEffect(() => {
     if (!isOpen || !url) return
@@ -194,10 +198,18 @@ export function ModalSettings({ isOpen, onClose, url, title, children, preselect
 
   const handleSubmitForm = () => {
     const payload = getSubmissionPayload()
-    const jsonString = JSON.stringify(payload, null, 2)
-    const blob = new Blob([jsonString], { type: 'application/json' })
-    const url = URL.createObjectURL(blob)
-    window.open(url, '_blank')
+    // save into exam context and navigate to the runner
+    try {
+      setExam(payload)
+      onClose()
+      navigate('/testing')
+    } catch (e) {
+      // fallback: still offer download if something fails
+      const jsonString = JSON.stringify(payload, null, 2)
+      const blob = new Blob([jsonString], { type: 'application/json' })
+      const blobUrl = URL.createObjectURL(blob)
+      window.open(blobUrl, '_blank')
+    }
   }
 
   const hasSelection = selectedUnits.size > 0
