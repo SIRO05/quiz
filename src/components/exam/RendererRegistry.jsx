@@ -9,15 +9,15 @@ export function detectQuestionType(q) {
   return 'fallback'
 }
 
-export default function QuestionRenderer(props) {
+export default function QuestionRenderer({ isFinished, ...props }) {
   const { question } = props
   const type = detectQuestionType(question)
 
   switch (type) {
     case 'mcq':
-      return <MCQ {...props} />
+      return <MCQ {...props} isFinished={isFinished} />
     case 'cloze':
-      return <Cloze {...props} />
+      return <Cloze {...props} isFinished={isFinished} />
     default:
       return (
         <div>

@@ -10,6 +10,7 @@ const TestingPage = () => {
     const [userAnswers, setUserAnswers] = useState({})
     const [showResultModal, setShowResultModal] = useState(false)
     const [resultData, setResultData] = useState(null)
+    const [isFinished, setIsFinished] = useState(false)
 
     // flatten tasks -> questions for single-page rendering
     const items = useMemo(() => {
@@ -44,9 +45,7 @@ const TestingPage = () => {
         items.forEach((item, idx) => {
             const key = `${item.unit}-${item.id}-${idx}`
             const selected = userAnswers[key]
-            const isCorrect = Array.isArray(item.correctOrder)
-              ? item.correctOrder.includes(selected)
-              : item.answer === selected
+            const isCorrect = item.answer === selected
 
             if (isCorrect) {
                 correctCount++
@@ -60,6 +59,7 @@ const TestingPage = () => {
             timeValue,
             totalMaxTime
         })
+        setIsFinished(true)
         setShowResultModal(true)
     }
 
@@ -85,6 +85,7 @@ const TestingPage = () => {
                                 showAnswers={!!showAnswers}
                                 value={userAnswers[qKey]}
                                 onChange={(val) => handleAnswerChange(qKey, val)}
+                                isFinished={isFinished}
                             />
                         </div>
                     )
@@ -94,7 +95,9 @@ const TestingPage = () => {
             <ExamControls 
                 mode={exam.mode || 'custom'} 
                 tasksLength={selectedQuiz.tasks.length} 
-                onFinish={handleFinish} 
+                onFinish={handleFinish}
+                isFinished={isFinished}
+                onShowResults={() => setShowResultModal(true)}
             />
 
             {showResultModal && resultData && (

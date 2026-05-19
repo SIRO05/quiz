@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
-export default function ExamControls({ mode, tasksLength, onFinish }) {
+export default function ExamControls({ mode, tasksLength, onFinish, isFinished, onShowResults }) {
   // mode: "all" or "custom"
   const INITIAL_TIME = mode === 'all' ? 45 * 60 : tasksLength * 5 * 60;
 
@@ -9,6 +9,8 @@ export default function ExamControls({ mode, tasksLength, onFinish }) {
   const [isOvertime, setIsOvertime] = useState(false);
 
   useEffect(() => {
+    if (isFinished) return;
+
     const timer = setInterval(() => {
       setTimeLeft((prev) => {
         if (prev <= 1 && !isOvertime) {
@@ -43,12 +45,21 @@ export default function ExamControls({ mode, tasksLength, onFinish }) {
         <div className={`text-xl font-mono ${colorClass}`}>
           {formattedStr}
         </div>
-        <button
-          onClick={() => onFinish({ isOvertime, timeValue: timeLeft, totalMaxTime: INITIAL_TIME })}
-          className="px-4 py-2 rounded-md bg-sky-500 hover:bg-sky-600 text-white transition text-sm font-medium"
-        >
-          Завершить тест
-        </button>
+        {isFinished ? (
+          <button
+            onClick={onShowResults}
+            className="px-4 py-2 rounded-md bg-green-500 hover:bg-green-600 text-white transition text-sm font-medium"
+          >
+            Показать результаты
+          </button>
+        ) : (
+          <button
+            onClick={() => onFinish({ isOvertime, timeValue: timeLeft, totalMaxTime: INITIAL_TIME })}
+            className="px-4 py-2 rounded-md bg-sky-500 hover:bg-sky-600 text-white transition text-sm font-medium"
+          >
+            Завершить тест
+          </button>
+        )}
       </div>
     </div>
   );

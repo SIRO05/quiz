@@ -22,13 +22,18 @@ function buildParts(text, hl) {
   }
 }
 
-export default function Cloze({ question, showAnswers = false, value = null, onChange, headerText }) {
+export default function Cloze({ question, showAnswers = false, value = null, onChange, headerText, isFinished }) {
   if (!question) return null
 
   const options = Array.isArray(question.options) ? question.options : []
 
+  const hasAnswered = value !== null;
+  const shouldShowFeedback = isFinished || (showAnswers && hasAnswered);
+  const isInputDisabled = isFinished || (showAnswers && hasAnswered);
+
   // Простая функция выбора (без сайд-эффектов внутри setState)
   function handleSelect(id) {
+    if (isInputDisabled) return;
     onChange?.(id)
   }
 
@@ -72,22 +77,38 @@ export default function Cloze({ question, showAnswers = false, value = null, onC
             const o = buildParts(opt.text, opt.textHighlight)
             const isSelected = value === opt.id
             
-            // Если showAnswers активен, ищем правильный ответ либо в correctOrder, либо в answer
-            const isCorrect = Array.isArray(question.correctOrder)
-              ? question.correctOrder.includes(opt.id)
-              : question.answer === opt.id
+            // answer holds the correct option ID for the starred position
+            const isCorrect = question.answer === opt.id
+
+            let itemClass = 'bg-white dark:bg-night-surface border-gray-200 dark:border-white/10 text-sm';
+
+            if (shouldShowFeedback) {
+              if (isCorrect) {
+                itemClass = 'bg-green-100 border-green-500 text-green-900 shadow-sm text-sm';
+              } else if (isSelected) {
+                itemClass = 'bg-red-100 border-red-500 text-red-900 shadow-sm text-sm';
+              }
+            } else if (isSelected) {
+              itemClass = 'bg-sky-100 border-sky-300 font-medium text-sm';
+            }
 
             return (
-              <button
+              <label
                 key={opt.id}
-                type="button"
-                onClick={() => handleSelect(opt.id)}
-                className={`inline-flex items-center gap-2 px-4 py-2 rounded-full border transition cursor-pointer text-sm ${
-                  isSelected 
-                    ? 'bg-sky-100 border-sky-300 font-medium' 
-                    : 'bg-white dark:bg-night-surface border-gray-200 dark:border-white/10'
-                }`}
+                className={`inline-flex items-center gap-2 px-4 py-2 rounded-full border transition-colors ${
+                  isInputDisabled ? 'cursor-default opacity-90' : 'cursor-pointer'
+                } ${itemClass}`}
               >
+                <input
+                  type="radio"
+                  name={`cloze-${question.id}-${headerText}`}
+                  value={opt.id}
+                  checked={isSelected}
+                  onChange={() => handleSelect(opt.id)}
+                  disabled={isInputDisabled}
+                  className="sr-only"
+                />
+                
                 <span>
                   {renderWithLineBreaks(o.before)}
                   {o.highlight && (
@@ -103,13 +124,46 @@ export default function Cloze({ question, showAnswers = false, value = null, onC
                 </span>
 
                 {/* Галочка правильного ответа */}
-                {showAnswers && isCorrect && (
-                  <span className="ml-1 text-green-600 font-bold">✓</span>
+                {shouldShowFeedback && isCorrect && (
+                  <span className="ml-1 text-green-700 font-bold">✓</span>
                 )}
-              </button>
+              </label>
             )
           })}
         </div>
+
+        {/* Правильное предложение (собирается по correctOrder) */}
+        {shouldShowFeedback && Array.isArray(question.correctOrder) && question.correctOrder.length > 0 && (
+          <div className="mt-8 p-4 bg-green-50 dark:bg-green-900/10 rounded-lg text-center border border-green-100 dark:border-green-800">
+            <div className="text-xs text-green-600 dark:text-green-400 font-semibold mb-3 uppercase tracking-wider">
+              Правильное предложение
+            </div>
+            <div className="text-base text-gray-800 dark:text-gray-200 leading-relaxed block">
+              <span>{renderWithLineBreaks(left)}</span>
+              
+              <span className="inline-flex gap-1 mx-2 align-middle flex-wrap justify-center">
+                {question.correctOrder.map((id, index) => {
+                  const opt = options.find((o) => o.id === id)
+                  const isStar = star === index
+                  return (
+                    <span 
+                      key={id} 
+                      className={`px-2 py-0.5 rounded border text-sm font-medium mx-0.5 ${
+                        isStar 
+                          ? 'bg-yellow-100 border-yellow-400 text-yellow-900 dark:bg-yellow-900/30 dark:text-yellow-200 dark:border-yellow-700' 
+                          : 'bg-white border-green-300 text-green-800 dark:bg-night-surface dark:text-green-300 dark:border-green-800'
+                      }`}
+                    >
+                      {opt ? opt.text : ''}
+                    </span>
+                  )
+                })}
+              </span>
+
+              <span>{renderWithLineBreaks(right)}</span>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   )

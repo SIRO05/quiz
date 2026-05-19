@@ -60,14 +60,20 @@ export default function MCQ({
   showAnswers = false, 
   value = null,
   onChange, 
-  headerText 
+  headerText,
+  isFinished 
 }) {
   const options = useMemo(() => {
     if (!Array.isArray(question.options)) return [];
     return globalRandomizeAnswers ? shuffleArray([...question.options]) : question.options;
   }, [question.options, globalRandomizeAnswers]);
 
+  const hasAnswered = value !== null;
+  const shouldShowFeedback = isFinished || (showAnswers && hasAnswered);
+  const isInputDisabled = isFinished || (showAnswers && hasAnswered);
+
   function handleSelect(id) {
+    if (isInputDisabled) return;
     onChange?.(id);
   }
 
@@ -91,35 +97,51 @@ export default function MCQ({
 
         {/* Варианты ответов */}
         <ul className="mt-4 flex flex-wrap justify-center gap-3">
-          {options.map((opt) => (
-            <li key={opt.id}>
-              <label 
-                className={`inline-flex items-center gap-3 px-4 py-2 rounded-full border transition-colors cursor-pointer ${
-                  value === opt.id 
-                    ? 'bg-sky-100 border-sky-300' 
-                    : 'bg-white dark:bg-night-surface border-gray-200 dark:border-white/10'
-                }`}
-              >
-                <input
-                  type="radio"
-                  name={`question-${question.id}-${headerText}`}
-                  value={opt.id}
-                  checked={value === opt.id}
-                  onChange={() => handleSelect(opt.id)}
-                  className="sr-only"
-                />
-                
-                <span className="text-sm">
-                  <HighlightedText item={opt} />
-                </span>
+          {options.map((opt) => {
+            const isCorrectAnswer = question.answer === opt.id;
+            const isSelected = value === opt.id;
+            
+            let itemClass = 'bg-white dark:bg-night-surface border-gray-200 dark:border-white/10';
+            
+            if (shouldShowFeedback) {
+              if (isCorrectAnswer) {
+                itemClass = 'bg-green-100 border-green-500 text-green-900 shadow-sm';
+              } else if (isSelected) {
+                itemClass = 'bg-red-100 border-red-500 text-red-900 shadow-sm';
+              }
+            } else if (isSelected) {
+              itemClass = 'bg-sky-100 border-sky-300';
+            }
 
-                {/* Галочка правильного ответа */}
-                {showAnswers && question.answer === opt.id && (
-                  <span className="ml-2 text-green-600">✓</span>
-                )}
-              </label>
-            </li>
-          ))}
+            return (
+              <li key={opt.id}>
+                <label 
+                  className={`inline-flex items-center gap-3 px-4 py-2 rounded-full border transition-colors ${
+                    isInputDisabled ? 'cursor-default opacity-90' : 'cursor-pointer'
+                  } ${itemClass}`}
+                >
+                  <input
+                    type="radio"
+                    name={`question-${question.id}-${headerText}`}
+                    value={opt.id}
+                    checked={isSelected}
+                    onChange={() => handleSelect(opt.id)}
+                    disabled={isInputDisabled}
+                    className="sr-only"
+                  />
+                  
+                  <span className="text-sm">
+                    <HighlightedText item={opt} />
+                  </span>
+
+                  {/* Галочка правильного ответа */}
+                  {shouldShowFeedback && isCorrectAnswer && (
+                    <span className="ml-2 font-bold text-green-700">✓</span>
+                  )}
+                </label>
+              </li>
+            );
+          })}
         </ul>
         
       </div>
