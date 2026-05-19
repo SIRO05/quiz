@@ -1,5 +1,3 @@
-import React, { useState } from 'react'
-
 // Утилита переноса строк
 const renderWithLineBreaks = (text) => {
   if (typeof text !== 'string') return text
@@ -24,18 +22,14 @@ function buildParts(text, hl) {
   }
 }
 
-export default function Cloze({ question, showAnswers = false, onAnswer }) {
-  // Выбор всегда один, поэтому храним просто ID или null
-  const [selected, setSelected] = useState(null)
-
+export default function Cloze({ question, showAnswers = false, value = null, onChange, headerText }) {
   if (!question) return null
 
   const options = Array.isArray(question.options) ? question.options : []
 
   // Простая функция выбора (без сайд-эффектов внутри setState)
   function handleSelect(id) {
-    setSelected(id)
-    onAnswer?.(question.id, id)
+    onChange?.(id)
   }
 
   const left = question.textLeft ?? ''
@@ -45,6 +39,12 @@ export default function Cloze({ question, showAnswers = false, onAnswer }) {
   return (
     <div className="max-w-2xl mx-auto">
       <div className="border rounded-lg p-6 bg-white dark:bg-night-surface shadow-sm">
+        {/* Заголовок */}
+        {headerText && (
+          <div className="mb-3 text-sm text-gray-500 dark:text-night-text/60 text-left">
+            {headerText}
+          </div>
+        )}
         
         {/* Текст с пропусками (блочный вывод, чтобы текст не ломался) */}
         <div className="min-h-[120px] flex flex-col items-center justify-center text-center">
@@ -70,7 +70,7 @@ export default function Cloze({ question, showAnswers = false, onAnswer }) {
         <div className="mt-6 flex flex-wrap justify-center gap-3">
           {options.map((opt) => {
             const o = buildParts(opt.text, opt.textHighlight)
-            const isSelected = selected === opt.id
+            const isSelected = value === opt.id
             
             // Если showAnswers активен, ищем правильный ответ либо в correctOrder, либо в answer
             const isCorrect = Array.isArray(question.correctOrder)

@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import { useMemo } from 'react';
 import { shuffleArray } from '../../utils/shuffle';
 
 // 1. Утилита для рендера переносов строк
@@ -58,19 +58,17 @@ export default function MCQ({
   question, 
   globalRandomizeAnswers = false, 
   showAnswers = false, 
-  onAnswer, 
+  value = null,
+  onChange, 
   headerText 
 }) {
-  const [selected, setSelected] = useState(null);
-
   const options = useMemo(() => {
     if (!Array.isArray(question.options)) return [];
     return globalRandomizeAnswers ? shuffleArray([...question.options]) : question.options;
   }, [question.options, globalRandomizeAnswers]);
 
   function handleSelect(id) {
-    setSelected(id);
-    onAnswer?.(question.id, id);
+    onChange?.(id);
   }
 
   return (
@@ -97,16 +95,16 @@ export default function MCQ({
             <li key={opt.id}>
               <label 
                 className={`inline-flex items-center gap-3 px-4 py-2 rounded-full border transition-colors cursor-pointer ${
-                  selected === opt.id 
+                  value === opt.id 
                     ? 'bg-sky-100 border-sky-300' 
                     : 'bg-white dark:bg-night-surface border-gray-200 dark:border-white/10'
                 }`}
               >
                 <input
                   type="radio"
-                  name={`question-${question.id}`}
+                  name={`question-${question.id}-${headerText}`}
                   value={opt.id}
-                  checked={selected === opt.id}
+                  checked={value === opt.id}
                   onChange={() => handleSelect(opt.id)}
                   className="sr-only"
                 />
