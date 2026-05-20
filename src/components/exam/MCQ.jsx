@@ -79,7 +79,7 @@ export default function MCQ({
 
   return (
     <div className="max-w-2xl mx-auto">
-      <div className="border rounded-lg p-6 bg-white dark:bg-night-surface shadow-sm">
+      <div className="border rounded-lg p-4 sm:p-6 bg-white dark:bg-night-surface shadow-sm">
         
         {/* Заголовок */}
         {headerText && (
@@ -89,14 +89,16 @@ export default function MCQ({
         )}
 
         {/* Текст вопроса */}
-        <div className="min-h-[120px] flex flex-col items-center justify-center text-center">
-          <div className="text-base leading-relaxed">
-            <HighlightedText item={question} />
+        {question.text && (
+          <div className="flex flex-col items-center justify-center text-center mb-4">
+            <div className="text-base leading-relaxed">
+              <HighlightedText item={question} />
+            </div>
           </div>
-        </div>
+        )}
 
         {/* Варианты ответов */}
-        <ul className="mt-4 flex flex-wrap justify-center gap-3">
+        <ul className={`${question.text ? 'mt-4' : 'mt-2'} flex flex-wrap justify-center gap-3`}>
           {options.map((opt) => {
             const isCorrectAnswer = question.answer === opt.id;
             const isSelected = value === opt.id;
