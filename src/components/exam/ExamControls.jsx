@@ -40,7 +40,7 @@ export default function ExamControls({ mode, tasksLength, onFinish, isFinished, 
           to="/" 
           className="px-4 py-2 rounded-md bg-gray-100 hover:bg-gray-200 dark:bg-white/10 dark:hover:bg-white/20 transition text-sm font-medium"
         >
-          Назад
+          戻る
         </Link>
         <div className={`text-xl font-mono ${colorClass}`}>
           {formattedStr}
@@ -50,14 +50,14 @@ export default function ExamControls({ mode, tasksLength, onFinish, isFinished, 
             onClick={onShowResults}
             className="px-4 py-2 rounded-md bg-green-500 hover:bg-green-600 text-white transition text-sm font-medium"
           >
-            Показать результаты
+            結果を表示
           </button>
         ) : (
           <button
             onClick={() => onFinish({ isOvertime, timeValue: timeLeft, totalMaxTime: INITIAL_TIME })}
             className="px-4 py-2 rounded-md bg-sky-500 hover:bg-sky-600 text-white transition text-sm font-medium"
           >
-            Завершить тест
+            試験を終了
           </button>
         )}
       </div>

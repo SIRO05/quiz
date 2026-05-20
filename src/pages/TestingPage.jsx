@@ -74,7 +74,7 @@ const TestingPage = () => {
 
     return (
         <div className="p-6 pb-32">
-            <Navbar control={<Link to="/" className="px-3 py-1 rounded bg-gray-100">Home</Link>}/>
+            <Navbar />
 
             <main className='container mx-auto mt-5 px-4'>
                 {exam.selectedQuiz.tasks.map((task, taskIdx) => (
@@ -85,7 +85,7 @@ const TestingPage = () => {
                                     <div className="sticky top-0 bg-white dark:bg-night-surface pb-3 mb-4 border-b border-gray-100 dark:border-white/5 z-10">
                                         <h3 className="text-lg font-bold text-gray-700 dark:text-gray-300 flex items-center gap-2">
                                             <svg className="w-5 h-5 text-sky-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-                                            読解 (Reading Comprehension)
+                                            第{task.unit}回
                                         </h3>
                                     </div>
                                     <Passage text={task.passage} />
@@ -98,7 +98,7 @@ const TestingPage = () => {
                                             <div key={qKey} className="shrink-0">
                                                 <QuestionRenderer
                                                     question={question}
-                                                    headerText={`Q${idx + 1} • Unit ${task.unit}`}
+                                                    headerText={`[${idx + 1}]`}
                                                     globalRandomizeAnswers={!!randomizeAnswers}
                                                     showAnswers={!!showAnswers}
                                                     value={userAnswers[qKey]}
@@ -119,7 +119,7 @@ const TestingPage = () => {
                                         <div key={qKey}>
                                             <QuestionRenderer
                                                 question={question}
-                                                headerText={`Q${idx + 1} • Unit ${task.unit}`}
+                                                headerText={`[${idx + 1}]`}
                                                 globalRandomizeAnswers={!!randomizeAnswers}
                                                 showAnswers={!!showAnswers}
                                                 value={userAnswers[qKey]}
@@ -146,15 +146,15 @@ const TestingPage = () => {
             {showResultModal && resultData && (
                 <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm p-4">
                     <div className="bg-white dark:bg-night-surface rounded-xl p-8 max-w-md w-full shadow-2xl relative">
-                        <h2 className="text-2xl font-bold mb-6 text-center">Итоги теста</h2>
+                        <h2 className="text-2xl font-bold mb-6 text-center">試験結果</h2>
                         
                         <div className="flex justify-center gap-12 text-center mb-8">
                             <div>
-                                <p className="text-sm text-gray-500 mb-1">Правильно</p>
+                                <p className="text-sm text-gray-500 mb-1">正解数</p>
                                 <p className="text-3xl font-bold text-green-500">{resultData.correct}</p>
                             </div>
                             <div>
-                                <p className="text-sm text-gray-500 mb-1">Ошибок</p>
+                                <p className="text-sm text-gray-500 mb-1">不正解数</p>
                                 <p className="text-3xl font-bold text-red-500">{resultData.total - resultData.correct}</p>
                             </div>
                         </div>
@@ -162,11 +162,11 @@ const TestingPage = () => {
                         <div className="bg-gray-50 dark:bg-white/5 rounded-lg p-4 mb-8">
                             <ul className="text-sm space-y-2">
                                 <li className="flex justify-between">
-                                    <span className="text-gray-600 dark:text-gray-300">Всего вопросов:</span>
+                                    <span className="text-gray-600 dark:text-gray-300">総問題数:</span>
                                     <span className="font-semibold">{resultData.total}</span>
                                 </li>
                                 <li className="flex justify-between">
-                                    <span className="text-gray-600 dark:text-gray-300">Потрачено времени:</span>
+                                    <span className="text-gray-600 dark:text-gray-300">消費時間:</span>
                                     <span className="font-semibold">
                                         {resultData.isOvertime 
                                             ? `${formatTimeInterval(resultData.totalMaxTime)} ` 
@@ -184,14 +184,14 @@ const TestingPage = () => {
                                 onClick={() => setShowResultModal(false)}
                                 className="flex-1 py-3 px-4 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-white/10 dark:hover:bg-white/20 font-medium transition"
                             >
-                                Закрыть
+                                戻る
                             </button>
                             <Link
                                 to="/"
                                 onClick={() => clearExam()}
                                 className="flex-1 py-3 px-4 rounded-lg bg-sky-500 hover:bg-sky-600 text-white font-medium text-center transition"
                             >
-                                На главную
+                                ホームに戻る
                             </Link>
                         </div>
                     </div>

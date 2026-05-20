@@ -81,8 +81,8 @@ const HomePage = () => {
                             className='w-full max-w-sm p-4 rounded-xl bg-journal-mint dark:bg-night-surface shadow-soft border border-black/5 transition-transform hover:scale-[1.02] cursor-pointer'
                             onClick={() => {
                                 setSelectedTask({
-                                    title: 'Exam: All Tests',
-                                    description: 'Run all available tests in one exam.',
+                                    title: '試験',
+                                    description: 'すべてのテストを1つの試験として実行',
                                     url: allTasks,
                                     preselectAll: true,
                                     selectionMode: 'all'
@@ -90,8 +90,8 @@ const HomePage = () => {
                                 setIsModalOpen(true)
                             }}
                         >
-                            <p className="font-bold text-journal-text dark:text-night-text">Exam: All Tests</p>
-                            <p className="text-muted-500 break-all text-sm">Run all available tests in one exam.</p>
+                            <p className="font-bold text-journal-text dark:text-night-text">試験</p>
+                            <p className="text-muted-500 break-all text-sm">すべてのテストを1つの試験として実行</p>
                         </div>
 
                         <div 
@@ -99,8 +99,8 @@ const HomePage = () => {
                             className='w-full max-w-sm p-4 rounded-xl bg-journal-mint dark:bg-night-surface shadow-soft border border-black/5 transition-transform hover:scale-[1.02] cursor-pointer'
                             onClick={() => {
                                 setSelectedTask({
-                                    title: 'Custom Exam',
-                                    description: 'Choose which tasks to include in the exam.',
+                                    title: 'カスタムテスト',
+                                    description: 'テストに含める問題を選択してください',
                                     url: allTasks,
                                     preselectAll: false,
                                     selectionMode: 'custom'
@@ -108,8 +108,8 @@ const HomePage = () => {
                                 setIsModalOpen(true)
                             }}
                         >
-                            <p className="font-bold text-journal-text dark:text-night-text">Custom Exam</p>
-                            <p className="text-muted-500 break-all text-sm">Choose which tasks to include in the exam.</p>
+                            <p className="font-bold text-journal-text dark:text-night-text">カスタムテスト</p>
+                            <p className="text-muted-500 break-all text-sm">テストに含める問題を選択してください</p>
                         </div>
 
                         {data.map((item) => (

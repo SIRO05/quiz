@@ -250,7 +250,7 @@ export function ModalSettings({ isOpen, onClose, url, title, children, preselect
                 <div className="flex min-h-[220px] flex-col justify-between pt-4 pb-1">
                   <div className="flex flex-1 items-center justify-center px-4 text-center">
                     <p className="text-sm sm:text-base text-gray-500 dark:text-night-text/70">
-                      Экзамен будет собран автоматически из всех доступных заданий.
+                      試験は利用可能なすべての問題から自動的に作成されます。
                     </p>
                   </div>
                   <button
@@ -258,7 +258,7 @@ export function ModalSettings({ isOpen, onClose, url, title, children, preselect
                     onClick={handleSubmitForm}
                     className="cursor-pointer inline-flex w-full items-center justify-center rounded-lg px-4 py-3 text-sm font-medium transition-all hover:scale-[1.01] active:scale-[0.99] bg-journal-accent text-white hover:opacity-90 animate-pulse"
                   >
-                    Начать экзамен
+                    試験を開始
                   </button>
                 </div>
               ) : (
@@ -279,7 +279,7 @@ export function ModalSettings({ isOpen, onClose, url, title, children, preselect
                     />
                     <div className="relative w-9 h-5 bg-gray-300 dark:bg-night-bg peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-blue-400 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-blue-500"></div>
                   </label>
-                  <span className="text-xs text-gray-500 dark:text-night-text/60 mt-1">Рандомные вопросы</span>
+                  <span className="text-xs text-gray-500 dark:text-night-text/60 mt-1">ランダムに出題</span>
                 </div>
                 <div className="flex flex-col items-center">
                   <label className="inline-flex items-center cursor-pointer">
@@ -292,7 +292,7 @@ export function ModalSettings({ isOpen, onClose, url, title, children, preselect
                     />
                     <div className="relative w-9 h-5 bg-gray-300 dark:bg-night-bg peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-blue-400 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-blue-500"></div>
                   </label>
-                  <span className="text-xs text-gray-500 dark:text-night-text/60 mt-1">Рандомные ответы</span>
+                  <span className="text-xs text-gray-500 dark:text-night-text/60 mt-1">ランダム回答</span>
                 </div>
                 <div className="flex flex-col items-center">
                   <label className="inline-flex items-center cursor-pointer">
@@ -305,12 +305,12 @@ export function ModalSettings({ isOpen, onClose, url, title, children, preselect
                     />
                     <div className="relative w-9 h-5 bg-gray-300 dark:bg-night-bg peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-blue-400 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-blue-500"></div>
                   </label>
-                  <span className="text-xs text-gray-500 dark:text-night-text/60 mt-1">Показать ответы</span>
+                  <span className="text-xs text-gray-500 dark:text-night-text/60 mt-1">回答を表示</span>
                 </div>
               </div>
               {isCustomExam ? (
                 <div className="space-y-3">
-                  <p className="text-sm text-gray-500 dark:text-night-text/60">Нажмите на урок, чтобы раскрыть юниты.</p>
+                  <p className="text-sm text-gray-500 dark:text-night-text/60">レッスンをタップしてユニットを開く</p>
                   {loadedState.data?.lessons?.map((lesson) => {
                     const lessonKey = lesson.url
                     const isExpanded = expandedLessons.has(lessonKey)
@@ -348,7 +348,7 @@ export function ModalSettings({ isOpen, onClose, url, title, children, preselect
                                   onChange={() => toggleCustomLessonUnits(lesson)}
                                   className="w-4 h-4"
                                 />
-                                <span className="font-medium text-gray-700 dark:text-night-text cursor-pointer">Все юниты</span>
+                                <span className="font-medium text-gray-700 dark:text-night-text cursor-pointer">全て</span>
                               </label>
                             </div>
                             <div className="space-y-2">
@@ -362,7 +362,7 @@ export function ModalSettings({ isOpen, onClose, url, title, children, preselect
                                       onChange={() => toggleCustomUnit(lessonKey, unit.unit)}
                                       className="w-4 h-4"
                                     />
-                                    <span className="text-sm text-gray-700 dark:text-night-text">Unit {unit.unit}</span>
+                                    <span className="text-sm text-gray-700 dark:text-night-text">第{unit.unit}回</span>
                                   </label>
                                 )
                               })}
@@ -386,7 +386,7 @@ export function ModalSettings({ isOpen, onClose, url, title, children, preselect
                           onClick={handleSubmitForm}
                           className="cursor-pointer inline-flex w-full items-center justify-center rounded-lg px-4 py-3 text-sm font-medium transition-all hover:scale-[1.01] active:scale-[0.99] bg-journal-accent text-white hover:opacity-90 animate-pulse"
                         >
-                          Нажми на меня
+                          ボタンを押して開始してください
                         </button>
                       </motion.div>
                     ) : null}
@@ -403,7 +403,7 @@ export function ModalSettings({ isOpen, onClose, url, title, children, preselect
                           onChange={toggleAllUnits}
                           className="w-4 h-4"
                         />
-                        <span className="font-medium text-gray-700 dark:text-night-text cursor-pointer">Все юниты</span>
+                        <span className="font-medium text-gray-700 dark:text-night-text cursor-pointer">全て</span>
                       </label>
                     </div>
                   )}
@@ -417,7 +417,7 @@ export function ModalSettings({ isOpen, onClose, url, title, children, preselect
                             className="w-4 h-4"
                           />
                           <label htmlFor={`unit-${unit.unit}`} className="cursor-pointer flex-1 dark:text-night-text">
-                            Unit {unit.unit}
+                            第{unit.unit}回
                           </label>
                        </div>
                           ))}
@@ -428,7 +428,7 @@ export function ModalSettings({ isOpen, onClose, url, title, children, preselect
                       disabled={!hasSelection}
                       className="cursor-pointer inline-flex w-full items-center justify-center rounded-lg px-4 py-3 text-sm font-medium transition-all hover:scale-[1.01] active:scale-[0.99] disabled:cursor-not-allowed disabled:bg-gray-200 disabled:text-gray-400 bg-journal-accent text-white hover:opacity-90 animate-pulse disabled:animate-none"
                     >
-                      Нажми на меня
+                      ボタンを押して開始してください
                     </button>
                   </div>
                 </form>
