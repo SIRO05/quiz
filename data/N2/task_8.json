@@ -1,0 +1,1131 @@
+{
+    "description": "問題8 次の文の___★___に入る最もよいものを、１・２・３・４から一つ選びなさい。",
+    "grade": 2,
+    "tasks": [
+        {
+            "unit": 1,
+            "questions": [
+                {
+                    "id": 1,
+                    "textLeft": "そんな勉強のやり方で合格",
+                    "textRight": "みればいいよ。",
+                    "starIndex": 2,
+                    "options": [
+                        {"id": 1, "text": "やれる"},
+                        {"id": 2, "text": "やって"},
+                        {"id": 3, "text": "できるか"},
+                        {"id": 4, "text": "ものなら"}
+                    ],
+                    "correctOrder": [3, 1, 4, 2],
+                    "answer": 4
+                },
+                {
+                    "id": 2,
+                    "textLeft": "日本人は、どこでも水がただで",
+                    "textRight": "です。",
+                    "starIndex": 2,
+                    "options": [
+                        {"id": 1, "text": "忘れ"},
+                        {"id": 2, "text": "ありがたさを"},
+                        {"id": 3, "text": "がち"},
+                        {"id": 4, "text": "飲める"}
+                    ],
+                    "correctOrder": [4, 2, 1, 3],
+                    "answer": 1
+                },
+                {
+                    "id": 3,
+                    "textLeft": "歯医者に行くのは、大人に",
+                    "textRight": "ありません。",
+                    "starIndex": 2,
+                    "options": [
+                        {"id": 1, "text": "という"},
+                        {"id": 2, "text": "ものでは"},
+                        {"id": 3, "text": "平気になる"},
+                        {"id": 4, "text": "なれば"}
+                    ],
+                    "correctOrder": [4, 3, 1, 2],
+                    "answer": 1
+                },
+                {
+                    "id": 4,
+                    "textLeft": "私が家のかぎを",
+                    "textRight": "どろぼうに入られてしまった。",
+                    "starIndex": 1,
+                    "options": [
+                        {"id": 1, "text": "忘れた"},
+                        {"id": 2, "text": "に"},
+                        {"id": 3, "text": "かけるのを"},
+                        {"id": 4, "text": "ばかり"}
+                    ],
+                    "correctOrder": [3, 1, 4, 2],
+                    "answer": 1
+                },
+                {
+                    "id": 5,
+                    "textLeft": "A 「もう熱もないし、試験だから学校に行ってもいいよね。」\nB 「病気を人に",
+                    "textRight": "学校を休んだほうがいいわよ。」",
+                    "starIndex": 1,
+                    "options": [
+                        {"id": 1, "text": "おそれが"},
+                        {"id": 2, "text": "ある"},
+                        {"id": 3, "text": "以上は"},
+                        {"id": 4, "text": "うつす"}
+                    ],
+                    "correctOrder": [4, 1, 2, 3],
+                    "answer": 1
+                }
+            ]
+        },
+        {
+            "unit": 2,
+            "questions": [
+                {
+                    "id": 1,
+                    "textLeft": "難しい漢字は、習う",
+                    "textRight": "うちにきちんと復習しょう。",
+                    "starIndex": 2,
+                    "options": [
+                        {"id": 1, "text": "ので"},
+                        {"id": 2, "text": "そばから"},
+                        {"id": 3, "text": "忘れてしまう"},
+                        {"id": 4, "text": "忘れない"}
+                    ],
+                    "correctOrder": [2, 3, 1, 4],
+                    "answer": 1
+                },
+                {
+                    "id": 2,
+                    "textLeft": "同じ言葉",
+                    "textRight": "印象が変わってしまうことがある。",
+                    "starIndex": 1,
+                    "options": [
+                        {"id": 1, "text": "話し方"},
+                        {"id": 2, "text": "でも"},
+                        {"id": 3, "text": "では"},
+                        {"id": 4, "text": "次第"}
+                    ],
+                    "correctOrder": [2, 1, 4, 3],
+                    "answer": 1
+                },
+                {
+                    "id": 3,
+                    "textLeft": "この学校では、",
+                    "textRight": "で受けることができます。",
+                    "starIndex": 2,
+                    "options": [
+                        {"id": 1, "text": "限って"},
+                        {"id": 2, "text": "無料"},
+                        {"id": 3, "text": "レッスンに"},
+                        {"id": 4, "text": "最初の"}
+                    ],
+                    "correctOrder": [4, 3, 1, 2],
+                    "answer": 1
+                },
+                {
+                    "id": 4,
+                    "textLeft": "この子は",
+                    "textRight": "が上手だ。",
+                    "starIndex": 1,
+                    "options": [
+                        {"id": 1, "text": "の"},
+                        {"id": 2, "text": "わりには"},
+                        {"id": 3, "text": "年齢"},
+                        {"id": 4, "text": "ピアノ"}
+                    ],
+                    "correctOrder": [3, 1, 2, 4],
+                    "answer": 1
+                },
+                {
+                    "id": 5,
+                    "textLeft": "あの学生の今までの",
+                    "textRight": "なんて信じられない。",
+                    "starIndex": 2,
+                    "options": [
+                        {"id": 1, "text": "こんな成績を"},
+                        {"id": 2, "text": "見ても"},
+                        {"id": 3, "text": "取る"},
+                        {"id": 4, "text": "成績から"}
+                    ],
+                    "correctOrder": [4, 2, 1, 3],
+                    "answer": 1
+                }
+            ]
+        },
+        {
+            "unit": 3,
+            "questions": [
+                {
+                    "id": 1,
+                    "textLeft": "あなたが困って",
+                    "textRight": "あげたいのだが･･････。",
+                    "starIndex": 2,
+                    "options": [
+                        {"id": 1, "text": "しては"},
+                        {"id": 2, "text": "いるなら"},
+                        {"id": 3, "text": "私と"},
+                        {"id": 4, "text": "助けて"}
+                    ],
+                    "correctOrder": [2, 3, 1, 4],
+                    "answer": 1
+                },
+                {
+                    "id": 2,
+                    "textLeft": "私の妻は",
+                    "textRight": "で高い服を買うことがある。",
+                    "starIndex": 2,
+                    "options": [
+                        {"id": 1, "text": "一方で"},
+                        {"id": 2, "text": "節約する"},
+                        {"id": 3, "text": "平気"},
+                        {"id": 4, "text": "10円を"}
+                    ],
+                    "correctOrder": [4, 2, 1, 3],
+                    "answer": 1
+                },
+                {
+                    "id": 3,
+                    "textLeft": "この店のケーキは",
+                    "textRight": "も人気がある。",
+                    "starIndex": 2,
+                    "options": [
+                        {"id": 1, "text": "もちろん"},
+                        {"id": 2, "text": "甘すぎないので"},
+                        {"id": 3, "text": "女性は"},
+                        {"id": 4, "text": "男性に"}
+                    ],
+                    "correctOrder": [2, 3, 1, 4],
+                    "answer": 1
+                },
+                {
+                    "id": 4,
+                    "textLeft": "時間にだらしない山下さんの",
+                    "textRight": "でさぼっている",
+                    "starIndex": 1,
+                    "options": [
+                        {"id": 1, "text": "だから"},
+                        {"id": 2, "text": "こと"},
+                        {"id": 3, "text": "また"},
+                        {"id": 4, "text": "どこか"}
+                    ],
+                    "correctOrder": [2, 1, 3, 4],
+                    "answer": 1
+                },
+                {
+                    "id": 5,
+                    "textLeft": "人の",
+                    "textRight": "、その先にイベント会場があった。",
+                    "starIndex": 2,
+                    "options": [
+                        {"id": 1, "text": "沿って"},
+                        {"id": 2, "text": "歩く"},
+                        {"id": 3, "text": "流れに"},
+                        {"id": 4, "text": "進むと"}
+                    ],
+                    "correctOrder": [2, 3, 1, 4],
+                    "answer": 1
+                }
+            ]
+        },
+        {
+            "unit": 4,
+            "questions": [
+                {
+                    "id": 1,
+                    "textLeft": "動物",
+                    "textRight": "子どもを捨てるなんて許せない。",
+                    "starIndex": 2,
+                    "options": [
+                        {"id": 1, "text": "必死に守るのに"},
+                        {"id": 2, "text": "でさえ"},
+                        {"id": 3, "text": "人間が"},
+                        {"id": 4, "text": "子どもを"}
+                    ],
+                    "correctOrder": [2, 4, 1, 3],
+                    "answer": 1
+                },
+                {
+                    "id": 2,
+                    "textLeft": "今の若者の考えは、",
+                    "textRight": "多すぎる。",
+                    "starIndex": 2,
+                    "options": [
+                        {"id": 1, "text": "かねる"},
+                        {"id": 2, "text": "ことが"},
+                        {"id": 3, "text": "理解"},
+                        {"id": 4, "text": "し"}
+                    ],
+                    "correctOrder": [3, 4, 1, 2],
+                    "answer": 1
+                },
+                {
+                    "id": 3,
+                    "textLeft": "私が東京に",
+                    "textRight": "が変わっている気がする。",
+                    "starIndex": 1,
+                    "options": [
+                        {"id": 1, "text": "たびに"},
+                        {"id": 2, "text": "まったく"},
+                        {"id": 3, "text": "行く"},
+                        {"id": 4, "text": "町の様子"}
+                    ],
+                    "correctOrder": [3, 1, 2, 4],
+                    "answer": 1
+                },
+                {
+                    "id": 4,
+                    "textLeft": "残念ながら、みなさんの",
+                    "textRight": "しなければなりません。",
+                    "starIndex": 1,
+                    "options": [
+                        {"id": 1, "text": "反した"},
+                        {"id": 2, "text": "ご期待に"},
+                        {"id": 3, "text": "結果を"},
+                        {"id": 4, "text": "お知らせ"}
+                    ],
+                    "correctOrder": [2, 1, 3, 4],
+                    "answer": 1
+                },
+                {
+                    "id": 5,
+                    "textLeft": "A 「明日、ドライブは絶対に行くの?」\nB 「いや、天気",
+                    "textRight": "得るよ。」",
+                    "starIndex": 2,
+                    "options": [
+                        {"id": 1, "text": "ということも"},
+                        {"id": 2, "text": "あり"},
+                        {"id": 3, "text": "中止"},
+                        {"id": 4, "text": "によっては"}
+                    ],
+                    "correctOrder": [4, 3, 1, 2],
+                    "answer": 1
+                }
+            ]
+        },
+        {
+            "unit": 5,
+            "questions": [
+                {
+                    "id": 1,
+                    "textLeft": "彼女の英語は",
+                    "textRight": "はきれいだが、文法は正しくない。",
+                    "starIndex": 2,
+                    "options": [
+                        {"id": 1, "text": "あって"},
+                        {"id": 2, "text": "発音"},
+                        {"id": 3, "text": "だけ"},
+                        {"id": 4, "text": "アメリカ育ち"}
+                    ],
+                    "correctOrder": [4, 3, 1, 2],
+                    "answer": 1
+                },
+                {
+                    "id": 2,
+                    "textLeft": "私のミスではないのに",
+                    "textRight": "も、たまにはあります。",
+                    "starIndex": 1,
+                    "options": [
+                        {"id": 1, "text": "あやまらざる"},
+                        {"id": 2, "text": "お客様に"},
+                        {"id": 3, "text": "を得ない"},
+                        {"id": 4, "text": "とき"}
+                    ],
+                    "correctOrder": [2, 1, 3, 4],
+                    "answer": 1
+                },
+                {
+                    "id": 3,
+                    "textLeft": "もし私が家を",
+                    "textRight": "町の中心から遠いところだ。",
+                    "starIndex": 1,
+                    "options": [
+                        {"id": 1, "text": "と"},
+                        {"id": 2, "text": "ずっと"},
+                        {"id": 3, "text": "しても"},
+                        {"id": 4, "text": "建てる"}
+                    ],
+                    "correctOrder": [4, 1, 3, 2],
+                    "answer": 1
+                },
+                {
+                    "id": 4,
+                    "textLeft": "優勝したマラソン選手は",
+                    "textRight": "も練習を休むことはな",
+                    "starIndex": 2,
+                    "options": [
+                        {"id": 1, "text": "限り"},
+                        {"id": 2, "text": "雨の日"},
+                        {"id": 3, "text": "来ない"},
+                        {"id": 4, "text": "台風でも"}
+                    ],
+                    "correctOrder": [4, 3, 1, 2],
+                    "answer": 1
+                },
+                {
+                    "id": 5,
+                    "textLeft": "米や果物の",
+                    "textRight": "です。",
+                    "starIndex": 2,
+                    "options": [
+                        {"id": 1, "text": "夏の天気"},
+                        {"id": 2, "text": "収穫量は"},
+                        {"id": 3, "text": "次第"},
+                        {"id": 4, "text": "秋の"}
+                    ],
+                    "correctOrder": [4, 2, 1, 3],
+                    "answer": 1
+                }
+            ]
+        },
+        {
+            "unit": 6,
+            "questions": [
+                {
+                    "id": 1,
+                    "textLeft": "部長は忙しすぎて",
+                    "textRight": "です。",
+                    "starIndex": 2,
+                    "options": [
+                        {"id": 1, "text": "ようで"},
+                        {"id": 2, "text": "気味の"},
+                        {"id": 3, "text": "心配"},
+                        {"id": 4, "text": "疲れ"}
+                    ],
+                    "correctOrder": [4, 2, 1, 3],
+                    "answer": 1
+                },
+                {
+                    "id": 2,
+                    "textLeft": "明日は旅行の予定だが",
+                    "textRight": "なくなった。",
+                    "starIndex": 2,
+                    "options": [
+                        {"id": 1, "text": "行く"},
+                        {"id": 2, "text": "どころでは"},
+                        {"id": 3, "text": "台風が"},
+                        {"id": 4, "text": "近づいて"}
+                    ],
+                    "correctOrder": [3, 4, 1, 2],
+                    "answer": 1
+                },
+                {
+                    "id": 3,
+                    "textLeft": "今日の朝早くから会議が",
+                    "textRight": "しまって、遅刻した。",
+                    "starIndex": 2,
+                    "options": [
+                        {"id": 1, "text": "いながら"},
+                        {"id": 2, "text": "言われて"},
+                        {"id": 3, "text": "忘れて"},
+                        {"id": 4, "text": "あると"}
+                    ],
+                    "correctOrder": [4, 2, 1, 3],
+                    "answer": 1
+                },
+                {
+                    "id": 4,
+                    "textLeft": "A 「スピーチコンテストは、だれが優勝するだろうね。」\nB 「もちろん、",
+                    "textRight": "いるよ。」",
+                    "starIndex": 1,
+                    "options": [
+                        {"id": 1, "text": "見ても"},
+                        {"id": 2, "text": "決まって"},
+                        {"id": 3, "text": "だれが"},
+                        {"id": 4, "text": "リーさんに"}
+                    ],
+                    "correctOrder": [3, 1, 4, 2],
+                    "answer": 1
+                },
+                {
+                    "id": 5,
+                    "textLeft": "運動はその人の",
+                    "textRight": "体をこわしますよ。",
+                    "starIndex": 2,
+                    "options": [
+                        {"id": 1, "text": "やらないと"},
+                        {"id": 2, "text": "体力に"},
+                        {"id": 3, "text": "応じて"},
+                        {"id": 4, "text": "かえって"}
+                    ],
+                    "correctOrder": [2, 3, 1, 4],
+                    "answer": 1
+                }
+            ]
+        },
+        {
+            "unit": 7,
+            "questions": [
+                {
+                    "id": 1,
+                    "textLeft": "その製品がどんなにすばらしくても、",
+                    "textRight": "信用できない。",
+                    "starIndex": 2,
+                    "options": [
+                        {"id": 1, "text": "みない"},
+                        {"id": 2, "text": "ことには"},
+                        {"id": 3, "text": "使って"},
+                        {"id": 4, "text": "実際に"}
+                    ],
+                    "correctOrder": [4, 3, 1, 2],
+                    "answer": 1
+                },
+                {
+                    "id": 2,
+                    "textLeft": "小さな子どもに",
+                    "textRight": "の海外旅行くらい大きな楽しみだ。",
+                    "starIndex": 1,
+                    "options": [
+                        {"id": 1, "text": "遠足は"},
+                        {"id": 2, "text": "とっての"},
+                        {"id": 3, "text": "大人に"},
+                        {"id": 4, "text": "とって"}
+                    ],
+                    "correctOrder": [2, 1, 3, 4],
+                    "answer": 1
+                },
+                {
+                    "id": 3,
+                    "textLeft": "心から反省している",
+                    "textRight": "ちゃんと謝ってほしい。",
+                    "starIndex": 2,
+                    "options": [
+                        {"id": 1, "text": "わけでも"},
+                        {"id": 2, "text": "許さない"},
+                        {"id": 3, "text": "なら"},
+                        {"id": 4, "text": "ないが"}
+                    ],
+                    "correctOrder": [3, 2, 1, 4],
+                    "answer": 1
+                },
+                {
+                    "id": 4,
+                    "textLeft": "3日間、",
+                    "textRight": "会社を辞めることにしました。",
+                    "starIndex": 2,
+                    "options": [
+                        {"id": 1, "text": "末"},
+                        {"id": 2, "text": "抜いた"},
+                        {"id": 3, "text": "考え"},
+                        {"id": 4, "text": "思い切って"}
+                    ],
+                    "correctOrder": [3, 2, 1, 4],
+                    "answer": 1
+                },
+                {
+                    "id": 5,
+                    "textLeft": "あの歌手の名前は",
+                    "textRight": "としても、どうしても思い出せない。",
+                    "starIndex": 1,
+                    "options": [
+                        {"id": 1, "text": "たっけ"},
+                        {"id": 2, "text": "思い出そう"},
+                        {"id": 3, "text": "何だっ"},
+                        {"id": 4, "text": "と"}
+                    ],
+                    "correctOrder": [3, 1, 4, 2],
+                    "answer": 1
+                }
+            ]
+        },
+        {
+            "unit": 8,
+            "questions": [
+                {
+                    "id": 1,
+                    "textLeft": "新しい社員が",
+                    "textRight": "規則を教えてやらなければいけない。",
+                    "starIndex": 1,
+                    "options": [
+                        {"id": 1, "text": "入ってくる"},
+                        {"id": 2, "text": "会社の"},
+                        {"id": 3, "text": "たび"},
+                        {"id": 4, "text": "会社に"}
+                    ],
+                    "correctOrder": [4, 1, 3, 2],
+                    "answer": 1
+                },
+                {
+                    "id": 2,
+                    "textLeft": "この暑さに",
+                    "textRight": "倒れる人が出た。",
+                    "starIndex": 1,
+                    "options": [
+                        {"id": 1, "text": "長い時間"},
+                        {"id": 2, "text": "待たされて"},
+                        {"id": 3, "text": "加えて"},
+                        {"id": 4, "text": "次々と"}
+                    ],
+                    "correctOrder": [3, 1, 2, 4],
+                    "answer": 1
+                },
+                {
+                    "id": 3,
+                    "textLeft": "目の前に熊がいたが、後ろは谷でなく、",
+                    "textRight": "あわてて木に登った。",
+                    "starIndex": 1,
+                    "options": [
+                        {"id": 1, "text": "も"},
+                        {"id": 2, "text": "が"},
+                        {"id": 3, "text": "逃げように"},
+                        {"id": 4, "text": "逃げ道"}
+                    ],
+                    "correctOrder": [3, 1, 4, 2],
+                    "answer": 1
+                },
+                {
+                    "id": 4,
+                    "textLeft": "この作文の漢字は",
+                    "textRight": "正しい漢字で書けている。",
+                    "starIndex": 2,
+                    "options": [
+                        {"id": 1, "text": "名前"},
+                        {"id": 2, "text": "だらけで"},
+                        {"id": 3, "text": "だけが"},
+                        {"id": 4, "text": "間違い"}
+                    ],
+                    "correctOrder": [4, 2, 1, 3],
+                    "answer": 1
+                },
+                {
+                    "id": 5,
+                    "textLeft": "現代は大学を出た",
+                    "textRight": "就職できない時代だ。",
+                    "starIndex": 2,
+                    "options": [
+                        {"id": 1, "text": "言っても"},
+                        {"id": 2, "text": "必ずしも"},
+                        {"id": 3, "text": "と"},
+                        {"id": 4, "text": "から"}
+                    ],
+                    "correctOrder": [4, 3, 1, 2],
+                    "answer": 1
+                }
+            ]
+        },
+        {
+            "unit": 9,
+            "questions": [
+                {
+                    "id": 1,
+                    "textLeft": "子どもがたくさんいると",
+                    "textRight": "仕事をがんばる力が出る。",
+                    "starIndex": 1,
+                    "options": [
+                        {"id": 1, "text": "というけれど"},
+                        {"id": 2, "text": "子どもがいる"},
+                        {"id": 3, "text": "からこそ"},
+                        {"id": 4, "text": "生活が苦しくなる"}
+                    ],
+                    "correctOrder": [4, 1, 2, 3],
+                    "answer": 1
+                },
+                {
+                    "id": 2,
+                    "textLeft": "世の中が",
+                    "textRight": "なってきた。",
+                    "starIndex": 1,
+                    "options": [
+                        {"id": 1, "text": "なるにつれ"},
+                        {"id": 2, "text": "薄く"},
+                        {"id": 3, "text": "助け合いの気持ちが"},
+                        {"id": 4, "text": "豊かに"}
+                    ],
+                    "correctOrder": [4, 1, 3, 2],
+                    "answer": 1
+                },
+                {
+                    "id": 3,
+                    "textLeft": "この家も建てた",
+                    "textRight": "あちこち修理が必要になってきた。",
+                    "starIndex": 2,
+                    "options": [
+                        {"id": 1, "text": "とき"},
+                        {"id": 2, "text": "きれいだったが"},
+                        {"id": 3, "text": "とともに"},
+                        {"id": 4, "text": "ときは"}
+                    ],
+                    "correctOrder": [4, 2, 1, 3],
+                    "answer": 1
+                },
+                {
+                    "id": 4,
+                    "textLeft": "A 「今日の夕食は何かな。」\nB 「カレーよ。カレー",
+                    "textRight": "インド風のものよ。」",
+                    "starIndex": 1,
+                    "options": [
+                        {"id": 1, "text": "いっても"},
+                        {"id": 2, "text": "じゃなくて"},
+                        {"id": 3, "text": "と"},
+                        {"id": 4, "text": "普通のカレー"}
+                    ],
+                    "correctOrder": [3, 1, 4, 2],
+                    "answer": 1
+                },
+                {
+                    "id": 5,
+                    "textLeft": "お金が足りないなら、親に",
+                    "textRight": "だろうね。",
+                    "starIndex": 2,
+                    "options": [
+                        {"id": 1, "text": "ほか"},
+                        {"id": 2, "text": "より"},
+                        {"id": 3, "text": "ない"},
+                        {"id": 4, "text": "借りる"}
+                    ],
+                    "correctOrder": [4, 2, 1, 3],
+                    "answer": 1
+                }
+            ]
+        },
+        {
+            "unit": 10,
+            "questions": [
+                {
+                    "id": 1,
+                    "textLeft": "たとえ",
+                    "textRight": "、私は彼女と結婚するつもりだ。",
+                    "starIndex": 2,
+                    "options": [
+                        {"id": 1, "text": "された"},
+                        {"id": 2, "text": "どんなに"},
+                        {"id": 3, "text": "反対"},
+                        {"id": 4, "text": "ところで"}
+                    ],
+                    "correctOrder": [2, 3, 1, 4],
+                    "answer": 1
+                },
+                {
+                    "id": 2,
+                    "textLeft": "成績が悪いのが",
+                    "textRight": "もっと勉強すればよいのに。",
+                    "starIndex": 1,
+                    "options": [
+                        {"id": 1, "text": "泣く"},
+                        {"id": 2, "text": "くやしくて"},
+                        {"id": 3, "text": "くらい"},
+                        {"id": 4, "text": "なら"}
+                    ],
+                    "correctOrder": [2, 1, 3, 4],
+                    "answer": 1
+                },
+                {
+                    "id": 3,
+                    "textLeft": "ラジオの",
+                    "textRight": "はじめて知った。",
+                    "starIndex": 2,
+                    "options": [
+                        {"id": 1, "text": "地震の被害の"},
+                        {"id": 2, "text": "ニュースを"},
+                        {"id": 3, "text": "大きさを"},
+                        {"id": 4, "text": "通じて"}
+                    ],
+                    "correctOrder": [2, 4, 1, 3],
+                    "answer": 1
+                },
+                {
+                    "id": 4,
+                    "textLeft": "だれに聞いても",
+                    "textRight": "、私1人でやるしかない。",
+                    "starIndex": 2,
+                    "options": [
+                        {"id": 1, "text": "と"},
+                        {"id": 2, "text": "手伝える"},
+                        {"id": 3, "text": "なると"},
+                        {"id": 4, "text": "人がいない"}
+                    ],
+                    "correctOrder": [2, 4, 1, 3],
+                    "answer": 1
+                },
+                {
+                    "id": 5,
+                    "textLeft": "目の前にごちそうを出されたら、いくら",
+                    "textRight": "いられない。",
+                    "starIndex": 2,
+                    "options": [
+                        {"id": 1, "text": "食べない"},
+                        {"id": 2, "text": "ダイエット中"},
+                        {"id": 3, "text": "でも"},
+                        {"id": 4, "text": "では"}
+                    ],
+                    "correctOrder": [2, 3, 1, 4],
+                    "answer": 1
+                }
+            ]
+        },
+        {
+            "unit": 11,
+            "questions": [
+                {
+                    "id": 1,
+                    "textLeft": "この薬はよく",
+                    "textRight": "を起こすので、注意が必要。",
+                    "starIndex": 2,
+                    "options": [
+                        {"id": 1, "text": "よっては"},
+                        {"id": 2, "text": "効くが"},
+                        {"id": 3, "text": "人に"},
+                        {"id": 4, "text": "アレルギー"}
+                    ],
+                    "correctOrder": [2, 3, 1, 4],
+                    "answer": 1
+                },
+                {
+                    "id": 2,
+                    "textLeft": "過去10年間のデータ",
+                    "textRight": "、これからも子どもは減り続けるだろう。",
+                    "starIndex": 2,
+                    "options": [
+                        {"id": 1, "text": "予想した"},
+                        {"id": 2, "text": "基づいて"},
+                        {"id": 3, "text": "結果"},
+                        {"id": 4, "text": "に"}
+                    ],
+                    "correctOrder": [4, 2, 1, 3],
+                    "answer": 1
+                },
+                {
+                    "id": 3,
+                    "textLeft": "宿題を忘れないように何度",
+                    "textRight": "しまった。",
+                    "starIndex": 1,
+                    "options": [
+                        {"id": 1, "text": "ことか"},
+                        {"id": 2, "text": "注意された"},
+                        {"id": 3, "text": "わからないのに"},
+                        {"id": 4, "text": "また忘れて"}
+                    ],
+                    "correctOrder": [2, 1, 3, 4],
+                    "answer": 1
+                },
+                {
+                    "id": 4,
+                    "textLeft": "あのときは",
+                    "textRight": "してしまったと後悔している。",
+                    "starIndex": 1,
+                    "options": [
+                        {"id": 1, "text": "いた"},
+                        {"id": 2, "text": "あわてて"},
+                        {"id": 3, "text": "にせよ"},
+                        {"id": 4, "text": "ばかなことを"}
+                    ],
+                    "correctOrder": [2, 1, 3, 4],
+                    "answer": 1
+                },
+                {
+                    "id": 5,
+                    "textLeft": "年齢から",
+                    "textRight": "はずなのに、弟のほうがしっかりしている。",
+                    "starIndex": 2,
+                    "options": [
+                        {"id": 1, "text": "しっかりしていても"},
+                        {"id": 2, "text": "よい"},
+                        {"id": 3, "text": "兄のほうが"},
+                        {"id": 4, "text": "いえば"}
+                    ],
+                    "correctOrder": [4, 3, 1, 2],
+                    "answer": 1
+                }
+            ]
+        },
+        {
+            "unit": 12,
+            "questions": [
+                {
+                    "id": 1,
+                    "textLeft": "1回試験に失敗した",
+                    "textRight": "ないですよ。",
+                    "starIndex": 1,
+                    "options": [
+                        {"id": 1, "text": "いって"},
+                        {"id": 2, "text": "ことは"},
+                        {"id": 3, "text": "からと"},
+                        {"id": 4, "text": "あきらめる"}
+                    ],
+                    "correctOrder": [3, 1, 4, 2],
+                    "answer": 1
+                },
+                {
+                    "id": 2,
+                    "textLeft": "砂漠の動物たちは、",
+                    "textRight": "必死に生きている。",
+                    "starIndex": 2,
+                    "options": [
+                        {"id": 1, "text": "条件の"},
+                        {"id": 2, "text": "きびしい"},
+                        {"id": 3, "text": "もとで"},
+                        {"id": 4, "text": "水がないという"}
+                    ],
+                    "correctOrder": [4, 2, 1, 3],
+                    "answer": 1
+                },
+                {
+                    "id": 3,
+                    "textLeft": "アメリカの大学に行くのに、",
+                    "textRight": "いけるのだろうか。",
+                    "starIndex": 1,
+                    "options": [
+                        {"id": 1, "text": "ともかくとして"},
+                        {"id": 2, "text": "ついて"},
+                        {"id": 3, "text": "お金の問題は"},
+                        {"id": 4, "text": "英語の授業に"}
+                    ],
+                    "correctOrder": [3, 1, 4, 2],
+                    "answer": 1
+                },
+                {
+                    "id": 4,
+                    "textLeft": "入院中の",
+                    "textRight": "にあたることになった。",
+                    "starIndex": 1,
+                    "options": [
+                        {"id": 1, "text": "かわって"},
+                        {"id": 2, "text": "副社長が"},
+                        {"id": 3, "text": "会社経営"},
+                        {"id": 4, "text": "社長に"}
+                    ],
+                    "correctOrder": [4, 1, 2, 3],
+                    "answer": 1
+                },
+                {
+                    "id": 5,
+                    "textLeft": "A 「これが社会の常識というものだ。」\nB 「10年前の常識が",
+                    "textRight": "ないよ。」",
+                    "starIndex": 2,
+                    "options": [
+                        {"id": 1, "text": "ものだって"},
+                        {"id": 2, "text": "非常識に"},
+                        {"id": 3, "text": "なってしまった"},
+                        {"id": 4, "text": "少なくは"}
+                    ],
+                    "correctOrder": [2, 3, 1, 4],
+                    "answer": 1
+                }
+            ]
+        },
+        {
+            "unit": 13,
+            "questions": [
+                {
+                    "id": 1,
+                    "textLeft": "子ども",
+                    "textRight": "おもしろいものもたくさんある。",
+                    "starIndex": 1,
+                    "options": [
+                        {"id": 1, "text": "本の中には"},
+                        {"id": 2, "text": "とって"},
+                        {"id": 3, "text": "向けの"},
+                        {"id": 4, "text": "大人に"}
+                    ],
+                    "correctOrder": [3, 1, 4, 2],
+                    "answer": 1
+                },
+                {
+                    "id": 2,
+                    "textLeft": "あのレストランは",
+                    "textRight": "が、いつも込んでいるのが困る。",
+                    "starIndex": 1,
+                    "options": [
+                        {"id": 1, "text": "安ければ"},
+                        {"id": 2, "text": "値段も"},
+                        {"id": 3, "text": "味も"},
+                        {"id": 4, "text": "よい"}
+                    ],
+                    "correctOrder": [2, 1, 3, 4],
+                    "answer": 1
+                },
+                {
+                    "id": 3,
+                    "textLeft": "前の社長の息子を",
+                    "textRight": "をスタートさせる。",
+                    "starIndex": 1,
+                    "options": [
+                        {"id": 1, "text": "として"},
+                        {"id": 2, "text": "体制"},
+                        {"id": 3, "text": "新しい"},
+                        {"id": 4, "text": "新社長"}
+                    ],
+                    "correctOrder": [4, 1, 3, 2],
+                    "answer": 1
+                },
+                {
+                    "id": 4,
+                    "textLeft": "しょうゆを",
+                    "textRight": "。",
+                    "starIndex": 1,
+                    "options": [
+                        {"id": 1, "text": "日本料理"},
+                        {"id": 2, "text": "は"},
+                        {"id": 3, "text": "ぬきにしては"},
+                        {"id": 4, "text": "語れない"}
+                    ],
+                    "correctOrder": [3, 1, 2, 4],
+                    "answer": 1
+                },
+                {
+                    "id": 5,
+                    "textLeft": "娘が無事と",
+                    "textRight": "家族は大騒ぎだった。",
+                    "starIndex": 2,
+                    "options": [
+                        {"id": 1, "text": "笑う"},
+                        {"id": 2, "text": "泣くやら"},
+                        {"id": 3, "text": "やらで"},
+                        {"id": 4, "text": "わかって"}
+                    ],
+                    "correctOrder": [4, 2, 1, 3],
+                    "answer": 1
+                }
+            ]
+        },
+        {
+            "unit": 14,
+            "questions": [
+                {
+                    "id": 1,
+                    "textLeft": "日本語が読めない人",
+                    "textRight": "マークがつけられている。",
+                    "starIndex": 2,
+                    "options": [
+                        {"id": 1, "text": "ように"},
+                        {"id": 2, "text": "理解できる"},
+                        {"id": 3, "text": "絵による"},
+                        {"id": 4, "text": "にも"}
+                    ],
+                    "correctOrder": [4, 2, 1, 3],
+                    "answer": 1
+                },
+                {
+                    "id": 2,
+                    "textLeft": "やろうが",
+                    "textRight": "悔やまなくてすむことが多い。",
+                    "starIndex": 1,
+                    "options": [
+                        {"id": 1, "text": "かと"},
+                        {"id": 2, "text": "やめよう"},
+                        {"id": 3, "text": "やったほうが"},
+                        {"id": 4, "text": "迷ったときは"}
+                    ],
+                    "correctOrder": [2, 1, 4, 3],
+                    "answer": 1
+                },
+                {
+                    "id": 3,
+                    "textLeft": "お客様の意見を",
+                    "textRight": "ための会議が開かれた。",
+                    "starIndex": 1,
+                    "options": [
+                        {"id": 1, "text": "して"},
+                        {"id": 2, "text": "新製品を"},
+                        {"id": 3, "text": "もとに"},
+                        {"id": 4, "text": "作る"}
+                    ],
+                    "correctOrder": [3, 1, 2, 4],
+                    "answer": 1
+                },
+                {
+                    "id": 4,
+                    "textLeft": "親の遺産を",
+                    "textRight": "とうとうけんか別れになった。",
+                    "starIndex": 2,
+                    "options": [
+                        {"id": 1, "text": "はげしく争った"},
+                        {"id": 2, "text": "めぐって"},
+                        {"id": 3, "text": "兄弟が"},
+                        {"id": 4, "text": "あげく"}
+                    ],
+                    "correctOrder": [2, 3, 1, 4],
+                    "answer": 1
+                },
+                {
+                    "id": 5,
+                    "textLeft": "旅好きの主婦が多いのは、めずらしい景色を見るのが",
+                    "textRight": "も理由の1つだ。",
+                    "starIndex": 2,
+                    "options": [
+                        {"id": 1, "text": "料理をしなくていい"},
+                        {"id": 2, "text": "だけでなく"},
+                        {"id": 3, "text": "好きな"},
+                        {"id": 4, "text": "ということ"}
+                    ],
+                    "correctOrder": [3, 2, 1, 4],
+                    "answer": 1
+                }
+            ]
+        },
+        {
+            "unit": 15,
+            "questions": [
+                {
+                    "id": 1,
+                    "textLeft": "気分が悪くて病院に行ったが",
+                    "textRight": "終わり、「ただの風邪です」と言われた。",
+                    "starIndex": 2,
+                    "options": [
+                        {"id": 1, "text": "あげくに"},
+                        {"id": 2, "text": "さんざん"},
+                        {"id": 3, "text": "待たされた"},
+                        {"id": 4, "text": "診察はすぐ"}
+                    ],
+                    "correctOrder": [2, 3, 1, 4],
+                    "answer": 1
+                },
+                {
+                    "id": 2,
+                    "textLeft": "皮肉で冷たいと",
+                    "textRight": "いつもやさしかった。",
+                    "starIndex": 2,
+                    "options": [
+                        {"id": 1, "text": "子どもに"},
+                        {"id": 2, "text": "対しては"},
+                        {"id": 3, "text": "言われる"},
+                        {"id": 4, "text": "彼も"}
+                    ],
+                    "correctOrder": [3, 4, 1, 2],
+                    "answer": 1
+                },
+                {
+                    "id": 3,
+                    "textLeft": "この会社は",
+                    "textRight": "受けることができます。",
+                    "starIndex": 1,
+                    "options": [
+                        {"id": 1, "text": "既卒かを"},
+                        {"id": 2, "text": "新卒か"},
+                        {"id": 3, "text": "問わず"},
+                        {"id": 4, "text": "採用試験を"}
+                    ],
+                    "correctOrder": [2, 1, 3, 4],
+                    "answer": 1
+                },
+                {
+                    "id": 4,
+                    "textLeft": "新しい教育方法が",
+                    "textRight": "ことになった。",
+                    "starIndex": 1,
+                    "options": [
+                        {"id": 1, "text": "先立ち"},
+                        {"id": 2, "text": "実行されるのに"},
+                        {"id": 3, "text": "試してみる"},
+                        {"id": 4, "text": "少数の学校で"}
+                    ],
+                    "correctOrder": [2, 1, 4, 3],
+                    "answer": 1
+                },
+                {
+                    "id": 5,
+                    "textLeft": "木村さんほどのベテランのガイドが",
+                    "textRight": "警察に電話しよう。",
+                    "starIndex": 2,
+                    "options": [
+                        {"id": 1, "text": "あるまいが"},
+                        {"id": 2, "text": "道に迷う"},
+                        {"id": 3, "text": "一応"},
+                        {"id": 4, "text": "ことなど"}
+                    ],
+                    "correctOrder": [2, 4, 1, 3],
+                    "answer": 1
+                }
+            ]
+        }
+    ]
+}

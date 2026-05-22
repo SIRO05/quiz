@@ -1,0 +1,13 @@
+{
+    "N2": [
+        {"task": 1, "url": "data/task_1.json", "title": "問題 1", "description": "言語知識：漢字読解"},
+        {"task": 2, "url": "data/task_2.json", "title": "問題 2", "description": "言語知識：表記"},
+        {"task": 3, "url": "data/task_3.json", "title": "問題 3", "description": "言語知識：語形成"},
+        {"task": 4, "url": "data/task_4.json", "title": "問題 4", "description": "言語知識：文脈規定"},
+        {"task": 5, "url": "data/task_5.json", "title": "問題 5", "description": "言語知識：言い換え類義語"},
+        {"task": 6, "url": "data/task_6.json", "title": "問題 6", "description": "言語知識：用法"},
+        {"task": 7, "url": "data/task_7.json", "title": "問題 7", "description": "言語知識（文法）：文法形式の判断"},
+        {"task": 8, "url": "data/task_8.json", "title": "問題 8", "description": "言語知識（文法）：文の組み立て"},
+        {"task": 9, "url": "data/task_9.json", "title": "問題 9", "description": "言語知識（文法）：文章の文法"}
+    ]
+}

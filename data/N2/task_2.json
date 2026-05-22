@@ -1,0 +1,981 @@
+{
+    "description": "問題2 _______の言葉を漢字で書くとき、最もよいものを１・２・３・４から一つ選びなさい。",
+    "grade": 1,
+    "tasks": [
+        {
+            "unit": 1,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "節約生活に疲れた消費者に安いだけの商品はあきられてきた。",
+                    "textHighlight": { "start": 20, "end": 25 },
+                    "options": [
+                        { "id": 1, "text": "飯きられて" },
+                        { "id": 2, "text": "飽きられて" },
+                        { "id": 3, "text": "館きられて" },
+                        { "id": 4, "text": "飲きられて" }
+                    ],
+                    "answer": 2
+                },
+                {
+                    "id": 2,
+                    "text": "「源氏物語」は日本の代表的なこてん文学だ。",
+                    "textHighlight": { "start": 14, "end": 17 },
+                    "options": [
+                        { "id": 1, "text": "古展" },
+                        { "id": 2, "text": "箇典" },
+                        { "id": 3, "text": "個展" },
+                        { "id": 4, "text": "古典" }
+                    ],
+                    "answer": 4
+                },
+                {
+                    "id": 3,
+                    "text": "自分の欠点をなげいてばかりいないで、長所を伸ばすべきだ。",
+                    "textHighlight": { "start": 6, "end": 10 },
+                    "options": [
+                        { "id": 1, "text": "難いて" },
+                        { "id": 2, "text": "嘆いて" },
+                        { "id": 3, "text": "喝いて" },
+                        { "id": 4, "text": "漢いて" }
+                    ],
+                    "answer": 2
+                },
+                {
+                    "id": 4,
+                    "text": "ストレスの多い現代、うつ病を病む人がげきぞうしている。",
+                    "textHighlight": { "start": 18, "end": 22 },
+                    "options": [
+                        { "id": 1, "text": "激増" },
+                        { "id": 2, "text": "激象" },
+                        { "id": 3, "text": "劇增" },
+                        { "id": 4, "text": "劇象" }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 5,
+                    "text": "高い技術力のおかげで海水がたんすい化されて、飲めるようになった。",
+                    "textHighlight": { "start": 13, "end": 17 },
+                    "options": [
+                        { "id": 1, "text": "単水" },
+                        { "id": 2, "text": "短水" },
+                        { "id": 3, "text": "淡水" },
+                        { "id": 4, "text": "探水" }
+                    ],
+                    "answer": 3
+                }
+            ]
+        },
+        {
+            "unit": 2,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "太陽エネルギーが生み出す熱はだんぼうに、光は電気に利用できる。",
+                    "textHighlight": { "start": 14, "end": 18 },
+                    "options": [
+                        { "id": 1, "text": "暖房" },
+                        { "id": 2, "text": "暖冒" },
+                        { "id": 3, "text": "断房" },
+                        { "id": 4, "text": "断冒" }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 2,
+                    "text": "あの2人は夫婦だとかんちがいしている人が多い。",
+                    "textHighlight": { "start": 9, "end": 14 },
+                    "options": [
+                        { "id": 1, "text": "勘違い" },
+                        { "id": 2, "text": "肝違い" },
+                        { "id": 3, "text": "感違い" },
+                        { "id": 4, "text": "塞違い" }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 3,
+                    "text": "常識にてらして考えてみれば、君が今、何をすべきかわかるだろう。",
+                    "textHighlight": { "start": 3, "end": 7 },
+                    "options": [
+                        { "id": 1, "text": "焦らして" },
+                        { "id": 2, "text": "燃らして" },
+                        { "id": 3, "text": "照らして" },
+                        { "id": 4, "text": "烈らして" }
+                    ],
+                    "answer": 3
+                },
+                {
+                    "id": 4,
+                    "text": "このあたりは地震でじばんが沈んでしまった。",
+                    "textHighlight": { "start": 9, "end": 12 },
+                    "options": [
+                        { "id": 1, "text": "地敷" },
+                        { "id": 2, "text": "地版" },
+                        { "id": 3, "text": "地番" },
+                        { "id": 4, "text": "地盤" }
+                    ],
+                    "answer": 4
+                },
+                {
+                    "id": 5,
+                    "text": "工場の事故で有害物質が流れ、川がおせんされた。",
+                    "textHighlight": { "start": 16, "end": 19 },
+                    "options": [
+                        { "id": 1, "text": "污洗" },
+                        { "id": 2, "text": "御染" },
+                        { "id": 3, "text": "汚染" },
+                        { "id": 4, "text": "冒染" }
+                    ],
+                    "answer": 3
+                }
+            ]
+        },
+        {
+            "unit": 3,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "あのコーチは選手のかくれた能力を引き出すのがうまい。",
+                    "textHighlight": { "start": 9, "end": 13 },
+                    "options": [
+                        { "id": 1, "text": "隠れた" },
+                        { "id": 2, "text": "陰れた" },
+                        { "id": 3, "text": "隆れた" },
+                        { "id": 4, "text": "隔れた" }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 2,
+                    "text": "火山灰は電気けいとうに入り込み、さまざまな誤作動を起こすことがある。",
+                    "textHighlight": { "start": 6, "end": 10 },
+                    "options": [
+                        { "id": 1, "text": "計統" },
+                        { "id": 2, "text": "形統" },
+                        { "id": 3, "text": "系統" },
+                        { "id": 4, "text": "経統" }
+                    ],
+                    "answer": 3
+                },
+                {
+                    "id": 3,
+                    "text": "これから先、都市の建築物はますますこうそう化が進むであろう。",
+                    "textHighlight": { "start": 17, "end": 21 },
+                    "options": [
+                        { "id": 1, "text": "構倣" },
+                        { "id": 2, "text": "高層" },
+                        { "id": 3, "text": "後送" },
+                        { "id": 4, "text": "効相" }
+                    ],
+                    "answer": 2
+                },
+                {
+                    "id": 4,
+                    "text": "人間は一生悩むことからかいほうされないのだと思う。",
+                    "textHighlight": { "start": 11, "end": 15 },
+                    "options": [
+                        { "id": 1, "text": "解倣" },
+                        { "id": 2, "text": "解封" },
+                        { "id": 3, "text": "解報" },
+                        { "id": 4, "text": "解放" }
+                    ],
+                    "answer": 4
+                },
+                {
+                    "id": 5,
+                    "text": "野菜や果物の栄養価は昔のものとくらべて低くなっている。",
+                    "textHighlight": { "start": 15, "end": 19 },
+                    "options": [
+                        { "id": 1, "text": "並べて" },
+                        { "id": 2, "text": "比べて" },
+                        { "id": 3, "text": "列べて" },
+                        { "id": 4, "text": "対べて" }
+                    ],
+                    "answer": 2
+                }
+            ]
+        },
+        {
+            "unit": 4,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "あの子はまるでスポンジのように教えたことはすべてきゅうしゅうする。",
+                    "textHighlight": { "start": 24, "end": 30 },
+                    "options": [
+                        { "id": 1, "text": "吸集" },
+                        { "id": 2, "text": "究収" },
+                        { "id": 3, "text": "吸収" },
+                        { "id": 4, "text": "急就" }
+                    ],
+                    "answer": 3
+                },
+                {
+                    "id": 2,
+                    "text": "あの学者は、この島に長期たいざいして、植物の研究をしている。",
+                    "textHighlight": { "start": 12, "end": 16 },
+                    "options": [
+                        { "id": 1, "text": "滞在" },
+                        { "id": 2, "text": "滞带" },
+                        { "id": 3, "text": "带存" },
+                        { "id": 4, "text": "帯在" }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 3,
+                    "text": "家族みんなで食卓をかこむことが少なくなってしまった。",
+                    "textHighlight": { "start": 9, "end": 12 },
+                    "options": [
+                        { "id": 1, "text": "因む" },
+                        { "id": 2, "text": "図む" },
+                        { "id": 3, "text": "回む" },
+                        { "id": 4, "text": "囲む" }
+                    ],
+                    "answer": 4
+                },
+                {
+                    "id": 4,
+                    "text": "娘はチラシの体験談をあんいに信じて高いサプリメントをよく買っている。",
+                    "textHighlight": { "start": 10, "end": 13 },
+                    "options": [
+                        { "id": 1, "text": "安意" },
+                        { "id": 2, "text": "安易" },
+                        { "id": 3, "text": "案意" },
+                        { "id": 4, "text": "案易" }
+                    ],
+                    "answer": 2
+                },
+                {
+                    "id": 5,
+                    "text": "警察犬はトラックの中の爆発物をかぎあてた。",
+                    "textHighlight": { "start": 15, "end": 17 },
+                    "options": [
+                        { "id": 1, "text": "嗅ぎ" },
+                        { "id": 2, "text": "吸ぎ" },
+                        { "id": 3, "text": "喝ぎ" },
+                        { "id": 4, "text": "喫ぎ" }
+                    ],
+                    "answer": 1
+                }
+            ]
+        },
+        {
+            "unit": 5,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "弱い立場の人に精神的、身体的くつうを与えることをパワーハラスメントという。",
+                    "textHighlight": { "start": 14, "end": 17 },
+                    "options": [
+                        { "id": 1, "text": "苦痛" },
+                        { "id": 2, "text": "苦通" },
+                        { "id": 3, "text": "具痛" },
+                        { "id": 4, "text": "悲痛" }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 2,
+                    "text": "今朝は手がこごえて、物がうまくつかめないほど寒かった。",
+                    "textHighlight": { "start": 5, "end": 9 },
+                    "options": [
+                        { "id": 1, "text": "冷えて" },
+                        { "id": 2, "text": "寒えて" },
+                        { "id": 3, "text": "凍えて" },
+                        { "id": 4, "text": "涼えて" }
+                    ],
+                    "answer": 3
+                },
+                {
+                    "id": 3,
+                    "text": "相手チームの弱点をにぎっていたので、試合を有利に進めることができた。",
+                    "textHighlight": { "start": 9, "end": 13 },
+                    "options": [
+                        { "id": 1, "text": "挟って" },
+                        { "id": 2, "text": "握って" },
+                        { "id": 3, "text": "担って" },
+                        { "id": 4, "text": "捕って" }
+                    ],
+                    "answer": 2
+                },
+                {
+                    "id": 4,
+                    "text": "取引先とりがいが一致して、契約の話がまとまった。",
+                    "textHighlight": { "start": 4, "end": 7 },
+                    "options": [
+                        { "id": 1, "text": "理外" },
+                        { "id": 2, "text": "理害" },
+                        { "id": 3, "text": "利外" },
+                        { "id": 4, "text": "利害" }
+                    ],
+                    "answer": 4
+                },
+                {
+                    "id": 5,
+                    "text": "厳しいトレーニングを積み重ねて、やっと自分の欠点をこくふくすることができた。",
+                    "textHighlight": { "start": 25, "end": 29 },
+                    "options": [
+                        { "id": 1, "text": "克服" },
+                        { "id": 2, "text": "告服" },
+                        { "id": 3, "text": "降服" },
+                        { "id": 4, "text": "攻服" }
+                    ],
+                    "answer": 1
+                }
+            ]
+        },
+        {
+            "unit": 6,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "14~15歳という年齢は子どもの終わりであり、大人の始まりであるびみょうな時期だ。",
+                    "textHighlight": { "start": 32, "end": 36 },
+                    "options": [
+                        { "id": 1, "text": "微妙" },
+                        { "id": 2, "text": "徵妙" },
+                        { "id": 3, "text": "微明" },
+                        { "id": 4, "text": "徵明" }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 2,
+                    "text": "家計をおぎなうために働きに出る主婦は増え続けている。",
+                    "textHighlight": { "start": 3, "end": 7 },
+                    "options": [
+                        { "id": 1, "text": "添う" },
+                        { "id": 2, "text": "充う" },
+                        { "id": 3, "text": "補う" },
+                        { "id": 4, "text": "授う" }
+                    ],
+                    "answer": 3
+                },
+                {
+                    "id": 3,
+                    "text": "人の頭の中にはパソコンも及ばないような記憶そうちがあるという。",
+                    "textHighlight": { "start": 21, "end": 24 },
+                    "options": [
+                        { "id": 1, "text": "創置" },
+                        { "id": 2, "text": "構置" },
+                        { "id": 3, "text": "操置" },
+                        { "id": 4, "text": "装置" }
+                    ],
+                    "answer": 4
+                },
+                {
+                    "id": 4,
+                    "text": "しゅっきん前に会社の近くの喫茶店で朝食を食べることにしている。",
+                    "textHighlight": { "start": 0, "end": 5 },
+                    "options": [
+                        { "id": 1, "text": "出勤" },
+                        { "id": 2, "text": "出緊" },
+                        { "id": 3, "text": "出務" },
+                        { "id": 4, "text": "出働" }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 5,
+                    "text": "50年前までは地図になかったヒマラヤのこの湖は、氷がとけてできた。",
+                    "textHighlight": { "start": 26, "end": 29 },
+                    "options": [
+                        { "id": 1, "text": "湯けて" },
+                        { "id": 2, "text": "解けて" },
+                        { "id": 3, "text": "割けて" },
+                        { "id": 4, "text": "削けて" }
+                    ],
+                    "answer": 2
+                }
+            ]
+        },
+        {
+            "unit": 7,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "心からうやまうオペラ歌手の初来日が決定して、今からわくわくしている。",
+                    "textHighlight": { "start": 3, "end": 7 },
+                    "options": [
+                        { "id": 1, "text": "敬う" },
+                        { "id": 2, "text": "尊う" },
+                        { "id": 3, "text": "仰う" },
+                        { "id": 4, "text": "拝う" }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 2,
+                    "text": "新人作家のデビュー作はサイトで厳しくひひょうされた。",
+                    "textHighlight": { "start": 18, "end": 22 },
+                    "options": [
+                        { "id": 1, "text": "非評" },
+                        { "id": 2, "text": "比評" },
+                        { "id": 3, "text": "品評" },
+                        { "id": 4, "text": "批評" }
+                    ],
+                    "answer": 4
+                },
+                {
+                    "id": 3,
+                    "text": "あくびはなぜ他人にでんせんするのかは、まだ学問的にわかっていない。",
+                    "textHighlight": { "start": 9, "end": 13 },
+                    "options": [
+                        { "id": 1, "text": "電染" },
+                        { "id": 2, "text": "伝染" },
+                        { "id": 3, "text": "伝線" },
+                        { "id": 4, "text": "電線" }
+                    ],
+                    "answer": 2
+                },
+                {
+                    "id": 4,
+                    "text": "生きている時間に限りがあると考えると、きちょうな時間を無駄にはできない。",
+                    "textHighlight": { "start": 19, "end": 23 },
+                    "options": [
+                        { "id": 1, "text": "貴重" },
+                        { "id": 2, "text": "希重" },
+                        { "id": 3, "text": "貴調" },
+                        { "id": 4, "text": "希調" }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 5,
+                    "text": "近くのコンビニで、アルバイト店員をぼしゅうしている。",
+                    "textHighlight": { "start": 17, "end": 21 },
+                    "options": [
+                        { "id": 1, "text": "慕集" },
+                        { "id": 2, "text": "募集" },
+                        { "id": 3, "text": "募墓" },
+                        { "id": 4, "text": "墓集" }
+                    ],
+                    "answer": 2
+                }
+            ]
+        },
+        {
+            "unit": 8,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "一部の人間がふせいに利益を得るような世の中であってはならない。",
+                    "textHighlight": { "start": 6, "end": 9 },
+                    "options": [
+                        { "id": 1, "text": "不政" },
+                        { "id": 2, "text": "不成" },
+                        { "id": 3, "text": "不正" },
+                        { "id": 4, "text": "不制" }
+                    ],
+                    "answer": 3
+                },
+                {
+                    "id": 2,
+                    "text": "妻とよく話し合ったうえで、離婚とどけを出した。",
+                    "textHighlight": { "start": 15, "end": 18 },
+                    "options": [
+                        { "id": 1, "text": "屈" },
+                        { "id": 2, "text": "居" },
+                        { "id": 3, "text": "展" },
+                        { "id": 4, "text": "届" }
+                    ],
+                    "answer": 4
+                },
+                {
+                    "id": 3,
+                    "text": "過去問題をぶんせきし、短期間で大学合格の力を身につけるつもりだ。",
+                    "textHighlight": { "start": 5, "end": 9 },
+                    "options": [
+                        { "id": 1, "text": "分責" },
+                        { "id": 2, "text": "分析" },
+                        { "id": 3, "text": "分積" },
+                        { "id": 4, "text": "分燃" }
+                    ],
+                    "answer": 2
+                },
+                {
+                    "id": 4,
+                    "text": "砂糖は畑からできるてんねんの調味料だ。",
+                    "textHighlight": { "start": 9, "end": 13 },
+                    "options": [
+                        { "id": 1, "text": "天燃" },
+                        { "id": 2, "text": "天然" },
+                        { "id": 3, "text": "伝燃" },
+                        { "id": 4, "text": "伝然" }
+                    ],
+                    "answer": 2
+                },
+                {
+                    "id": 5,
+                    "text": "我が社は「環境にやさしい商品」の開発に力をそそいでいます。",
+                    "textHighlight": { "start": 21, "end": 24 },
+                    "options": [
+                        { "id": 1, "text": "注いで" },
+                        { "id": 2, "text": "沿いで" },
+                        { "id": 3, "text": "泊いで" },
+                        { "id": 4, "text": "沖いで" }
+                    ],
+                    "answer": 1
+                }
+            ]
+        },
+        {
+            "unit": 9,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "受験する大学を決めたものの、これで本当にいいのかと気持ちがゆらぐ。",
+                    "textHighlight": { "start": 29, "end": 32 },
+                    "options": [
+                        { "id": 1, "text": "緩らぐ" },
+                        { "id": 2, "text": "揺らぐ" },
+                        { "id": 3, "text": "震らぐ" },
+                        { "id": 4, "text": "振らぐ" }
+                    ],
+                    "answer": 2
+                },
+                {
+                    "id": 2,
+                    "text": "人生はよきせぬことの連続なんだから、あまりくよくよしないほうがいいよ。",
+                    "textHighlight": { "start": 3, "end": 5 },
+                    "options": [
+                        { "id": 1, "text": "与期" },
+                        { "id": 2, "text": "余期" },
+                        { "id": 3, "text": "世期" },
+                        { "id": 4, "text": "予期" }
+                    ],
+                    "answer": 4
+                },
+                {
+                    "id": 3,
+                    "text": "この本は内容がこくて満足した。",
+                    "textHighlight": { "start": 7, "end": 10 },
+                    "options": [
+                        { "id": 1, "text": "濃くて" },
+                        { "id": 2, "text": "巧くて" },
+                        { "id": 3, "text": "厚くて" },
+                        { "id": 4, "text": "密くて" }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 4,
+                    "text": "地は長期にわたって無差別に人々をねらい続ける、恐ろしい兵器だ。",
+                    "textHighlight": { "start": 16, "end": 19 },
+                    "options": [
+                        { "id": 1, "text": "盗い" },
+                        { "id": 2, "text": "襲い" },
+                        { "id": 3, "text": "狙い" },
+                        { "id": 4, "text": "追い" }
+                    ],
+                    "answer": 3
+                },
+                {
+                    "id": 5,
+                    "text": "帰宅とちゅうにバイクに乗った男にバッグをひったくられた。",
+                    "textHighlight": { "start": 2, "end": 6 },
+                    "options": [
+                        { "id": 1, "text": "避中" },
+                        { "id": 2, "text": "途中" },
+                        { "id": 3, "text": "道中" },
+                        { "id": 4, "text": "逐中" }
+                    ],
+                    "answer": 2
+                }
+            ]
+        },
+        {
+            "unit": 10,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "あの2人の作家の作品はたいしょう的である。",
+                    "textHighlight": { "start": 11, "end": 16 },
+                    "options": [
+                        { "id": 1, "text": "対象" },
+                        { "id": 2, "text": "対称" },
+                        { "id": 3, "text": "対照" },
+                        { "id": 4, "text": "対症" }
+                    ],
+                    "answer": 3
+                },
+                {
+                    "id": 2,
+                    "text": "彼女は日本のテレビドラマで、楽しく言葉をおぼえている。",
+                    "textHighlight": { "start": 20, "end": 24 },
+                    "options": [
+                        { "id": 1, "text": "覚えて" },
+                        { "id": 2, "text": "学えて" },
+                        { "id": 3, "text": "賞えて" },
+                        { "id": 4, "text": "党えて" }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 3,
+                    "text": "この数学の問題のかいとうがわからないので、教えてください。",
+                    "textHighlight": { "start": 8, "end": 12 },
+                    "options": [
+                        { "id": 1, "text": "会答" },
+                        { "id": 2, "text": "快答" },
+                        { "id": 3, "text": "解答" },
+                        { "id": 4, "text": "改答" }
+                    ],
+                    "answer": 3
+                },
+                {
+                    "id": 4,
+                    "text": "父の誕生日に家族全員が久しぶりに集まって、ビールでかんぱいした。",
+                    "textHighlight": { "start": 25, "end": 29 },
+                    "options": [
+                        { "id": 1, "text": "乾杯" },
+                        { "id": 2, "text": "観杯" },
+                        { "id": 3, "text": "幹杯" },
+                        { "id": 4, "text": "換杯" }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 5,
+                    "text": "時代の流れにはさからえず、公衆電話の数が減っている。",
+                    "textHighlight": { "start": 7, "end": 12 },
+                    "options": [
+                        { "id": 1, "text": "反らえず" },
+                        { "id": 2, "text": "敵らえず" },
+                        { "id": 3, "text": "抗らえず" },
+                        { "id": 4, "text": "逆らえず" }
+                    ],
+                    "answer": 4
+                }
+            ]
+        },
+        {
+            "unit": 11,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "世界の30ヵ国近くの国が、国際ごうとう団の被害を受けている。",
+                    "textHighlight": { "start": 15, "end": 19 },
+                    "options": [
+                        { "id": 1, "text": "監獄" },
+                        { "id": 2, "text": "強罰" },
+                        { "id": 3, "text": "強盗" },
+                        { "id": 4, "text": "獄盗" }
+                    ],
+                    "answer": 3
+                },
+                {
+                    "id": 2,
+                    "text": "しょうとつ直前で自動的にブレーキがかかって停止する車が開発された。",
+                    "textHighlight": { "start": 0, "end": 5 },
+                    "options": [
+                        { "id": 1, "text": "衝突" },
+                        { "id": 2, "text": "障突" },
+                        { "id": 3, "text": "衡突" },
+                        { "id": 4, "text": "将突" }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 3,
+                    "text": "彼女は好きな相手につくすタイプだ。",
+                    "textHighlight": { "start": 9, "end": 12 },
+                    "options": [
+                        { "id": 1, "text": "注くす" },
+                        { "id": 2, "text": "就くす" },
+                        { "id": 3, "text": "尽くす" },
+                        { "id": 4, "text": "着くす" }
+                    ],
+                    "answer": 3
+                },
+                {
+                    "id": 4,
+                    "text": "相手の国の文化にけいいを払うことは、国際協力上大切なことだ。",
+                    "textHighlight": { "start": 8, "end": 11 },
+                    "options": [
+                        { "id": 1, "text": "仰意" },
+                        { "id": 2, "text": "掲意" },
+                        { "id": 3, "text": "傾意" },
+                        { "id": 4, "text": "敬意" }
+                    ],
+                    "answer": 4
+                },
+                {
+                    "id": 5,
+                    "text": "大学卒業後数年は新卒として就職活動をできるよう、システムをあらためるべきだ。",
+                    "textHighlight": { "start": 29, "end": 34 },
+                    "options": [
+                        { "id": 1, "text": "改める" },
+                        { "id": 2, "text": "政める" },
+                        { "id": 3, "text": "敢める" },
+                        { "id": 4, "text": "変める" }
+                    ],
+                    "answer": 1
+                }
+            ]
+        },
+        {
+            "unit": 12,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "飲み水や食事に使用されているかがく物質の安全性に不安のある人が多い。",
+                    "textHighlight": { "start": 14, "end": 17 },
+                    "options": [
+                        { "id": 1, "text": "科画" },
+                        { "id": 2, "text": "科学" },
+                        { "id": 3, "text": "化画" },
+                        { "id": 4, "text": "化学" }
+                    ],
+                    "answer": 4
+                },
+                {
+                    "id": 2,
+                    "text": "このチラシのゆうこう期間は、本日より1週間とさせていただきます。",
+                    "textHighlight": { "start": 6, "end": 10 },
+                    "options": [
+                        { "id": 1, "text": "有効" },
+                        { "id": 2, "text": "優効" },
+                        { "id": 3, "text": "有抗" },
+                        { "id": 4, "text": "結抗" }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 3,
+                    "text": "この暑さで祖父は体力をすっかりしょうもうしてしまった。",
+                    "textHighlight": { "start": 15, "end": 20 },
+                    "options": [
+                        { "id": 1, "text": "失耗" },
+                        { "id": 2, "text": "減耗" },
+                        { "id": 3, "text": "省耗" },
+                        { "id": 4, "text": "消耗" }
+                    ],
+                    "answer": 4
+                },
+                {
+                    "id": 4,
+                    "text": "日本は国土の約70パーセントを森林がしめている緑豊かな国の1つである。",
+                    "textHighlight": { "start": 18, "end": 21 },
+                    "options": [
+                        { "id": 1, "text": "示めて" },
+                        { "id": 2, "text": "占めて" },
+                        { "id": 3, "text": "閉めて" },
+                        { "id": 4, "text": "締めて" }
+                    ],
+                    "answer": 2
+                },
+                {
+                    "id": 5,
+                    "text": "長くてようりょうを得ない話は、聞くほうも疲れてしまう。",
+                    "textHighlight": { "start": 3, "end": 8 },
+                    "options": [
+                        { "id": 1, "text": "用項" },
+                        { "id": 2, "text": "要項" },
+                        { "id": 3, "text": "用領" },
+                        { "id": 4, "text": "要領" }
+                    ],
+                    "answer": 4
+                }
+            ]
+        },
+        {
+            "unit": 13,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "自分をかだい評価している人は、ちょっとした失敗にも落ち込みやすい。",
+                    "textHighlight": { "start": 3, "end": 6 },
+                    "options": [
+                        { "id": 1, "text": "仮大" },
+                        { "id": 2, "text": "加大" },
+                        { "id": 3, "text": "過大" },
+                        { "id": 4, "text": "課大" }
+                    ],
+                    "answer": 3
+                },
+                {
+                    "id": 2,
+                    "text": "世界記録をなんと0.5秒もちぢめる好タイムで優勝した。",
+                    "textHighlight": { "start": 13, "end": 17 },
+                    "options": [
+                        { "id": 1, "text": "縮める" },
+                        { "id": 2, "text": "減める" },
+                        { "id": 3, "text": "損める" },
+                        { "id": 4, "text": "短める" }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 3,
+                    "text": "社長のさいしゅう決定は絶対に変わらない。",
+                    "textHighlight": { "start": 3, "end": 8 },
+                    "options": [
+                        { "id": 1, "text": "再終" },
+                        { "id": 2, "text": "最終" },
+                        { "id": 3, "text": "再修" },
+                        { "id": 4, "text": "最修" }
+                    ],
+                    "answer": 2
+                },
+                {
+                    "id": 4,
+                    "text": "彼女は家事や育児を夫とぶんたんし、共働きを続けている。",
+                    "textHighlight": { "start": 11, "end": 15 },
+                    "options": [
+                        { "id": 1, "text": "分拍" },
+                        { "id": 2, "text": "分拒" },
+                        { "id": 3, "text": "分抽" },
+                        { "id": 4, "text": "分担" }
+                    ],
+                    "answer": 4
+                },
+                {
+                    "id": 5,
+                    "text": "税金ををおさめるのは国民の義務だ。",
+                    "textHighlight": { "start": 4, "end": 8 },
+                    "options": [
+                        { "id": 1, "text": "主める" },
+                        { "id": 2, "text": "納める" },
+                        { "id": 3, "text": "押める" },
+                        { "id": 4, "text": "得める" }
+                    ],
+                    "answer": 2
+                }
+            ]
+        },
+        {
+            "unit": 14,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "私は精神的にも時間的にもよゆうをもつように心がけている。",
+                    "textHighlight": { "start": 12, "end": 15 },
+                    "options": [
+                        { "id": 1, "text": "予裕" },
+                        { "id": 2, "text": "余裕" },
+                        { "id": 3, "text": "予有" },
+                        { "id": 4, "text": "余有" }
+                    ],
+                    "answer": 2
+                },
+                {
+                    "id": 2,
+                    "text": "携帯電話がこわれてしまい、友人と連絡が取れない。",
+                    "textHighlight": { "start": 5, "end": 9 },
+                    "options": [
+                        { "id": 1, "text": "壊れて" },
+                        { "id": 2, "text": "傷れて" },
+                        { "id": 3, "text": "破れて" },
+                        { "id": 4, "text": "崩れて" }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 3,
+                    "text": "電気や水道などのこうきょう料金を、クレジットカードで支払う。",
+                    "textHighlight": { "start": 8, "end": 13 },
+                    "options": [
+                        { "id": 1, "text": "公協" },
+                        { "id": 2, "text": "交協" },
+                        { "id": 3, "text": "公共" },
+                        { "id": 4, "text": "交共" }
+                    ],
+                    "answer": 3
+                },
+                {
+                    "id": 4,
+                    "text": "校則や試験を厳しくする教育によって少年はんざいを減らした。",
+                    "textHighlight": { "start": 19, "end": 23 },
+                    "options": [
+                        { "id": 1, "text": "犯罰" },
+                        { "id": 2, "text": "犯罪" },
+                        { "id": 3, "text": "反罰" },
+                        { "id": 4, "text": "反罪" }
+                    ],
+                    "answer": 2
+                },
+                {
+                    "id": 5,
+                    "text": "空き巣の被害にあう一人暮らしの女性が少なくない。",
+                    "textHighlight": { "start": 7, "end": 9 },
+                    "options": [
+                        { "id": 1, "text": "迷う" },
+                        { "id": 2, "text": "遣う" },
+                        { "id": 3, "text": "逸う" },
+                        { "id": 4, "text": "遭う" }
+                    ],
+                    "answer": 4
+                }
+            ]
+        },
+        {
+            "unit": 15,
+            "questions": [
+                {
+                    "id": 1,
+                    "text": "心の病は病名をしんだんするのさえ非常に難しい。",
+                    "textHighlight": { "start": 7, "end": 11 },
+                    "options": [
+                        { "id": 1, "text": "診断" },
+                        { "id": 2, "text": "侵断" },
+                        { "id": 3, "text": "審断" },
+                        { "id": 4, "text": "信断" }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 2,
+                    "text": "劇場で、大きな荷物や上着をクロークにあずける。",
+                    "textHighlight": { "start": 18, "end": 22 },
+                    "options": [
+                        { "id": 1, "text": "頂ける" },
+                        { "id": 2, "text": "預ける" },
+                        { "id": 3, "text": "頷ける" },
+                        { "id": 4, "text": "頂ける" }
+                    ],
+                    "answer": 2
+                },
+                {
+                    "id": 3,
+                    "text": "あの子はいかにもりこうそうだ。",
+                    "textHighlight": { "start": 8, "end": 11 },
+                    "options": [
+                        { "id": 1, "text": "利行" },
+                        { "id": 2, "text": "利効" },
+                        { "id": 3, "text": "利口" },
+                        { "id": 4, "text": "利硬" }
+                    ],
+                    "answer": 3
+                },
+                {
+                    "id": 4,
+                    "text": "新入社員のけんしゅうは入社後一カ月行う。",
+                    "textHighlight": { "start": 5, "end": 10 },
+                    "options": [
+                        { "id": 1, "text": "研修" },
+                        { "id": 2, "text": "検修" },
+                        { "id": 3, "text": "研習" },
+                        { "id": 4, "text": "検習" }
+                    ],
+                    "answer": 1
+                },
+                {
+                    "id": 5,
+                    "text": "昨夜宝石店で2億円相当の商品が何者かにぬすまれた。",
+                    "textHighlight": { "start": 19, "end": 24 },
+                    "options": [
+                        { "id": 1, "text": "除まれた" },
+                        { "id": 2, "text": "奪まれた" },
+                        { "id": 3, "text": "詐まれた" },
+                        { "id": 4, "text": "盗まれた" }
+                    ],
+                    "answer": 4
+                }
+            ]
+        }
+    ]
+}
