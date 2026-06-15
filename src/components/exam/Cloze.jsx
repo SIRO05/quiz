@@ -136,7 +136,7 @@ export default function Cloze({ question, showAnswers = false, value = null, onC
         {shouldShowFeedback && Array.isArray(question.correctOrder) && question.correctOrder.length > 0 && (
           <div className="mt-8 p-4 bg-green-50 dark:bg-green-900/10 rounded-lg text-center border border-green-100 dark:border-green-800">
             <div className="text-xs text-green-600 dark:text-green-400 font-semibold mb-3 uppercase tracking-wider">
-              Правильное предложение
+              正しい文 
             </div>
             <div className="text-base text-gray-800 dark:text-gray-200 leading-relaxed block">
               <span>{renderWithLineBreaks(left)}</span>
