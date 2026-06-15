@@ -1,0 +1,392 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0px;
+  padding: 0px;
+  background-image: url("./front_photo/front_photo.jpg");
+  background-size: cover;
+  background-repeat: no-repeat; 
+  background-attachment: fixed;
+}
+
+.header {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  background: #004080;
+  color: white;
+  padding: 0px 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10;
+}
+
+.wrapper {
+  overflow: hidden; /* Скрывает текст, выходящий за пределы */
+  /*width: 100%; /* Задаем ширину контейнера */
+  white-space: nowrap; /* Предотвращает перенос текста */
+}
+
+.moving-text {
+  display: inline-block; /* Делает текст блочным элементом */
+  animation: moveText 7s linear infinite; /* Применяем анимацию */
+}
+
+@keyframes moveText {
+  0% {
+    transform: translateX(-100%); /* Начальное положение - за пределами */
+  }
+  100% {
+    transform: translateX(100%); /* Конечное положение - за пределами */
+  }
+}
+
+.titul {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: inherit;
+  font-size: auto;
+  max-width: max-content;
+}
+
+.test-container {
+  max-width: 900px;
+  margin: 100px auto 100px;
+  padding: 20px;
+  background: var(--container-bg);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.question-set img {
+  width: 100%;
+  object-fit: contain;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.question {
+  margin: 10px 0;
+}
+
+.answers button {
+  display: inline;
+  margin: 0px 0;
+  margin-inline-start: 7px;
+  padding: auto;
+  margin-bottom: 10px;
+  border: none;
+  border-radius: 5px;
+  background: var(--answer-bg);
+  color: var(--answer-text);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.answers button.correct {
+  background: #4CAF50;
+  color: white;
+}
+
+.answers button.incorrect {
+  background: #F44336;
+  color: white;
+}
+
+.answers button:disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #004080;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  color: white;
+}
+
+#timer {
+  flex-grow: 1;
+  text-align: center;
+  font-size: 18px;
+  color: white;
+}
+
+.finish-button {
+  position: absolute;
+  right: 5px;
+  background: var(--button-bg);
+  border: none;
+  color: white;
+  padding: 7px 20px;
+  font-size: 13px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Apply theme variables */
+body {
+  background-color: var(--background);
+  color: var(--text-color);
+}
+
+.choice_container,
+.container,
+.question {
+  background-color: var(--container-bg);
+  color: var(--text-color);
+  border-radius: 10px;
+  margin-top: 1px;
+  padding-top: 1px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.question {
+  background-color: var(--question-bg);
+  padding-top: 1px;
+}
+
+.bottom-bar {
+  background-color: var(--header-bg);
+  color: var(--header-text);
+}
+
+#toggle-theme {
+  font-size: 20px;
+  background: transparent;
+  border: none;
+  padding: 7px 20px;
+  font-size: 13px;
+  border-radius: 5px;
+  cursor: pointer;
+  color: var(--header-text);
+}
+
+/* ==== Light Theme (default) ==== */
+:root {
+  --background: #ffffff;
+  --text-color: #000000;
+  --container-bg: rgba(255, 255, 255, 0.5);
+  --question-bg: #f9f9f9;
+  --header-bg: #004080;
+  --header-text: #ffffff;
+  --button-bg: #0780e3;
+  --button-text: #ffffff;
+  --answer-text: #000000;
+  --answer-bg: #e5e5e5;
+  --choose-bg: #e5e5e5;
+  --modalbutton-bg: #ef1e1e;
+  --modal1button-bg: #0e9919;
+}
+
+/* ==== Dark Theme Custom ==== */
+body.dark-mode {
+  --background: #000000;                          /* Главный фон — черный */
+  --text-color: #ffffff;                          /* Основной текст — белый */
+  --container-bg: rgba(0, 0, 0, 0.5);             /* Контейнер тестов — черный */
+  --question-bg: #1f1f1f;                         /* Вопросы — черные */
+  --header-bg: #2e003e;                           /* Темно-пурпурный верх/низ */
+  --header-text: #ffffff;
+  --button-bg: #ba55d3;                           /* Светло-пурпурный кнопки */
+  --button-text: #ffffff;
+  --answer-text: #ffffff;
+  --answer-bg: rgba(0, 0, 0, 0.5);
+  --choose-bg: #151515;
+  --modalbutton-bg: #ef1e1e;
+  --modal1button-bg: #0e7e17;
+}
+
+/* Применение переменных */
+body {
+  background-color: var(--background);
+  color: var(--text-color);
+}
+
+.choice_container,
+.container,
+.question {
+  background-color: var(--container-bg);
+  color: var(--text-color);
+}
+
+.question {
+  background-color: var(--question-bg);
+}
+
+.header,
+.bottom-bar {
+  background-color: var(--header-bg);
+  color: var(--header-text);
+}
+
+/* Кнопки */
+#stop_test,
+#back_button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  padding: 10px 20px;
+  font-size: 13px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* ==== Light Theme Background Image ==== */  
+/* ==== Dark Theme Background Image ==== */
+body.dark-mode {
+  background-image: url("./front_photo/front_photo_dark.jpg"); /* Укажи здесь нужное изображение для темной темы */
+}
+
+body {
+  transition: background-image 0.6s ease-in-out, background-color 0.3s ease;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  background-image: url("./front_photo/front_photo.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  opacity: 1;
+  transition: opacity 0.8s ease-in-out;
+  pointer-events: none;
+}
+
+body.dark-mode::before {
+  background-image: url("./front_photo/front_photo_dark.jpg");
+  opacity: 1;
+}
+
+/* Настройки модального окна */
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+}
+
+.modal-content {
+  background: white;
+  color: black;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+  width: 150px;
+  background-color: var(--container-bg);
+  color: var(--text-color);
+}
+
+.modal-content select, .modal-content button {
+  margin-top: 10px;
+  width: 100%;
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: none;
+  color: var(--answer-text);
+  background: var(--choose-bg);
+}
+
+#startBtn {
+  background-color: var(--modal1button-bg);
+}
+
+#cancelBtn {
+  background-color: var(--modalbutton-bg);
+}
+
+/* Кнопки в нижней панели */
+.bottom-button {
+  background: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  padding: 7px 20px;
+  font-size: 13px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+.bottom-button.left {
+  position: absolute;
+  left: 5px;
+}
+
+/* Плавный переход темных и светлых тем */
+body,
+body::before,
+.container,
+.question,
+.choice_container,
+.header,
+.bottom-bar,
+#stop_test,
+#back_button,
+#toggle-theme,
+.modal-content,
+.modal-content button {
+  transition:
+    background-color 0.4s ease,
+    color 0.4s ease,
+    background-image 0.6s ease-in-out,
+    opacity 0.6s ease-in-out;
+}
+
+/* Обеспечиваем плавный переход фонового изображения */
+body::before {
+  transition:
+    background-image 0.8s ease-in-out,
+    opacity 0.8s ease-in-out;
+}
+
+/* Custom confirm modal style */
+.confirm-content {
+  background-color: var(--container-bg);
+  color: var(--text-color);
+  padding: 10px 5px;
+  border-radius: 10px;
+  max-width: 350px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.confirm-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.confirm-buttons button {
+  margin: 10px;
+  padding: 8px 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.confirm-buttons button:hover {
+  filter: brightness(1.1);
+}
