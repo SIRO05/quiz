@@ -94,6 +94,24 @@ const HomePage = () => {
                             <p className="text-muted-500 break-all text-sm">すべてのテストを1つの試験として実行</p>
                         </div>
 
+                        <div
+                            key="mini-test"
+                            className='w-full max-w-sm p-4 rounded-xl bg-journal-mint dark:bg-night-surface shadow-soft border border-black/5 transition-transform hover:scale-[1.02] cursor-pointer'
+                            onClick={() => {
+                                setSelectedTask({
+                                    title: 'ミニテスト',
+                                    description: '選択したユニットのミニテスト',
+                                    url: allTasks,
+                                    preselectAll: false,
+                                    selectionMode: 'mini'
+                                })
+                                setIsModalOpen(true)
+                            }}
+                        >
+                            <p className="font-bold text-journal-text dark:text-night-text">ミニテスト</p>
+                            <p className="text-muted-500 break-all text-sm">選択したユニットのミニテスト</p>
+                        </div>
+
                         <div 
                             key="custom-exam"
                             className='w-full max-w-sm p-4 rounded-xl bg-journal-mint dark:bg-night-surface shadow-soft border border-black/5 transition-transform hover:scale-[1.02] cursor-pointer'

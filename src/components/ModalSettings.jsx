@@ -14,6 +14,7 @@ const resolveSource = (source, index) => {
       url: source,
       title: fileName?.replace(/\.json$/i, '') ?? `Lesson ${index + 1}`,
       description: '',
+      task: null,
     }
   }
 
@@ -21,6 +22,7 @@ const resolveSource = (source, index) => {
     url: source?.url ?? '',
     title: source?.title ?? `Lesson ${index + 1}`,
     description: source?.description ?? '',
+    task: source?.task ?? null,
   }
 }
 
@@ -31,6 +33,9 @@ export function ModalSettings({ isOpen, onClose, url, title, children, preselect
   const [randomizeQuestions, setRandomizeQuestions] = useState(false)
   const [randomizeAnswers, setRandomizeAnswers] = useState(false)
   const [showAnswers, setShowAnswers] = useState(false)
+  const [mojigoiEnabled, setMojigoiEnabled] = useState(true)
+  const [bunpouEnabled, setBunpouEnabled] = useState(true)
+  const [selectedMiniUnits, setSelectedMiniUnits] = useState(new Set())
   const navigate = useNavigate()
   const { setExam } = useExam()
 
@@ -45,7 +50,7 @@ export function ModalSettings({ isOpen, onClose, url, title, children, preselect
       try {
         let jsonData
 
-        if (selectionMode === "all" || selectionMode === "custom") {
+        if (selectionMode === "all" || selectionMode === "custom" || selectionMode === "mini") {
           const results = await Promise.all(url.map(async (source, index) => {
             const resolvedSource = resolveSource(source, index)
             const data = await readJson(resolvedSource.url, normalizeTaskFile)
@@ -55,6 +60,7 @@ export function ModalSettings({ isOpen, onClose, url, title, children, preselect
               title: resolvedSource.title,
               description: resolvedSource.description ?? data?.description ?? '',
               tasks: data?.tasks ?? [],
+              task: resolvedSource.task,
             }
           }))
 
@@ -80,6 +86,11 @@ export function ModalSettings({ isOpen, onClose, url, title, children, preselect
             setSelectedUnits(new Set())
             setExpandedLessons(new Set())
           }
+          if (selectionMode === "mini") {
+            setMojigoiEnabled(true)
+            setBunpouEnabled(true)
+            setSelectedMiniUnits(new Set())
+          }
         }
       } catch {
         if (isActive) {
@@ -93,7 +104,7 @@ export function ModalSettings({ isOpen, onClose, url, title, children, preselect
     return () => {
       isActive = false
     }
-  }, [isOpen, url, preselectAll])
+  }, [isOpen, url, preselectAll, selectionMode])
 
   useEffect(() => {
     const handleKeyDown = (e) => {
@@ -112,6 +123,23 @@ export function ModalSettings({ isOpen, onClose, url, title, children, preselect
   const isAllSelected = selectedUnits.size === totalUnits && totalUnits > 0
   const isCustomExam = selectionMode === "custom"
   const isAllExam = selectionMode === "all"
+  const isMiniExam = selectionMode === "mini"
+
+  // mojigoi = 問題1-6 (task_1..task_6), bunpou = 問題7-9 (task_7..task_9)
+  const miniLessons = loadedState.data?.lessons ?? []
+  const isMojigoiLesson = (lesson, idx) => (lesson.task ?? (idx + 1)) <= 6
+  const isBunpouLesson = (lesson, idx) => (lesson.task ?? (idx + 1)) >= 7
+  const activeMiniLessons = miniLessons.filter((lesson, idx) =>
+    (mojigoiEnabled && isMojigoiLesson(lesson, idx)) || (bunpouEnabled && isBunpouLesson(lesson, idx))
+  )
+  const availableMiniUnits = [...new Set(
+    activeMiniLessons.flatMap((lesson) => (lesson.tasks ?? []).map((unit) => unit.unit))
+  )].sort((a, b) => a - b)
+  const effectiveSelectedMiniUnits = new Set(
+    [...selectedMiniUnits].filter((unitId) => availableMiniUnits.includes(unitId))
+  )
+  const isAllMiniSelected = availableMiniUnits.length > 0 && effectiveSelectedMiniUnits.size === availableMiniUnits.length
+  const hasMiniSelection = effectiveSelectedMiniUnits.size > 0
 
   const toggleUnit = (unitId) => {
     const newSelected = new Set(selectedUnits)
@@ -167,26 +195,77 @@ export function ModalSettings({ isOpen, onClose, url, title, children, preselect
     }
   }
 
+  // mojigoi/bunpou: хотя бы один обязательно включен.
+  // Если пытаются выключить последний оставшийся — второй включается автоматически.
+  const toggleMojigoi = () => {
+    const next = !mojigoiEnabled
+    if (!next && !bunpouEnabled) {
+      setBunpouEnabled(true)
+    }
+    setMojigoiEnabled(next)
+  }
+
+  const toggleBunpou = () => {
+    const next = !bunpouEnabled
+    if (!next && !mojigoiEnabled) {
+      setMojigoiEnabled(true)
+    }
+    setBunpouEnabled(next)
+  }
+
+  const toggleMiniUnit = (unitId) => {
+    const newSelected = new Set(selectedMiniUnits)
+    if (newSelected.has(unitId)) {
+      newSelected.delete(unitId)
+    } else {
+      newSelected.add(unitId)
+    }
+    setSelectedMiniUnits(newSelected)
+  }
+
+  const toggleAllMiniUnits = () => {
+    if (isAllMiniSelected) {
+      setSelectedMiniUnits(new Set())
+    } else {
+      setSelectedMiniUnits(new Set(availableMiniUnits))
+    }
+  }
+
+  // Для mini-режима собираем те же ключи "lessonUrl:unit", что и custom,
+  // только по активным (mojigoi/bunpou) лекциям и выбранным юнитам.
+  const buildMiniSelectedUnitKeys = () => {
+    const keys = new Set()
+    activeMiniLessons.forEach((lesson) => {
+      effectiveSelectedMiniUnits.forEach((unitId) => {
+        keys.add(`${lesson.url}:${unitId}`)
+      })
+    })
+    return keys
+  }
+
   const getSubmissionPayload = () => {
+    const effectiveSelectionMode = isMiniExam ? "custom" : selectionMode
+    const effectiveSelectedUnits = isMiniExam ? buildMiniSelectedUnitKeys() : selectedUnits
+
     const selectedQuiz = buildSelectedQuiz({
       data: loadedState.data,
-      selectionMode,
-      selectedUnits,
+      selectionMode: effectiveSelectionMode,
+      selectedUnits: effectiveSelectedUnits,
     })
 
     const basePayload = {
       mode: selectionMode,
       title,
-      randomizeQuestions,
-      randomizeAnswers,
+      randomizeQuestions: isMiniExam ? false : randomizeQuestions,
+      randomizeAnswers: isMiniExam ? false : randomizeAnswers,
       showAnswers,
       selectedQuiz,
     }
 
-    if (isCustomExam) {
+    if (isCustomExam || isMiniExam) {
       return {
         ...basePayload,
-        selectedUnitKeys: [...selectedUnits],
+        selectedUnitKeys: [...effectiveSelectedUnits],
       }
     }
 
@@ -268,32 +347,65 @@ export function ModalSettings({ isOpen, onClose, url, title, children, preselect
                     <p className="mt-2 text-sm text-gray-400 dark:text-night-text/60">Loading...</p>
                   ) : null}
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4">
-                <div className="flex flex-col items-center">
-                  <label className="inline-flex items-center cursor-pointer">
-                    <input
-                      type="checkbox"
-                      checked={randomizeQuestions}
-                      onChange={() => setRandomizeQuestions(!randomizeQuestions)}
-                      className="sr-only peer"
-                      title="Рандомный порядок вопросов"
-                    />
-                    <div className="relative w-9 h-5 bg-gray-300 dark:bg-night-bg peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-blue-400 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-blue-500"></div>
-                  </label>
-                  <span className="text-xs text-gray-500 dark:text-night-text/60 mt-1">ランダムに出題</span>
-                </div>
-                <div className="flex flex-col items-center">
-                  <label className="inline-flex items-center cursor-pointer">
-                    <input
-                      type="checkbox"
-                      checked={randomizeAnswers}
-                      onChange={() => setRandomizeAnswers(!randomizeAnswers)}
-                      className="sr-only peer"
-                      title="Рандомный порядок ответов"
-                    />
-                    <div className="relative w-9 h-5 bg-gray-300 dark:bg-night-bg peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-blue-400 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-blue-500"></div>
-                  </label>
-                  <span className="text-xs text-gray-500 dark:text-night-text/60 mt-1">ランダム回答</span>
-                </div>
+                {isMiniExam ? (
+                  <>
+                    <div className="flex flex-col items-center">
+                      <label className="inline-flex items-center cursor-pointer">
+                        <input
+                          type="checkbox"
+                          checked={mojigoiEnabled}
+                          onChange={toggleMojigoi}
+                          className="sr-only peer"
+                          title="文字語彙の問題を含める（問題1-6）"
+                        />
+                        <div className="relative w-9 h-5 bg-gray-300 dark:bg-night-bg peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-blue-400 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-blue-500"></div>
+                      </label>
+                      <span className="text-xs text-gray-500 dark:text-night-text/60 mt-1">文字語彙</span>
+                    </div>
+                    <div className="flex flex-col items-center">
+                      <label className="inline-flex items-center cursor-pointer">
+                        <input
+                          type="checkbox"
+                          checked={bunpouEnabled}
+                          onChange={toggleBunpou}
+                          className="sr-only peer"
+                          title="文法の問題を含める（問題7-9）"
+                        />
+                        <div className="relative w-9 h-5 bg-gray-300 dark:bg-night-bg peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-blue-400 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-blue-500"></div>
+                      </label>
+                      <span className="text-xs text-gray-500 dark:text-night-text/60 mt-1">文法</span>
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    <div className="flex flex-col items-center">
+                      <label className="inline-flex items-center cursor-pointer">
+                        <input
+                          type="checkbox"
+                          checked={randomizeQuestions}
+                          onChange={() => setRandomizeQuestions(!randomizeQuestions)}
+                          className="sr-only peer"
+                          title="Рандомный порядок вопросов"
+                        />
+                        <div className="relative w-9 h-5 bg-gray-300 dark:bg-night-bg peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-blue-400 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-blue-500"></div>
+                      </label>
+                      <span className="text-xs text-gray-500 dark:text-night-text/60 mt-1">ランダムに出題</span>
+                    </div>
+                    <div className="flex flex-col items-center">
+                      <label className="inline-flex items-center cursor-pointer">
+                        <input
+                          type="checkbox"
+                          checked={randomizeAnswers}
+                          onChange={() => setRandomizeAnswers(!randomizeAnswers)}
+                          className="sr-only peer"
+                          title="Рандомный порядок ответов"
+                        />
+                        <div className="relative w-9 h-5 bg-gray-300 dark:bg-night-bg peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-blue-400 rounded-full peer peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:rounded-full after:h-4 after:w-4 after:transition-all peer-checked:bg-blue-500"></div>
+                      </label>
+                      <span className="text-xs text-gray-500 dark:text-night-text/60 mt-1">ランダム回答</span>
+                    </div>
+                  </>
+                )}
                 <div className="flex flex-col items-center">
                   <label className="inline-flex items-center cursor-pointer">
                     <input
@@ -374,6 +486,63 @@ export function ModalSettings({ isOpen, onClose, url, title, children, preselect
                   })}
                   <AnimatePresence>
                     {hasSelection ? (
+                      <motion.div
+                        initial={{ opacity: 0, y: 8 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        exit={{ opacity: 0, y: 8 }}
+                        transition={{ duration: 0.2, ease: "easeOut" }}
+                        className="sticky bottom-0 pt-3 pb-1 bg-white/95 dark:bg-night-surface/90 backdrop-blur-sm"
+                      >
+                        <button
+                          type="button"
+                          onClick={handleSubmitForm}
+                          className="cursor-pointer inline-flex w-full items-center justify-center rounded-lg px-4 py-3 text-sm font-medium transition-all hover:scale-[1.01] active:scale-[0.99] bg-journal-accent text-white hover:opacity-90 animate-pulse"
+                        >
+                          ボタンを押して開始してください
+                        </button>
+                      </motion.div>
+                    ) : null}
+                  </AnimatePresence>
+                </div>
+              ) : isMiniExam ? (
+                <div className="space-y-3">
+                  <p className="text-sm text-gray-500 dark:text-night-text/60">テストするユニットを選択してください</p>
+
+                  {availableMiniUnits.length > 0 && (
+                    <div className="mb-2 p-3 border border-gray-200 dark:border-white/10 rounded-lg bg-gray-50 dark:bg-night-bg/40">
+                      <label className="flex items-center gap-2 cursor-pointer">
+                        <input
+                          type="checkbox"
+                          checked={isAllMiniSelected}
+                          onChange={toggleAllMiniUnits}
+                          className="w-4 h-4"
+                        />
+                        <span className="font-medium text-gray-700 dark:text-night-text cursor-pointer">全て</span>
+                      </label>
+                    </div>
+                  )}
+
+                  {availableMiniUnits.length === 0 ? (
+                    <p className="text-sm text-gray-400 dark:text-night-text/60">選択した条件に一致するユニットがありません</p>
+                  ) : (
+                    availableMiniUnits.map((unitId) => (
+                      <div key={unitId} className="mb-2 p-2 flex items-center gap-2 hover:bg-gray-50 dark:hover:bg-night-bg rounded cursor-pointer">
+                        <input
+                          type="checkbox"
+                          id={`mini-unit-${unitId}`}
+                          checked={effectiveSelectedMiniUnits.has(unitId)}
+                          onChange={() => toggleMiniUnit(unitId)}
+                          className="w-4 h-4"
+                        />
+                        <label htmlFor={`mini-unit-${unitId}`} className="cursor-pointer flex-1 dark:text-night-text">
+                          第{unitId}回
+                        </label>
+                      </div>
+                    ))
+                  )}
+
+                  <AnimatePresence>
+                    {hasMiniSelection ? (
                       <motion.div
                         initial={{ opacity: 0, y: 8 }}
                         animate={{ opacity: 1, y: 0 }}
