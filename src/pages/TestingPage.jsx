@@ -5,6 +5,7 @@ import Passage from '../components/exam/Passage'
 import { useExam } from '../contexts/ExamContext'
 import { Navbar } from '../components/Navbar'
 import ExamControls from '../components/exam/ExamControls'
+import { shuffleArray } from '../utils/shuffle'
 
 const TestingPage = () => {
     const { exam, clearExam } = useExam()
@@ -13,16 +14,27 @@ const TestingPage = () => {
     const [resultData, setResultData] = useState(null)
     const [isFinished, setIsFinished] = useState(false)
 
+    // если включён randomizeQuestions — перемешиваем порядок вопросов внутри каждого task/unit
+    // (один раз на загрузку exam, а не на каждый ре-рендер)
+    const tasksForRender = useMemo(() => {
+        const tasks = exam?.selectedQuiz?.tasks ?? []
+
+        if (!exam?.randomizeQuestions) return tasks
+
+        return tasks.map((task) => ({
+            ...task,
+            questions: shuffleArray([...(task.questions ?? [])]),
+        }))
+    }, [exam])
+
     // flatten tasks -> questions for single-page rendering
     const items = useMemo(() => {
         const flat = []
-        if (exam && exam.selectedQuiz && exam.selectedQuiz.tasks) {
-            exam.selectedQuiz.tasks.forEach((task) => {
-                (task.questions || []).forEach((q) => flat.push({ ...q, unit: task.unit, passage: task.passage }))
-            })
-        }
+        tasksForRender.forEach((task) => {
+            (task.questions || []).forEach((q) => flat.push({ ...q, unit: task.unit, passage: task.passage }))
+        })
         return flat
-    }, [exam])
+    }, [tasksForRender])
 
     if (!exam || !exam.selectedQuiz) {
         return (
@@ -77,7 +89,7 @@ const TestingPage = () => {
             <Navbar />
 
             <main className='container mx-auto mt-5 px-4'>
-                {exam.selectedQuiz.tasks.map((task, taskIdx) => (
+                {tasksForRender.map((task, taskIdx) => (
                     <div key={`task-${task.unit}-${taskIdx}`} className="mb-12">
                         {task.passage ? (
                             <div className="bg-white dark:bg-night-surface p-5 lg:p-6 rounded-2xl border border-gray-200 dark:border-white/10 shadow-sm flex flex-col xl:flex-row gap-6 xl:max-h-[calc(100vh-220px)]">
