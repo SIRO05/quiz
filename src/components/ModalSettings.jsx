@@ -26,18 +26,54 @@ const resolveSource = (source, index) => {
   }
 }
 
+// Сохранение пользовательских настроек теста (рандом вопросов/ответов, показ ответов,
+// mojigoi/bunpou), чтобы они не сбрасывались при перезагрузке страницы.
+const SETTINGS_STORAGE_KEY = "jlpt-quiz-settings"
+
+const getStoredSettings = () => {
+  if (typeof window === "undefined") return {}
+  try {
+    const raw = window.localStorage.getItem(SETTINGS_STORAGE_KEY)
+    return raw ? JSON.parse(raw) : {}
+  } catch {
+    return {}
+  }
+}
+
+const persistSettings = (partial) => {
+  if (typeof window === "undefined") return
+  try {
+    const current = getStoredSettings()
+    window.localStorage.setItem(SETTINGS_STORAGE_KEY, JSON.stringify({ ...current, ...partial }))
+  } catch {
+    // localStorage недоступен (приватный режим и т.п.) — просто не сохраняем
+  }
+}
+
 export function ModalSettings({ isOpen, onClose, url, title, children, preselectAll, selectionMode = "single" }) {
   const [loadedState, setLoadedState] = useState({ url: null, data: null })
   const [selectedUnits, setSelectedUnits] = useState(new Set())
   const [expandedLessons, setExpandedLessons] = useState(new Set())
-  const [randomizeQuestions, setRandomizeQuestions] = useState(false)
-  const [randomizeAnswers, setRandomizeAnswers] = useState(false)
-  const [showAnswers, setShowAnswers] = useState(false)
-  const [mojigoiEnabled, setMojigoiEnabled] = useState(true)
-  const [bunpouEnabled, setBunpouEnabled] = useState(true)
+  const [randomizeQuestions, setRandomizeQuestions] = useState(() => getStoredSettings().randomizeQuestions ?? false)
+  const [randomizeAnswers, setRandomizeAnswers] = useState(() => getStoredSettings().randomizeAnswers ?? false)
+  const [showAnswers, setShowAnswers] = useState(() => getStoredSettings().showAnswers ?? false)
+  const [mojigoiEnabled, setMojigoiEnabled] = useState(() => getStoredSettings().mojigoiEnabled ?? true)
+  const [bunpouEnabled, setBunpouEnabled] = useState(() => {
+    // защита: если в сохранённых настройках оба тумблера оказались выключены
+    // (например, повреждённые данные), принудительно включаем bunpou
+    const stored = getStoredSettings()
+    const moji = stored.mojigoiEnabled ?? true
+    const bun = stored.bunpouEnabled ?? true
+    return !moji && !bun ? true : bun
+  })
   const [selectedMiniUnits, setSelectedMiniUnits] = useState(new Set())
   const navigate = useNavigate()
   const { setExam } = useExam()
+
+  // Сохраняем настройки при каждом изменении, чтобы они не слетали при перезагрузке
+  useEffect(() => {
+    persistSettings({ randomizeQuestions, randomizeAnswers, showAnswers, mojigoiEnabled, bunpouEnabled })
+  }, [randomizeQuestions, randomizeAnswers, showAnswers, mojigoiEnabled, bunpouEnabled])
 
   useEffect(() => {
     if (!isOpen || !url) return
@@ -82,8 +118,6 @@ export function ModalSettings({ isOpen, onClose, url, title, children, preselect
             setExpandedLessons(new Set())
           }
           if (selectionMode === "mini") {
-            setMojigoiEnabled(true)
-            setBunpouEnabled(true)
             setSelectedMiniUnits(new Set())
           }
         }
