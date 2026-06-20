@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { createPortal } from "react-dom"
 import { motion, AnimatePresence } from "framer-motion"
 import { normalizeTaskFile, readJson } from "../utils/jsonReader"
-import { buildSelectedQuiz } from "../utils/quizBuilder"
+import { buildSelectedQuiz, buildExamQuiz } from "../utils/quizBuilder"
 import { useNavigate } from 'react-router-dom'
 import { useExam } from '../contexts/ExamContext.jsx'
 
@@ -64,15 +64,10 @@ export function ModalSettings({ isOpen, onClose, url, title, children, preselect
             }
           }))
 
-          jsonData = selectionMode === "all"
-            ? {
-                tasks: results.flatMap((r) => r.tasks),
-                description: results.map((r) => r.description).filter(Boolean).join(' — '),
-              }
-            : {
-                lessons: results,
-                description: results.map((r) => r.description).filter(Boolean).join(' — '),
-              }
+          jsonData = {
+            lessons: results,
+            description: results.map((r) => r.description).filter(Boolean).join(' — '),
+          }
         } else {
           jsonData = await readJson(url, normalizeTaskFile)
         }
@@ -244,6 +239,22 @@ export function ModalSettings({ isOpen, onClose, url, title, children, preselect
   }
 
   const getSubmissionPayload = () => {
+    // Экзамен: вопросы уже случайно собраны из разных юнитов и перемешаны
+    // внутри buildExamQuiz, поэтому здесь просто отдаём готовый результат
+    // и дополнительно рандомизируем порядок вариантов ответа.
+    if (isAllExam) {
+      const selectedQuiz = buildExamQuiz({ data: loadedState.data })
+
+      return {
+        mode: selectionMode,
+        title,
+        randomizeQuestions: false,
+        randomizeAnswers: true,
+        showAnswers,
+        selectedQuiz,
+      }
+    }
+
     const effectiveSelectionMode = isMiniExam ? "custom" : selectionMode
     const effectiveSelectedUnits = isMiniExam ? buildMiniSelectedUnitKeys() : selectedUnits
 
